@@ -1,17 +1,74 @@
 <html>
 	<head>
 		<title>PSGD Home</title>
+	<style type="text/css">
+		.container {
+			width: 100vw;
+			height: 100vh;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			line-height: 0px;
+		}
+		.tab_content{
+			display: none;
+		}
+
+		.login_options button{
+			background-color: #04AA6D; /* Green background */
+  			border: 1px solid green; /* Green border */
+  			color: white; /* White text */
+  			padding: 10px 24px; /* Some padding */
+ 			cursor: pointer; /* Pointer/hand icon */
+  			float: left; /* Float the buttons side by side */
+		}
+
+		.login_options {
+			box-shadow: 0px 0px 10px green;
+		}
+		body {
+			margin: 0px;
+		}
+	</style>
 	</head>
 	
 	<body>
 		<center>
+		<!--div que engloba a página inteira-->
+		<div class="container">
 			<h1>PSGD</h1>
 			<h2>(Programa de Simulação de Geopolítica Digital)</h2>
+			<!--div onde se encontra os botões de login-->
 			<div class='login_options'>
 				<button type = 'button' onclick = "window.location.href = 'criar_comite.html'">Criar comitê</button>
 				<button type = 'button' onclick = "window.location.href = 'login_del.html'">Entrar como delegado</button>
 				<button type = 'button' onclick = "window.location.href = 'login_dir.html'">Entrar como diretor</button>
 			</div>
+
+
+			<!--div onde será realizado o login do delegado-->
+			<div id="login_delegado" class = 'tab_content'>
+				<form name = 'fm_del'>
+					<label id = 'lb_login' for = 'ip_login'>Usuário:</label>
+					<input id = 'ip_login' type = 'text'></input><br/><br/>
+					<label id = 'lb_psswd' for = 'ip_psswd'>Senha:</label>
+					<input id = 'ip_psswd' type = 'password'></input><br/><br/>
+				</form>
+				<button type = 'button'>Entrar</button>
+			</div>
+
+			<!--div onde será realizado o login do diretor-->
+			<div id="login_diretor" class = 'tab_content'>
+				<form name = 'fm_dir'>
+					<label id = 'lb_login' for = 'ip_login'>Usuário:</label>
+					<input id = 'ip_login' type = 'text'></input><br/><br/>
+					<label id = 'lb_psswd' for = 'ip_psswd'>Senha:</label>
+					<input id = 'ip_psswd' type = 'password'></input><br/><br/>
+				</form>
+				<button type = 'button'>Entrar</button>
+			</div>
+		</div>
 		</center>
 	</body>
 </html>
