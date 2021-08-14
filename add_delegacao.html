@@ -1,0 +1,89 @@
+<html>
+	
+	<head>
+	
+	    <title>Adicionar delegacoes</title>
+        
+        <style>
+
+            .salvar{
+
+                position: absolute;
+                right: 10px;
+
+            }
+
+        </style>
+    
+        <script>
+
+            /* Armazenando as delegaçoes e os nomes pra exibir */
+            var delegacoes = [];
+            var nomes = "";
+
+            /* Função que adiciona as delegações no array, que em si é um array de arrays que contem o nome e a sigla*/
+            function adicionar(){
+
+                var nome = document.getElementById('nome').value;
+                var sigla = document.getElementById('sigla').value;
+                
+                var delegacao = [nome, sigla];
+
+
+                delegacoes.push(delegacao);
+
+                /* loop pra adicionar os nomes na lista de nomes e exibir eles toda vez que adicionar um novo, sem repetições(provavelmente vou mudar isso aqui depois pra adicionar opção de exclusão) */
+                for(i = delegacoes.length-1; i < delegacoes.length; i++) {
+
+                   nomes += delegacoes[i][0];
+                   nomes += "<br/>";
+
+                }
+                
+                /* Isso aqui exibe os nomes de fato */
+                document.getElementById("lista").innerHTML = nomes;
+
+            }
+
+        </script>
+        
+
+	</head>
+	
+		
+	
+	<body>
+
+        <!-- Div pra recepção dos dados-->
+        <div class="add_del">
+
+            <form id = "dados">
+
+                <label for="nome">Nome oficial da delegação:</label>
+                <input type="text" id="nome"><br/><br/>
+
+                <label for="sigla">Sigla da delegação:</label>
+                <input type="text" id="sigla"><br/><br/>
+
+                <p>Delegações:</p>
+                <p id="lista"></p>
+
+                <!--Botão que adiciona a delegação na lista-->
+                <button type = "button" id = "proximo" onclick="adicionar()">Proximo</button>
+            
+            </form>
+
+
+        </div>
+
+
+        <!--Div do botão de salvar que por enquanto não faz nada ja que a gente não tem pagina de comite ainda, então ele só volta pra home mesmo-->
+        <div class = "salvar">
+
+            <button type = 'button' onclick = "window.location.href = 'home.html'">Salvar</button>
+
+        </div>
+
+	</body>
+	
+</html>

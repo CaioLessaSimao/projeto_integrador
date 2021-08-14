@@ -14,6 +14,14 @@
 
             }
 
+            .data_sim{
+
+                position: absolute;
+                bottom: 400px;
+                right: 10px;
+                
+            }
+
         </style>
     
 
@@ -27,30 +35,54 @@
 	<body>
 	
         <h2>Criar comite</h2>
+        <!--Botão que vai levar pra pagina de add delegação-->
         <div class="btn_proximo">
-            <button type = "button" id = "proximo">Proximo</button> 
+            <button type = "button" id = "proximo" onclick="window.location.href = 'add_delegacao.html'">Proximo</button> 
         </div>
 
 
+        <!--Div com os dados do comitê-->
         <div class = "div_criar_comite">
 
 		    <form name="criar_comite">
 
-                <br/>Orgao:
-                <input type="text" id="orgao"><br/>
-                <br/>Tema:
+                <label for="orgao">Orgao:</label>
+                <input type="text" id="orgao"><br/><br/>
+                
+                <label for="tema">Tema:</label>
                 <input type="text" id="tema"><br/><br/><br/>
 
-                <br/>Diretor Geral:
-                <input type="text" id="dir_ger"><br/>
-                <br/>Diretores Assistentes:
-                <input type="text" id="dir_ass"><br/>
+
                 
-         
-        		
+                <label for="dir_ger">Diretor Geral:</label>
+                <input type="text" id="dir_ger"><br/><br/>              
+                   
+                <label for="dir_ass">Diretores Assistentes:</label>
+                <input type="text" id="dir_ass"><br/><br/>
+                
+                <label for="desc">Descrição:</label>
+                <input type="text" id="desc"><br/><br/>
+                
+                <label for="blog">Link do Blog</label>  
+                <input type="text" id="blog"><br/><br/>
+                
+
+                <!--RadioButton do modelo de delegação-->
+                <p>Modelo de Delegação:</p>
+                <input type="radio" name = "modelo" id="individual" value="individual">
+                <label for="individual">Individual</label>
+                <input type="radio" name = "modelo" id="dupla" value="dupla">
+                <label for="dupla">Dupla</label>             
+                 		
 		    </form>
 
 		</div>
+
+        <!--Calendário pra escolher a data da sim-->
+        <div class="data_sim">
+            <label for="data_sim">Data da Simulação:</label>
+            <input type="date" id="data_sim">
+        </div>
 
 	</body>
 	
