@@ -12,7 +12,26 @@
 			line-height: 0px;
 		}
 		.tab_content{
+			/*faz com que essas divs não apareçam*/
 			display: none;
+			background-color: red;
+			border: 5px solid;
+			position: absolute;
+			padding: 100px 100px;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			line-height: 20px;
+			transition: block .10s;
+		}
+
+		.closebtn {
+  			position: absolute;
+			top: 0;
+			left: 25px;
+			font-size: 36px;
+			margin-right: 50px;
+			padding: 5px 5px;
 		}
 
 		.login_options button{
@@ -25,12 +44,28 @@
 		}
 
 		.login_options {
+			/*cria a sombra atrás dos botões*/
 			box-shadow: 0px 0px 10px green;
 		}
 		body {
+			/*tira a margem para que a div container ocupe a tela inteira*/
 			margin: 0px;
 		}
 	</style>
+	<script type="text/javascript">
+		/*função que abre a div baseado no id*/
+		function openDiv(login){
+  			document.getElementById(login).style.display = "block";
+  			document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+		}
+		/*função que fecha a div*/
+		function closeDiv(login){
+			document.getElementById(login).style.display = "none";
+			document.body.style.backgroundColor = "white";
+		}
+	</script>
+
+
 	</head>
 	
 	<body>
@@ -41,14 +76,16 @@
 			<h2>(Programa de Simulação de Geopolítica Digital)</h2>
 			<!--div onde se encontra os botões de login-->
 			<div class='login_options'>
-				<button type = 'button' onclick = "window.location.href = 'criar_comite.html'">Criar comitê</button>
-				<button type = 'button' onclick = "window.location.href = 'login_del.html'">Entrar como delegado</button>
-				<button type = 'button' onclick = "window.location.href = 'login_dir.html'">Entrar como diretor</button>
+				<button type = 'button' onclick = "openDiv('create_comite')">Criar comitê</button>
+				<button type = 'button' onclick = "openDiv('login_delegado')">Entrar como delegado</button>
+				<button type = 'button' onclick = "openDiv('login_diretor')">Entrar como diretor</button>
 			</div>
 
 
 			<!--div onde será realizado o login do delegado-->
 			<div id="login_delegado" class = 'tab_content'>
+				<!-- botão que fecha-->
+				<button class="closebtn" onclick="closeDiv('login_delegado')">Fechar</button>
 				<form name = 'fm_del'>
 					<label id = 'lb_login' for = 'ip_login'>Usuário:</label>
 					<input id = 'ip_login' type = 'text'></input><br/><br/>
@@ -60,6 +97,8 @@
 
 			<!--div onde será realizado o login do diretor-->
 			<div id="login_diretor" class = 'tab_content'>
+				<!-- botão que fecha-->
+				<button class="closebtn" onclick="closeDiv('login_diretor')">Fechar</button>
 				<form name = 'fm_dir'>
 					<label id = 'lb_login' for = 'ip_login'>Usuário:</label>
 					<input id = 'ip_login' type = 'text'></input><br/><br/>
@@ -67,6 +106,17 @@
 					<input id = 'ip_psswd' type = 'password'></input><br/><br/>
 				</form>
 				<button type = 'button'>Entrar</button>
+			</div>
+
+			<!--div onde será inserido o email-->
+			<div id="create_comite" class = 'tab_content'>
+				<!-- botão que fecha-->
+				<button class="closebtn" onclick="closeDiv('create_comite')">Fechar</button>
+				<form name = 'fm_dir'>
+					<label id ="c_comite" for = 'ip_login'>Insira um email:</label>
+					<input id = 'email_comite' type = 'text'></input><br/><br/>
+				</form>
+				<button type = 'button'onclick = "window.location.href = 'criar_comite.html'">Começar</button>
 			</div>
 		</div>
 		</center>
