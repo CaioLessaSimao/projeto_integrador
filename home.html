@@ -19,7 +19,7 @@
 		.tab_content{
 			/*faz com que essas divs não apareçam*/
 			display: none;
-			background-color: red;
+			background-color: #808080;
 			border: 5px solid;
 			position: absolute;
 			padding: 100px 100px;
@@ -40,18 +40,14 @@
 		}
 
 		.login_options button{
-			background-color: #04AA6D; /* Green background */
-  			border: 1px solid green; /* Green border */
-  			color: white; /* White text */
-  			padding: 10px 24px; /* Some padding */
+			/*background-color: #04AA6D;  Green background */
+  			/*border: 1px solid green;  Green border */
+  			/*color: white;  White text */
+  			/*padding: 10px 24px;  Some padding */
  			cursor: pointer; /* Pointer/hand icon */
   			float: left; /* Float the buttons side by side */
 		}
 
-		.login_options {
-			/*cria a sombra atrás dos botões*/
-			box-shadow: 0px 0px 10px green;
-		}
 		body {
 			/*tira a margem para que a div container ocupe a tela inteira*/
 			margin: 0px;
@@ -74,23 +70,22 @@
 	</head>
 	
 	<body>
-		<center>
 		<!--div que engloba a página inteira-->
 		<div class="container">
 			<h1>PSGD</h1>
-			<h2>(Programa de Simulação de Geopolítica Digital)</h2>
+			<h4>(Programa de Simulação de Geopolítica Digital)</h4>
 			<!--div onde se encontra os botões de login-->
 			<div class='login_options'>
-				<button type = 'button' onclick = "openDiv('create_comite')">Criar comitê</button>
-				<button type = 'button' onclick = "openDiv('login_delegado')">Entrar como delegado</button>
-				<button type = 'button' onclick = "openDiv('login_diretor')">Entrar como diretor</button>
+				<button type = 'button' class="btn" onclick = "openDiv('create_comite')">Criar comitê</button>
+				<button type = 'button' class="btn" onclick = "openDiv('login_delegado')">Entrar como delegado</button>
+				<button type = 'button' class="btn" onclick = "openDiv('login_diretor')">Entrar como diretor</button>
 			</div>
 
 
 			<!--div onde será realizado o login do delegado-->
 			<div id="login_delegado" class = 'tab_content'>
 				<!-- botão que fecha-->
-				<button class="closebtn" onclick="closeDiv('login_delegado')">Fechar</button>
+				<button class="close_btn" onclick="closeDiv('login_delegado')">Fechar</button>
 				<form name = 'fm_del'>
 					<label id = 'lb_login' for = 'ip_login'>Usuário:</label>
 					<input id = 'ip_login' type = 'text'></input><br/><br/>
@@ -124,6 +119,5 @@
 				<button type = 'button'onclick = "window.location.href = 'criar_comite.html'">Começar</button>
 			</div>
 		</div>
-		</center>
 	</body>
 </html>
