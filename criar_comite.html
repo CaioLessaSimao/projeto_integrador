@@ -4,6 +4,10 @@
 	
 	    <title>PSGD Criar Comitê</title>
         
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+        
         <style>
 
             .btn_proximo {
@@ -22,6 +26,10 @@
                 
             }
 
+            label{
+                color: black;
+            }
+
         </style>
     
 
@@ -34,16 +42,16 @@
 	
 	<body>
 	
-        <h2>Criar comite</h2>
-        <!--Botão que vai levar pra pagina de add delegação-->
+          <!--Botão que vai levar pra pagina de add delegação-->
         <div class="btn_proximo">
             <button type = "button" id = "proximo" onclick="window.location.href = 'add_delegacao.html'">Proximo</button> 
         </div>
 
 
+    <div class="container">
         <!--Div com os dados do comitê-->
-        <div class = "div_criar_comite">
-
+        <div class = "row">
+            <h2 class="light" >Criar comite</h2>
 		    <form name="criar_comite">
 
                 <label for="orgao">Orgao:</label>
@@ -83,7 +91,9 @@
             <label for="data_sim">Data da Simulação:</label>
             <input type="date" id="data_sim">
         </div>
+    </div>
 
-	</body>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    </body>
 	
 </html>
