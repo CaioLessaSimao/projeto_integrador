@@ -4,6 +4,10 @@
 	
 	    <title>Adicionar delegacoes</title>
         
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
         <style>
 
             .salvar{
@@ -12,6 +16,10 @@
                 right: 10px;
 
             }
+            
+            label{
+                color: black;
+            }
 
         </style>
     
@@ -19,31 +27,35 @@
 
             /* Armazenando as delegaçoes e os nomes pra exibir */
             var delegacoes = [];
-            var nomes = "";
 
             /* Função que adiciona as delegações no array, que em si é um array de arrays que contem o nome e a sigla*/
             function adicionar(){
-
-                var nome = document.getElementById('nome').value;
-                var sigla = document.getElementById('sigla').value;
                 
-                var delegacao = [nome, sigla];
+                var nome = document.getElementById("nome").value;
+                var sigla = document.getElementById("sigla").value;
 
+                console.log(nome);
+                console.log(sigla);
 
-                delegacoes.push(delegacao);
+                var linha = new create_item(nome,sigla);
 
-                /* loop pra adicionar os nomes na lista de nomes e exibir eles toda vez que adicionar um novo, sem repetições(provavelmente vou mudar isso aqui depois pra adicionar opção de exclusão) */
-                for(i = delegacoes.length-1; i < delegacoes.length; i++) {
-
-                   nomes += delegacoes[i][0];
-                   nomes += "<br/>";
-
+                delagacoes.push(linha);
+                var resultado = "";
+                
+                for(i in delegacoes){
+                    resultado += i.html;
                 }
-                
-                /* Isso aqui exibe os nomes de fato */
-                document.getElementById("lista").innerHTML = nomes;
+               
+               document.getElementById("corpo_tabela").innerHTML = resultado;               
 
             }
+            
+            function create_item(nome,sigla){
+                this.assunto = assunto;
+                this.hora = hora;
+                var string = "<tr><td>"+sigla+"</td><td>"+nome+"</td></tr>";
+                this.html = string;
+        }           
 
         </script>
         
@@ -55,34 +67,39 @@
 	<body>
 
         <!-- Div pra recepção dos dados-->
-        <div class="add_del">
-
-            <form id = "dados">
-
-                <label for="nome">Nome oficial da delegação:</label>
-                <input type="text" id="nome"><br/><br/>
-
-                <label for="sigla">Sigla da delegação:</label>
-                <input type="text" id="sigla"><br/><br/>
-
-                <p>Delegações:</p>
-                <p id="lista"></p>
-
-                <!--Botão que adiciona a delegação na lista-->
-                <button type = "button" id = "proximo" onclick="adicionar()">Proximo</button>
+        <div class="row">
             
-            </form>
-
-
-        </div>
-
-
-        <!--Div do botão de salvar que por enquanto não faz nada ja que a gente não tem pagina de comite ainda, então ele só volta pra home mesmo-->
-        <div class = "salvar">
-
-            <button type = 'button' onclick = "window.location.href = 'home.html'">Salvar</button>
-
-        </div>
+        <form class="col s12">  
+                  
+                
+            <div class="input-field col s12">
+                <input id="nome" type="text" class="validate">
+            </div>
+                
+            <div class="input-field col s12">
+                <input id="sigla" type="text" class="validate">
+            </div>
+            
+            <button class="btn" type = "button" onclick = "adicionar()">Adicionar</button> 
+            <button type = 'button' class="btn" onclick = "window.location.href = 'home.html'">Finalizar</button>    
+        
+        </form>
+        </div>   
+            
+            <div class="col s12">
+                <h6>Delegações:</h6>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Sigla</th>
+                            <th>Nome da delegação</th>
+                        </tr>
+                        <tbody id="corpo_tabela">
+                            
+                        </tbody>
+                    </thead>
+                </table>
+            </div>
 
 	</body>
 	
