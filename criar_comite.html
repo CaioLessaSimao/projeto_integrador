@@ -21,13 +21,14 @@
             .data_sim{
 
                 position: absolute;
-                bottom: 400px;
-                right: 10px;
+                bottom: 439px;
+                right: 0px;
                 
             }
 
             label{
                 color: black;
+				
             }
 
         </style>
@@ -52,45 +53,65 @@
         <!--Div com os dados do comitê-->
         <div class = "row">
             <h2 class="light" >Criar comite</h2>
-		    <form name="criar_comite">
+		    <form class = "col s12" name="criar_comite">
 
-                <label for="orgao">Orgao:</label>
-                <input type="text" id="orgao"><br/><br/>
+                <div class = "col s6">
+					<label for="orgao">Orgao:</label>
+					<input type="text" id="orgao"><br/><br/>
+                </div>
                 
-                <label for="tema">Tema:</label>
-                <input type="text" id="tema"><br/><br/><br/>
+				<div class = "col s6">
+					<label for="tema">Tema:</label>
+					<input type="text" id="tema"><br/><br/><br/>
+				</div>
 
-
+                <div class = "col s6">
+					<label for="dir_ger">Diretor Geral:</label>
+					<input type="text" id="dir_ger"><br/><br/>              
+                </div>   
                 
-                <label for="dir_ger">Diretor Geral:</label>
-                <input type="text" id="dir_ger"><br/><br/>              
-                   
-                <label for="dir_ass">Diretores Assistentes:</label>
-                <input type="text" id="dir_ass"><br/><br/>
+				<div class = "col s6">
+					<label for="dir_ass">Diretores Assistentes:</label>
+					<input type="text" id="dir_ass"><br/><br/>
+                </div>
+				
+				<div class = "col s6">
+					<label for="desc">Descrição:</label>
+					<input type="text" id="desc"><br/><br/>
+                </div>
                 
-                <label for="desc">Descrição:</label>
-                <input type="text" id="desc"><br/><br/>
-                
-                <label for="blog">Link do Blog</label>  
-                <input type="text" id="blog"><br/><br/>
-                
+				<div class = "col s6">
+					<label for="blog">Link do Blog</label>  
+					<input type="text" id="blog"><br/><br/>
+                </div>
 
                 <!--RadioButton do modelo de delegação-->
-                <p>Modelo de Delegação:</p>
-                <input type="radio" name = "modelo" id="individual" value="individual">
-                <label for="individual">Individual</label>
-                <input type="radio" name = "modelo" id="dupla" value="dupla">
-                <label for="dupla">Dupla</label>             
-                 		
+                <div class = "col s6">
+					
+					<h6>Modelo de Delegação:</h6>
+					<label>
+						<input class="with-gap" name="group1" type="radio" checked />
+						<span>Individual</span>
+					</label>
+					
+					<label>
+						<input class="with-gap" name="group1" type="radio" />
+						<span>Dupla</span>
+					</label>
+					
+					
+				</div> 
+				
+				<div class="col s6">
+					<label for="data_sim">Data da Simulação:</label>
+					<input type="date" id="data_sim">
+				</div>
 		    </form>
 
 		</div>
 
         <!--Calendário pra escolher a data da sim-->
-        <div class="data_sim">
-            <label for="data_sim">Data da Simulação:</label>
-            <input type="date" id="data_sim">
-        </div>
+        
     </div>
 
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
