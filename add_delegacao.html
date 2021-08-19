@@ -17,8 +17,8 @@
 
             }
             
-            label{
-                color: black;
+           input::placeholder{
+                color: grey;
             }
 
         </style>
@@ -31,28 +31,35 @@
             /* Função que adiciona as delegações no array, que em si é um array de arrays que contem o nome e a sigla*/
             function adicionar(){
                 
+                
                 var nome = document.getElementById("nome").value;
                 var sigla = document.getElementById("sigla").value;
+
+                document.getElementById("nome").value = "";
+                document.getElementById("sigla").value = "";
 
                 console.log(nome);
                 console.log(sigla);
 
                 var linha = new create_item(nome,sigla);
 
-                delagacoes.push(linha);
+                delegacoes.push(linha);
                 var resultado = "";
                 
-                for(i in delegacoes){
+                
+                for(var i of delegacoes){
+                    console.log(delegacoes[0].nome);    
                     resultado += i.html;
+                    console.log(i.html);
                 }
-               
+               console.log(resultado);
                document.getElementById("corpo_tabela").innerHTML = resultado;               
 
             }
             
             function create_item(nome,sigla){
-                this.assunto = assunto;
-                this.hora = hora;
+                this.nome = nome;
+                this.sigla = sigla;
                 var string = "<tr><td>"+sigla+"</td><td>"+nome+"</td></tr>";
                 this.html = string;
         }           
@@ -66,21 +73,21 @@
 	
 	<body>
 
-        <!-- Div pra recepção dos dados-->
+        
         <div class="row">
             
         <form class="col s12">  
                   
                 
             <div class="input-field col s12">
-                <input id="nome" type="text" class="validate">
+                <input id="nome" type="text" class="validate" placeholder="Insira o nome da delegação">
             </div>
                 
-            <div class="input-field col s12">
-                <input id="sigla" type="text" class="validate">
+            <div class="col s12">
+                <input id="sigla" type="text" class="validate" placeholder="Insira a sigla da delegação">
             </div>
             
-            <button class="btn" type = "button" onclick = "adicionar()">Adicionar</button> 
+            <button class="btn" type = "button" onclick="adicionar()">Adicionar</button> 
             <button type = 'button' class="btn" onclick = "window.location.href = 'home.html'">Finalizar</button>    
         
         </form>
@@ -94,7 +101,7 @@
                             <th>Sigla</th>
                             <th>Nome da delegação</th>
                         </tr>
-                        <tbody id="corpo_tabela">
+                        <tbody id="corpo_tabela"> 
                             
                         </tbody>
                     </thead>
