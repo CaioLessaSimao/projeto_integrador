@@ -54,7 +54,9 @@
 		<div class='center-align'>
 				<h1>PSGD</h1>
 				<h4>(Plataforma de Simulação de Geopolítica Digital)</h2>
-				<button type = 'button' id="btn_options" class="btn" onclick = "openDiv('criar_comite')">Criar comitê</button>
+				<form  action = "controle.php" method = "POST">
+					<input type = 'submit' name="funcao" class="btn" value = 'Criar Comitê'></input>
+				<form>
 				<button type = 'button' id="btn_options" class="btn" onclick = "openDiv('login_delegado')">Entrar como delegado</button>
 				<button type = 'button' id="btn_options" class="btn" onclick = "openDiv('login_diretor')">Entrar como diretor</button>
 			</div>
@@ -79,7 +81,7 @@
 			</div>
 			
 			<div id="login_diretor" class="row">
-				<form class="col s12">	
+				<form class="col s12" action = "controle.php" method = "POST">	
 					<h4 class="titulo">Logar como diretor</h4>
 				
 				
@@ -98,21 +100,8 @@
         		<button id="botao" class="btn waves-effect waves-light col s3 top-right green accent-3" onclick="closeDiv('login_diretor')">Cancelar</button>
         	</form>
         	</div>
-			<div id="criar_comite" class="row">
-				<form class="col s12">	
-					<h4 class="titulo">Insira um email</h4>
-				
-				
-				<div class="input-field col s12">
-          			<input id="dir_usuario" type="email" class="validate">
-          			<label for="dir_usuario">Usuário</label>
-          		</div>
-        		
-        		
-        		<button id="botao" class="btn waves-effect waves-light col s3 right green accent-3" onclick = "window.location.href = 'criar_comite.html' ">Entrar</button>
-        		<button id="botao" class="btn waves-effect waves-light col s3 top-right green accent-3" onclick="closeDiv('criar_comite')">Cancelar</button>
-        	</form>
-        	</div>
+
+        	
 	</div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
