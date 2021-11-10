@@ -14,7 +14,7 @@
         $blog = "";
         $logo = "test";
 
-        if (isset($_REQUEST["orgao"] & isset($_REQUEST["tema"] & isset($_REQUEST["desc"] & isset($_REQUEST["blog"])){
+        if (isset($_REQUEST["orgao"] && isset($_REQUEST["tema"] && isset($_REQUEST["desc"] && isset($_REQUEST["blog"])){
             $orgao = $_REQUEST["orgao"];
             $tema = $_REQUEST["tema"];
             $desc = $_REQUEST["desc"];
@@ -28,7 +28,7 @@
                 echo  "<script>alert('Os campos não podem ficar em branco!');</script>";
                 header("Location: criar_comite.html");
             }
-            
+
             $query = "INSERT INTO comite (nome, tema, descricao, link_do_blog, logo) VALUES ('$orgao', '$tema, '$desc', '$blog', '$logo');";
             $result = pg_query($query);
             header("Location = add_delegacao.html");
