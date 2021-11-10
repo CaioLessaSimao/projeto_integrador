@@ -32,7 +32,7 @@
 		.titulo{
 			color: white;	 
 		}
-}
+
 	</style>
 
 	<script type="text/javascript">
@@ -53,10 +53,11 @@
 	<div class="container">
 		<div class='center-align'>
 				<h1>PSGD</h1>
-				<h4>(Plataforma de Simulação de Geopolítica Digital)</h2>
+				<h4>(Plataforma de Simulação de Geopolítica Digital)</h4>
 				<form  action = "controle.php" method = "POST">
-					<input type = 'submit' name="funcao" class="btn" value = 'Criar Comitê'></input>
-				<form>
+					<input type = 'hidden' name = 'funcao' value = 'criar_comite'/>
+					<input type = 'submit' name="btn_criar_comite" class="btn" value = 'Criar Comitê'></input>
+				</form>
 				<button type = 'button' id="btn_options" class="btn" onclick = "openDiv('login_delegado')">Entrar como delegado</button>
 				<button type = 'button' id="btn_options" class="btn" onclick = "openDiv('login_diretor')">Entrar como diretor</button>
 			</div>

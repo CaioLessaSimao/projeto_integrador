@@ -63,30 +63,30 @@
         
         <div class = "row">
             <h2 class="light" >Criar comite</h2>
-		    <form class = "col s12" name="criar_comite">
-
+		    <form class = "col s12" name="criar_comite" action = 'controle.php' method="post">
+				<input type = 'hidden' name = 'funcao' value = 'inserir_comite'/>
                 <div class = "col s6">
 					<label for="orgao">Orgao:</label>
-					<input type="text" id="orgao"><br/><br/>
+					<input type="text" name="orgao"><br/><br/>
                 </div>
                 
 				<div class = "col s6">
 					<label for="tema">Tema:</label>
-					<input type="text" id="tema"><br/><br/><br/>
+					<input type="text" name="tema"><br/><br/><br/>
 				</div>
 				
 				<div class = "col s6">
 					<label for="desc">Descrição:</label>
-					<input type="text" id="desc"><br/><br/>
+					<input type="text" name="desc"><br/><br/>
                 </div>
                 
 				<div class = "col s6">
 					<label for="blog">Link do Blog</label>  
-					<input type="text" id="blog"><br/><br/>
+					<input type="text" name="blog"><br/><br/>
                 </div>
 				
 				<div class = "col s12" >
-					<button class = 'btn right' type = "button" id = "proximo" onclick="window.location.href = 'add_delegacao.html'">Proximo</button> 
+					<input type = 'submit' class = 'btn right' name = "btn_prx" value = 'proximo'></input> 
 				</div>
 		    </form>
 
