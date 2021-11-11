@@ -93,17 +93,19 @@
         <form action="controle.php?id_diretor=<?php echo $_REQUEST['idcomite'];?>" class="col s12" method="POST">  
                   
                 
-            <div class="input-field col s6">
+            <div class="input-field col s4">
                 <input id="nome1" type="text">
 				<label for="nome1"> Insira o nome do diretor geral</label>
             </div>
                 
-            <div class="input-field col s6">
+            <div class="input-field col s4">
                 <input id="email" type="text">
                 <label for="email"> Insira o email do diretor geral</label>	
             </div>
             <input type = 'hidden' name = 'funcao' value = 'inserir_diretor'/>
-            <input type = 'submit' name="btn_inserir_diretor" class="btn" value = 'Cadastrar'></input>
+            <div class="input-field col 24">
+                <input type = 'submit' name="btn_inserir_diretor" class="btn" value = 'Cadastrar'></input>
+            </div>
                 
             
         </form>
