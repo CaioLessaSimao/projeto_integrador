@@ -68,7 +68,9 @@
 
         </script>
         
-
+        <?php
+            $id = $_REQUEST['idcomite']; 
+        ?>
 	</head>
 	
 		
@@ -91,7 +93,7 @@
 
         <div class="row">
             
-        <form class="col s12">  
+        <form action="controle.php?id_diretor=<?php id?>" class="col s12">  
                   
                 
             <div class="input-field col s6">
@@ -103,9 +105,9 @@
                 <input id="email" type="text">
                 <label for="email"> Insira o email do diretor geral</label>	
             </div>
-            
-                <button class="btn" type = "button" onclick="adicionar()">Adicionar</button> 
-                <button type = 'button' class="btn" onclick = "window.location.href = 'home.html'">Finalizar</button>    
+            <input type = 'hidden' name = 'funcao' value = 'inserir_diretor'/>
+            <input type = 'submit' name="btn_inserir_diretor" class="btn" value = 'Cadastrar'></input>
+                
             
         </form>
         </div>   
