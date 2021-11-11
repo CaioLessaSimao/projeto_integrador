@@ -40,7 +40,7 @@
             
             $comite = pg_fetch_array($result2);
 
-            echo $comite;
+            echo $comite[0];
         }
     }
 
