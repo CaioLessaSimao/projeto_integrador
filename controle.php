@@ -32,7 +32,9 @@
            
             $sql = "INSERT INTO comite (nome, tema, descricao, link_blog, logo) VALUES ('$orgao', '$tema', '$desc', '$blog', '$logo');";
             
-            pg_query($conn, $sql);
+            $result = pg_query($conn, $sql);
+
+            echo $result;
         }
     }
 
