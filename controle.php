@@ -7,7 +7,7 @@
         header("Location: criar_comite.html");
     }
 
-     if($oper == 'inserir_comite'){
+    if($oper == 'inserir_comite'){
         $orgao = "";
         $tema = "";
         $desc = "";
@@ -29,7 +29,8 @@
                 header("Location: criar_comite.html");
             }
            
-            $sql = "INSERT INTO comite (nome, tema, descricao, link_do_blog, logo) VALUES ('$orgao', '$tema, '$desc', '$blog', '$logo');";
+            $sql = "INSERT INTO comite (nome, tema, descricao, link_do_blog, logo) VALUES ('$orgao', '$tema', '$desc', '$blog', '$logo');";
+            
             $conn->query($sql);
         }
     }
