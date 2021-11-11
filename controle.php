@@ -24,12 +24,13 @@
                 echo  "<script>alert('Existem campos vazios!');</script>";
                 header("Location: criar_comite.html");
             
-            }else if(ctype_space($orgao) || ctype_space($tema) || ctype_space($desc) || ctype_space($blog)){
+            }
+            else if(ctype_space($orgao) || ctype_space($tema) || ctype_space($desc) || ctype_space($blog)){
                 echo  "<script>alert('Os campos não podem ficar em branco!');</script>";
                 header("Location: criar_comite.html");
             }
            
-            $sql = "INSERT INTO comite (nome, tema, descricao, link_do_blog, logo) VALUES ('$orgao', '$tema', '$desc', '$blog', '$logo');";
+            $sql = "INSERT INTO comite (nome, tema, descricao, link_blog, logo) VALUES ('$orgao', '$tema', '$desc', '$blog', '$logo');";
             
             $conn->query($sql);
         }
