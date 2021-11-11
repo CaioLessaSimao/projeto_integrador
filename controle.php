@@ -33,8 +33,14 @@
             $sql = "INSERT INTO comite (nome, tema, descricao, link_blog, logo) VALUES ('$orgao', '$tema', '$desc', '$blog', '$logo');";
             
             $result = pg_query($conn, $sql);
+            
+            $sql2 = "SELECT id FROM comite WHERE tema = '$tema';";
 
-            echo $result;
+            $result2 = pg_query($conn, $sql2);
+            
+            $comite = pg_fetch_array($result2);
+
+            echo $comite;
         }
     }
 
