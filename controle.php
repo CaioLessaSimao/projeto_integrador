@@ -42,6 +42,8 @@
 
             header("Location: add_diretor.html?idcomite=$comite[0]");
         }
+    } elseif ($oper == "inserir_diretor") {
+        echo "Cheguei";
     }
 
 ?>
