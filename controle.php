@@ -40,7 +40,7 @@
             
             $comite = pg_fetch_array($result2);
 
-            header("Location: add_diretor.html?idcomite=$comite[0]");
+            header("Location: add_diretor.php?idcomite=$comite[0]");
         }
     } elseif ($oper == "inserir_diretor") {
         echo "Cheguei";
