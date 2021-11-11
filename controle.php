@@ -40,7 +40,7 @@
             
             $comite = pg_fetch_array($result2);
 
-            header("Location: add_delegacao.php?idcomite=$comite[0]");
+            header("Location: add_diretor.html?idcomite=$comite[0]");
         }
     }
 
