@@ -43,7 +43,7 @@
             header("Location: add_diretor.php?idcomite=$comite[0]");
         }
     } 
-    /**else if ($oper == "inserir_diretor") {
+    else if ($oper == "inserir_diretor") {
         $nome = "";
         $email = "";
         $login = "to_be_defined";
@@ -57,7 +57,7 @@
             $sql1 = "INSERT INTO diretor (nome, email, login, senha,cargo, fk_comite_id) values ('$nome', '$email', '$login', '$senha', '$cargo', '$id_comite');";
             $result1 = pg_query($conn, $sql1);
 
-            $sql2 = "SELECT id FROM diretor ORDER BY id DESC LIMIT 1;"
+            $sql2 = "SELECT id FROM diretor ORDER BY id DESC LIMIT 1;";
             $result2 = pg_query($conn, $sql2);
             $diretor = pg_fetch_array($result2);
             $id_dir = strval($diretor[0]);
@@ -79,6 +79,6 @@
             
         }
 
-    }*/
+    }
 
 ?>
