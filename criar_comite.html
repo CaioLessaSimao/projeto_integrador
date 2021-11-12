@@ -82,16 +82,23 @@
 				<div class = "col s12" >
 				</div>
 		    </form>
-            <button data-target="modal1" class="btn modal-trigger">Modal</button>
+           <a href="#meu-modal" class="btn waves-effect waves-light modal-trigger">Abrir modal</a>
 		</div> 
+    </div>
+    <div id="meu-modal" class="modal"> <!-- bottom-sheet -->
+        <div class="modal-content">
+            <h4>Lorem ipsum dolor sit</h4>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequuntur, cupiditate!</p>
+        </div>
+        <div class="modal-footer">
+            <a href="#" class=" modal-close waves-effect btn-flat waves-light">Fechar</a>
+        </div>
     </div>
     
     </body>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js">
-        document.addEventListener('DOMContentLoaded', function() {
-        var elems = document.querySelectorAll('.modal');
-        var instances = M.Modal.init(elems, options);
-      });
-   
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script type="text/javascript">
+        const elemsModal = document.querySelectorAll(".modal");
+        const instancesModal = M.Modal.init(elemsModal);
     </script>
 </html>
