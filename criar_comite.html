@@ -37,6 +37,10 @@
                 display: none;
             }
 
+            #ad{
+                display: none;
+            }
+
         </style>
     
 
@@ -105,6 +109,7 @@
             
             <button id="fin" class="btn" onclick="finalizar()">Finalizar</button>
             <button id="mod" class="btn" type = "button" onclick="adicionar()">Próximo</button>
+            <button id="ad" class="btn" onclick="add_ass()">Adicionar mais diretores</button>
              
         
         </div>
@@ -129,8 +134,11 @@
 
             document.getElementById("title").innerHTML = "<h4>Cadastrar diretor assistente</h4>";
             document.getElementById("fin").style.display = "block";
-            document.getElementById("mod").innerHTML = "<button id='mod' class='btn' type = 'button' onclick='adicionar()'>Próximo</button>"; 
+            document.getElementById("mod").style.display = "none";
+            document.getElementById("ad").style.display = "block"; 
         }
+
+
 
     </script>
 </html>
