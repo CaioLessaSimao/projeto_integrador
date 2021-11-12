@@ -43,7 +43,17 @@
             header("Location: add_diretor.php?idcomite=$comite[0]");
         }
     } elseif ($oper == "inserir_diretor") {
-        echo "Cheguei";
+        $nome = "";
+        $email = "";
+        $login = "teste";
+        $senha = "teste";
+        $cargo = "geral";
+        $id_comite = $_REQUEST["id_comite"];
+        if(isset($_REQUEST["nome"]) && isset($_REQUEST["email"])){
+            $nome = $_REQUEST["nome"];
+            $email = $_REQUEST["email"];
+        }
+
     }
 
 ?>

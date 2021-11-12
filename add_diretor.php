@@ -90,12 +90,12 @@
 
         <div class="row">
             
-        <form action="controle.php?id_diretor=<?php echo $_REQUEST['idcomite'];?>" class="col s12" method="POST">  
+        <form action="controle.php?id_comite=<?php echo $_REQUEST['idcomite'];?>" class="col s12" method="POST">  
                   
                 
             <div class="input-field col s4">
-                <input id="nome1" type="text">
-				<label for="nome1"> Insira o nome do diretor geral</label>
+                <input id="nome" type="text">
+				<label for="nome"> Insira o nome do diretor geral</label>
             </div>
                 
             <div class="input-field col s4">
