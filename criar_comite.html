@@ -45,7 +45,8 @@
     
 
 	</head>
-	<body>
+
+	<body onload="verificar()">
 
     
 	<nav>
@@ -90,7 +91,7 @@
 				<div class = "col s12" >
 				</div>
 		    </form>
-           <a href="#meu-modal" class="btn waves-effect waves-light modal-trigger">Cadastrar</a>
+           <a href="#meu-modal" class="btn waves-effect waves-light modal-trigger" id="modalsinho">Cadastrar</a>
 		</div> 
     </div>
     <div id="meu-modal" class="modal"> <!-- bottom-sheet -->
@@ -125,6 +126,21 @@
     </body>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script type="text/javascript">
+        function verfificar(){
+            var aux = document.getElementById("orgao").value;
+            var aux2 = document.getElementById("tema").value;
+            var aux3 = document.getElementById("desc").value;
+            var aux4 = document.getElementById("blog").value;
+
+
+            if(aux==""||aux2==""||aux3==""||aux4==""){
+                document.getElementById("modalsinho").disabled = true;
+            }else{
+                document.getElementById("modalsinho").disabled = false;
+            }
+        }
+
+
         const elemsModal = document.querySelectorAll(".modal");
         const instancesModal = M.Modal.init(elemsModal);
         
