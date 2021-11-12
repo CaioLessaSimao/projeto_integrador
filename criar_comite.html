@@ -33,6 +33,10 @@
 				
             }
 
+            #fin{
+                display: none;
+            }
+
         </style>
     
 
@@ -99,7 +103,7 @@
                 <label for="email">Insira o email do diretor</label>
             </div>
             
-            <button type="hidden" id="fin" class="btn" onclick="finalizar()">Finalizar</button>
+            <button id="fin" class="btn" onclick="finalizar()">Finalizar</button>
             <button id="mod" class="btn" type = "button" onclick="adicionar()">Próximo</button>
              
         
@@ -123,7 +127,7 @@
             dirs_mtz.push(dirG);
 
             document.getElementById("title").innerHTML = "<h4>Cadastrar diretor assistente</h4>";
-            document.getElementById("fin").innerHTML = "<button type='hidden' id='fin' class='btn' onclick='finalizar()'>Finalizar</button>";
+            document.getElementById("fin").style.display = "block";
             document.getElementById("mod").innerHTML = "<button id='mod' class='btn' type = 'button' onclick='adicionar()'>Próximo</button>"; 
         }
 
