@@ -42,7 +42,8 @@
 
             header("Location: add_diretor.php?idcomite=$comite[0]");
         }
-    } elseif ($oper == "inserir_diretor") {
+    } 
+    /**else if ($oper == "inserir_diretor") {
         $nome = "";
         $email = "";
         $login = "to_be_defined";
@@ -78,6 +79,6 @@
             
         }
 
-    }
+    }*/
 
 ?>
