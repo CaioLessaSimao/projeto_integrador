@@ -43,7 +43,7 @@
             header("Location: add_diretor.php?idcomite=$comite[0]");
         }
     } 
-    else if ($oper == "inserir_diretor") {
+    /**else if ($oper == "inserir_diretor") {
         $nome = "";
         $email = "";
         $login = "to_be_defined";
@@ -68,7 +68,7 @@
 
             $nome_comite = $comite[0]; 
 
-            $login = $nome_comite .".dir." .$id_dir;
+            $login = $nome_comite.".dir.".$id_dir;
 
             $senha = $nome "." .strval(rand(0, 9)) .strval(rand(0, 9)) .strval(rand(0, 9));
 
@@ -79,6 +79,6 @@
             
         }
 
-    }
+    }**/
 
 ?>
