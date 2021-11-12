@@ -4,7 +4,7 @@
     $oper = $_REQUEST['funcao'];
 
     if($oper == "criar_comite"){
-        header("Location: criar_comite.php");
+        header("Location: criar_comite.html");
     }
 
     if($oper == 'inserir_comite'){
