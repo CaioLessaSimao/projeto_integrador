@@ -45,13 +45,22 @@
     } elseif ($oper == "inserir_diretor") {
         $nome = "";
         $email = "";
-        $login = "teste";
-        $senha = "teste";
+        $login = "to_be_defined";
+        $senha = "to_be_defined";
         $cargo = "geral";
         $id_comite = $_REQUEST["id_comite"];
         if(isset($_REQUEST["nome"]) && isset($_REQUEST["email"])){
             $nome = $_REQUEST["nome"];
             $email = $_REQUEST["email"];
+            
+            $sql1 = "INSERT INTO diretor (nome, email"
+
+            $sql3 = "SELECT nome FROM comite WHERE id = '$id_comite'";
+            $result3 = pg_query($conn, $sql1);
+            $comite = pg_fetch_array($result2);
+
+            $nome_comite = $comite[0]; 
+            
         }
 
     }
