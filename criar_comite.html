@@ -87,7 +87,7 @@
     </div>
     <div id="meu-modal" class="modal"> <!-- bottom-sheet -->
         <div class="row modal-content">
-            <h4>Cadastrar diretor geral</h4>
+            <h4 id="title">Cadastrar diretor geral</h4>
             
             <div class=input-field col s12>
                 <input type="text" name="nome" id="dir_nome">
@@ -98,11 +98,13 @@
                 <input type="email" name="email" id="dir_email">
                 <label for="email">Insira o email do diretor</label>
             </div>
-
+            
+            <button type="hidden" id="fin" class="btn" onclick="finalizar()">Finalizar</button>
+            <button id="mod" class="btn" type = "button" onclick="adicionar()">Próximo</button>
+             
+        
         </div>
-        <div class="modal-footer">
-            <a href="#" class=" modal-close waves-effect btn-flat waves-light">Fechar</a>
-        </div>
+        
     </div>
     
     </body>
@@ -110,5 +112,20 @@
     <script type="text/javascript">
         const elemsModal = document.querySelectorAll(".modal");
         const instancesModal = M.Modal.init(elemsModal);
+        
+        var dirs_mtz = []; 
+        
+        
+        function adicionar(){
+            var dirG = [];
+            dirG.push(document.getElementById(dir_nome).value);
+            dirG.push(document.getElementById(dir_email).value);
+            dirs_mtz.push(dirG);
+
+            document.getElementById("title").innerHTML = "<h4>Cadastrar diretor assistente</h4>";
+            document.getElementById("fin").innerHTML = "<button type='hidden' id='fin' class='btn' onclick='finalizar()'>Finalizar</button>";
+            document.getElementById("mod").innerHTML = "<button id='mod' class='btn' type = 'button' onclick='adicionar()'>Próximo</button>"; 
+        }
+
     </script>
 </html>
