@@ -92,7 +92,7 @@
 				</div>
 		    </form>
            <!--<a href="#meu-modal" class="btn waves-effect waves-light modal-trigger" id="modalsinho">Cadastrar</a>-->
-           <button data-target="meu-modal" class="btn modal-trigger">Modal</button>
+           <button data-target="meu-modal" class="btn modal-trigger" id="modalsinho">Modal</button>
 		</div> 
     </div>
     <div id="meu-modal" class="modal"> <!-- bottom-sheet -->
@@ -135,9 +135,9 @@
 
 
             if(aux==""||aux2==""||aux3==""||aux4==""){
-                document.getElementById("modalsinho").style.display = "none";
+                document.getElementById("modalsinho").disabled = true;
             }else{
-                document.getElementById("modalsinho").style.display = "block";
+                document.getElementById("modalsinho").disabled = false;
             }
         }
 
