@@ -69,28 +69,28 @@
 				<input type = 'hidden' name = 'funcao' value = 'inserir_comite'/>
                 <div class = "col s6">
 					<label for="orgao">Orgao:</label>
-					<input type="text" name="orgao"><br/><br/>
+					<input type="text" id = "orgao"><br/><br/>
                 </div>
                 
 				<div class = "col s6">
 					<label for="tema">Tema:</label>
-					<input type="text" name="tema"><br/><br/><br/>
+					<input type="text" id = "tema"><br/><br/><br/>
 				</div>
 				
 				<div class = "col s6">
 					<label for="desc">Descrição:</label>
-					<input type="text" name="desc"><br/><br/>
+					<input type="text" id = "desc"><br/><br/>
                 </div>
                 
 				<div class = "col s6">
 					<label for="blog">Link do Blog</label>  
-					<input type="text" name="blog"><br/><br/>
+					<input type="text" id = "blog"><br/><br/>
                 </div>
 				
 				<div class = "col s12" >
 				</div>
 		    </form>
-           <a href="#meu-modal" class="btn waves-effect waves-light modal-trigger">Abrir modal</a>
+           <a href="#meu-modal" class="btn waves-effect waves-light modal-trigger">Cadastrar</a>
 		</div> 
     </div>
     <div id="meu-modal" class="modal"> <!-- bottom-sheet -->
@@ -108,8 +108,8 @@
             </div>
             
             <button id="fin" class="btn" onclick="finalizar()">Finalizar</button>
-            <button id="mod" class="btn" type = "button" onclick="adicionar()">Próximo</button>
-            <button id="ad" class="btn" onclick="add_ass()">Adicionar mais diretores</button>
+            <button id="mod" class="btn" type = "button" onclick="adicionar()">Adicionar diretor</button>
+            <button id="ad" class="btn" onclick="add_ass()">Adicionar diretor</button>
              
         
         </div>
@@ -123,10 +123,17 @@
         const instancesModal = M.Modal.init(elemsModal);
         
         var dirs_mtz = []; 
+        var comite = [];
         
         
         function adicionar(){
-            console.log("asdjhabsjbcashdjbcd");
+            
+            comite.push(document.getElementById("orgao").value);
+            comite.push(document.getElementById("tema").value);
+            comite.push(document.getElementById("desc").value);
+            comite.push(document.getElementById("blog").value);
+
+
             var dirG = [];
             dirG.push(document.getElementById("dir_nome").value);
             dirG.push(document.getElementById("dir_email").value);
@@ -138,6 +145,20 @@
             document.getElementById("ad").style.display = "block"; 
         }
 
+        function add_ass(){
+            var dirAss = [];
+            dirAss.push(document.getElementById("dir_nome").value);
+            dirAss.push(document.getElementById("dir_email").value);
+            dirs_mtz.push(dirAss);
+
+            document.getElementById("dir_nome").value = "";
+            document.getElementById("dir_email").value = "";
+        }
+
+        function finalizar(){
+            console.log(dirs_mtz);
+            console.log(comite);
+        }
 
 
     </script>
