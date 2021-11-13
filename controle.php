@@ -23,7 +23,7 @@
             $desc = $arrayComite[2];
             $blog = $arrayComite[3];
 
-            echo $orgao, $tema, $desc, $blog;
+            echo "$orgao $tema, $desc, $blog";
             
             /**if(empty($orgao) || empty($tema) || empty($desc) || empty($blog)){
                 echo  "<script>alert('Existem campos vazios!');</script>";
