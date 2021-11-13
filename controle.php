@@ -8,10 +8,10 @@
     }
 
     if($oper == 'inserir_comite'){
-        $orgao = "";
-        $tema = "";
-        $desc = "";
-        $blog = "";
+        $orgao = "a";
+        $tema = "a";
+        $desc = "a";
+        $blog = "a";
         $logo = "test";
         $arrayComite;
 
