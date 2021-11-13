@@ -97,12 +97,7 @@
                 }
             }
 
-
-            }
-
-            
-
-        }
+        }  
     } 
     /**else if ($oper == "inserir_diretor") {
         $nome = "";
