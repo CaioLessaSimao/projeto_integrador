@@ -19,7 +19,7 @@
         if (isset($_REQUEST['comite']) && isset($_REQUEST['diretores'])){
             $arrayComite = explode(",",$_REQUEST['comite']);
             
-            /**$orgao =$arrayComite[0];
+            $orgao =$arrayComite[0];
             $tema = $arrayComite[1];
             $desc = $arrayComite[2];
             $blog = $arrayComite[3];
@@ -29,12 +29,10 @@
             echo $desc;
             echo $blog;
 
-            $arrayDiretores = explode($_REQUEST['diretores']);
+            /**$arrayDiretores = explode($_REQUEST['diretores']);
 
             echo $arrayDiretores[0];
             echo $arrayDiretores[2];**/
-
-            echo count($arrayComite);
             
             /**if(empty($orgao) || empty($tema) || empty($desc) || empty($blog)){
                 echo  "<script>alert('Existem campos vazios!');</script>";
