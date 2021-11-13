@@ -68,7 +68,7 @@
                     
                     $senha = $nome_comite ."." .strval(rand(0, 9)) .strval(rand(0, 9)) .strval(rand(0, 9));
 
-                    $sql5 = "UPDATE TABLE diretor SET login = '$login', senha = '$senha' WHERE id = $id_dir;";
+                    $sql5 = "UPDATE diretor SET login = '$login', senha = '$senha' WHERE id = $id_dir;";
                     $result5 = pg_query($conn, $sql5);
 
                 }
@@ -88,7 +88,7 @@
                     
                     $senha = $nome_comite ."." .strval(rand(0, 9)) .strval(rand(0, 9)) .strval(rand(0, 9));
 
-                    $sql5 = "UPDATE TABLE diretor SET login = '$login', senha = '$senha' WHERE id = $id_dir;";
+                    $sql5 = "UPDATE diretor SET login = '$login', senha = '$senha' WHERE id = $id_dir;";
                     $result5 = pg_query($conn, $sql5);
                 }
                 echo "comite criado com sucesso.";
