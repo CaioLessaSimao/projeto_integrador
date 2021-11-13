@@ -34,7 +34,7 @@
             echo $arrayDiretores[0];
             echo $arrayDiretores[2];**/
 
-            echo count($arrayDiretores);
+            echo count($arrayComite);
             
             /**if(empty($orgao) || empty($tema) || empty($desc) || empty($blog)){
                 echo  "<script>alert('Existem campos vazios!');</script>";
