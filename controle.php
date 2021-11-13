@@ -45,8 +45,8 @@
             
             $comite = pg_fetch_array($result2);
 
-            header("Location: add_diretor.php?idcomite=$comite[0]");
-        }**/
+            header("Location: add_diretor.php?idcomite=$comite[0]");**/
+        }
     } 
     /**else if ($oper == "inserir_diretor") {
         $nome = "";
