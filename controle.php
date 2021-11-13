@@ -14,9 +14,10 @@
         $blog = "a";
         $logo = "test";
         $arrayComite;
+        $arrayDiretores;
 
-        if (isset($_REQUEST['comite'])){
-            $arrayComite = $_REQUEST['comite'];
+        if (isset($_REQUEST['comite']) && isset($_REQUEST['diretores'])){
+            $arrayComite = explode(",",$_REQUEST['comite']);
             
             $orgao =$arrayComite[0];
             $tema = $arrayComite[2];
@@ -27,6 +28,11 @@
             echo $tema;
             echo $desc;
             echo $blog;
+
+            $arrayDiretores = explode($_REQUEST['diretores']);
+
+            echo $arrayDiretores[0];
+            echo $arrayDiretores[2];
             
             /**if(empty($orgao) || empty($tema) || empty($desc) || empty($blog)){
                 echo  "<script>alert('Existem campos vazios!');</script>";
@@ -48,7 +54,10 @@
             
             $comite = pg_fetch_array($result2);
 
-            header("Location: add_diretor.php?idcomite=$comite[0]");**/
+            $id_comite = $comite[0];**/
+
+            
+
         }
     } 
     /**else if ($oper == "inserir_diretor") {
