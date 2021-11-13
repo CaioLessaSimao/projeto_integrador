@@ -53,8 +53,7 @@
                 $nome_dir = $arrayDiretores[$i];
                 $email_dir = $arrayDiretores[$i + 1];
                 $cargo="";
-                echo $nome_dir . ", " . $email_dir ." - "; 
-                /**if($i == 0){
+                if($i == 0){
                     $cargo = "geral";
                     $sql3 = "INSERT INTO diretor (nome, email, login, senha,cargo, fk_comite_id) values ('$nome_dir', '$email_dir', 'to_be_defined', 'to_be_defined', '$cargo', $id_comite);";
                     $result3 = pg_query($conn, $sql1);
@@ -91,7 +90,8 @@
 
                     $sql5 = "UPDATE TABLE diretor SET login = '$login', senha = '$senha' WHERE id = $id_dir;";
                     $result5 = pg_query($conn, $sql5);
-                }**/
+                }
+                echo "comite criado com sucesso.";
             }
         }  
     } 
