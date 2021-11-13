@@ -72,7 +72,7 @@
                     
                     $senha = $nome_comite ."." .strval(rand(0, 9)) .strval(rand(0, 9)) .strval(rand(0, 9));
 
-                    $sql5 = "UPDATE TABLE SET login = '$login', senha = '$senha' WHERE id = $id_dir;";
+                    $sql5 = "UPDATE TABLE diretor SET login = '$login', senha = '$senha' WHERE id = $id_dir;";
                     $result5 = pg_query($conn, $sql5);
 
                 }
@@ -80,7 +80,7 @@
                 else{
                     $cargo = "assistente";
                     $sql3 = "INSERT INTO diretor (nome, email, login, senha,cargo, fk_comite_id) values ('$nome_dir', '$email_dir', 'to_be_defined', 'to_be_defined', '$cargo', $id_comite);";
-                    $result3 = pg_query($conn, $sql1);
+                    $result3 = pg_query($conn, $sql3);
                     
                     $sql4 = "SELECT id FROM diretor ORDER BY id DESC limit 1";
                     $result4 = pg_query($conn, $sql4);
@@ -92,9 +92,10 @@
                     
                     $senha = $nome_comite ."." .strval(rand(0, 9)) .strval(rand(0, 9)) .strval(rand(0, 9));
 
-                    $sql5 = "UPDATE TABLE SET login = '$login', senha = '$senha' WHERE id = $id_dir;";
+                    $sql5 = "UPDATE TABLE diretor SET login = '$login', senha = '$senha' WHERE id = $id_dir;";
                     $result5 = pg_query($conn, $sql5);
                 }
+            }
 
 
             }
