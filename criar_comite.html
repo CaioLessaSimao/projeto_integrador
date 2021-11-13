@@ -156,14 +156,13 @@
             comite.push(document.getElementById("desc").value);
             comite.push(document.getElementById("blog").value);
 
-
-            document.getElementById("dir_nome").value = "";
-            document.getElementById("dir_email").value = "";
-
             var dirG = [];
             dirG.push(document.getElementById("dir_nome").value);
             dirG.push(document.getElementById("dir_email").value);
             dirs_mtz.push(dirG);
+
+            document.getElementById("dir_nome").value = "";
+            document.getElementById("dir_email").value = "";
 
             document.getElementById("title").innerHTML = "<h4>Cadastrar diretor assistente</h4>";
             document.getElementById("fin").style.display = "block";
@@ -188,7 +187,7 @@
             console.log(dirs_mtz);
             console.log(comite);
 
-            window.location.href = "controle.php?diretores="+dirs_mtz+"comite="+comite;
+            window.location.href = "controle.php?diretores="+dirs_mtz+"comite="+comite+"funcao=inserir_comite";
            
         }
 
