@@ -90,9 +90,9 @@
 
                     $sql5 = "UPDATE diretor SET login = '$login', senha = '$senha' WHERE id = $id_dir;";
                     $result5 = pg_query($conn, $sql5);
-                }
-                echo "comite criado com sucesso.";
+                } 
             }
+            header("Location: add_delegacao.html");
         }  
     } 
     /**else if ($oper == "inserir_diretor") {
