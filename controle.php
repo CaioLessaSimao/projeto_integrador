@@ -23,11 +23,7 @@
             $tema = $arrayComite[1];
             $desc = $arrayComite[2];
             $blog = $arrayComite[3];
-
-
-            $arrayDiretores = explode($_REQUEST['diretores']);
-
-            
+    
             if(empty($orgao) || empty($tema) || empty($desc) || empty($blog)){
                 echo  "<script>alert('Existem campos vazios!');</script>";
                 header("Location: criar_comite.html");
@@ -49,9 +45,9 @@
             $comite = pg_fetch_array($result2);
 
             $id_comite = (int)$comite[0];
-            $nome_comite = $comit[1];
+            $nome_comite = $comite[1];
             
-            $arrayDiretores = explode($_REQUEST['diretores']);
+            $arrayDiretores = explode(",", $_REQUEST['diretores']);
             echo $arrayDiretores[0];
             
             /**for($i = 0; $i <count($arrayDiretores) - 2; $i += 2){
