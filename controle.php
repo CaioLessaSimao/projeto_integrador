@@ -24,17 +24,11 @@
             $desc = $arrayComite[2];
             $blog = $arrayComite[3];
 
-            echo $orgao;
-            echo $tema;
-            echo $desc;
-            echo $blog;
 
-            /**$arrayDiretores = explode($_REQUEST['diretores']);
+            $arrayDiretores = explode($_REQUEST['diretores']);
 
-            echo $arrayDiretores[0];
-            echo $arrayDiretores[2];**/
             
-            /**if(empty($orgao) || empty($tema) || empty($desc) || empty($blog)){
+            if(empty($orgao) || empty($tema) || empty($desc) || empty($blog)){
                 echo  "<script>alert('Existem campos vazios!');</script>";
                 header("Location: criar_comite.html");
             
@@ -48,13 +42,62 @@
             
             $result = pg_query($conn, $sql);
             
-            $sql2 = "SELECT id FROM comite WHERE tema = '$tema';";
+            $sql2 = "SELECT id, nome FROM comite WHERE tema = '$tema';";
 
             $result2 = pg_query($conn, $sql2);
             
             $comite = pg_fetch_array($result2);
 
-            $id_comite = $comite[0];**/
+            $id_comite = (int)$comite[0];
+            $nome_comite = $comit[1];
+            
+            $arrayDiretores = explode($_REQUEST['diretores']);
+            
+            for($i = 0; $i <count($arrayDiretores) - 2; $i += 2){
+                $nome_dir = $arrayDiretores[$i];
+                $email_dir = $arrayDiretores[$i + 1];
+                $cargo="";
+                if($i == 0){
+                    $cargo = "geral";
+                    $sql3 = "INSERT INTO diretor (nome, email, login, senha,cargo, fk_comite_id) values ('$nome_dir', '$email_dir', 'to_be_defined', 'to_be_defined', '$cargo', $id_comite);";
+                    $result3 = pg_query($conn, $sql1);
+                    
+                    $sql4 = "SELECT id FROM diretor ORDER BY id DESC limit 1";
+                    $result4 = pg_query($conn, $sql4);
+                    
+                    $dir = pg_fetch_array($result4);
+                    $id_dir = $dir[0];
+                    
+                    $login = $nome_comite.".dir.".$id_dir;
+                    
+                    $senha = $nome_comite ."." .strval(rand(0, 9)) .strval(rand(0, 9)) .strval(rand(0, 9));
+
+                    $sql5 = "UPDATE TABLE SET login = '$login', senha = '$senha' WHERE id = $id_dir;";
+                    $result5 = pg_query($conn, $sql5);
+
+                }
+
+                else{
+                    $cargo = "assistente";
+                    $sql3 = "INSERT INTO diretor (nome, email, login, senha,cargo, fk_comite_id) values ('$nome_dir', '$email_dir', 'to_be_defined', 'to_be_defined', '$cargo', $id_comite);";
+                    $result3 = pg_query($conn, $sql1);
+                    
+                    $sql4 = "SELECT id FROM diretor ORDER BY id DESC limit 1";
+                    $result4 = pg_query($conn, $sql4);
+                    
+                    $dir = pg_fetch_array($result4);
+                    $id_dir = $dir[0];
+                    
+                    $login = $nome_comite.".dir.".$id_dir;
+                    
+                    $senha = $nome_comite ."." .strval(rand(0, 9)) .strval(rand(0, 9)) .strval(rand(0, 9));
+
+                    $sql5 = "UPDATE TABLE SET login = '$login', senha = '$senha' WHERE id = $id_dir;";
+                    $result5 = pg_query($conn, $sql5);
+                }
+
+
+            }
 
             
 
