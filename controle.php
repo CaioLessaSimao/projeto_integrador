@@ -19,11 +19,14 @@
             $arrayComite = $_REQUEST['comite'];
             
             $orgao =$arrayComite[0];
-            $tema = $arrayComite[1];
-            $desc = $arrayComite[2];
-            $blog = $arrayComite[3];
+            $tema = $arrayComite[2];
+            $desc = $arrayComite[4];
+            $blog = $arrayComite[6];
 
-            echo "$blog";
+            echo $orgao;
+            echo $tema;
+            echo $desc;
+            echo $blog;
             
             /**if(empty($orgao) || empty($tema) || empty($desc) || empty($blog)){
                 echo  "<script>alert('Existem campos vazios!');</script>";
