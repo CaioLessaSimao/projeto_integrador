@@ -49,7 +49,7 @@
             
             $arrayDiretores = explode(",", $_REQUEST['diretores']);
             
-            for($i = 0; $i <count($arrayDiretores) - 2; $i += 2){
+            for($i = 0; $i <count($arrayDiretores) - 1; $i += 2){
                 $nome_dir = $arrayDiretores[$i];
                 $email_dir = $arrayDiretores[$i + 1];
                 $cargo="";
