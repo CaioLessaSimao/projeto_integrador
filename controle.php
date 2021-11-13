@@ -1,6 +1,10 @@
 <?php
 	require_once  "connection.php";
     
+    echo "<script><link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css'></script>";
+
+    echo "<script src='https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js'></script>";
+
     $oper = $_REQUEST['funcao'];
 
     if($oper == "criar_comite"){
@@ -92,6 +96,7 @@
                     $result5 = pg_query($conn, $sql5);
                 } 
             }
+            echo "<script>M.toast({html: 'Cadastro realizado'})</script>";
             header("Location: add_delegacao.html");
         }  
     } 
