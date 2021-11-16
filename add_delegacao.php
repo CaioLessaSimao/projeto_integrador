@@ -93,12 +93,12 @@
 
         <div class="row">
             
-        <form class="col s12" action="controle.php?<?php echo $idcomite1;?>"method="POST">  
+        <form class="col s12" action="controle.php?idcomite=<?php echo $idcomite1;?>"method="POST">  
                   
                 
             <div class="input-field col s12">
-                <input id="nome1" type="text" class="validate" >
-				<label for="nome1"> Insira o nome da delegação</label>
+                <input name="nome" type="text" class="validate" >
+				<label for="nome"> Insira o nome da delegação</label>
             </div>
                 
             <div class="input-field col s12">
