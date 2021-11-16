@@ -93,8 +93,8 @@
                     
                 } 
             }
-            echo  "<script>alert('Cadastro realizado com sucesso!');</script>";
-            header("Location: add_delegacao.php");
+            $idc = strval($id_comite);
+            header("Location: add_delegacao.php?idcomite=$idc");
         }  
     } 
 

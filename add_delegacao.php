@@ -91,7 +91,7 @@
 
         <div class="row">
             
-        <form class="col s12">  
+        <form class="col s12" action="controle.php" method="POST">  
                   
                 
             <div class="input-field col s12">
@@ -106,7 +106,7 @@
             
             <button class="btn" type = "button" onclick="adicionar()">Adicionar</button> 
             <input type="hidden" name="funcao"  valeu="add_del"></input>
-            <input type="submit" name="btn_add_del" value="adicionar_delegacao" class="btn"></input>  
+            <input type="submit" name="btn_add_del" value="adicionar delegação" class="btn"></input>  
         
         </form>
         </div>   
