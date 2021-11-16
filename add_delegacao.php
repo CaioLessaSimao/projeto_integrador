@@ -68,7 +68,9 @@
 
         </script>
         
-
+        <?php 
+            $idcomite1 = $_REQUEST['idcomite'];
+        ?>
 	</head>
 	
 		
@@ -91,7 +93,7 @@
 
         <div class="row">
             
-        <form class="col s12" action="controle.php" method="POST">  
+        <form class="col s12" action="controle.php?<?php echo $idcomite1;?>"method="POST">  
                   
                 
             <div class="input-field col s12">
