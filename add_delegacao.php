@@ -102,8 +102,13 @@
             </div>
                 
             <div class="input-field col s12">
-                <input id="sigla" type="text" class="validate">
+                <input name="sigla" type="text" class="validate">
 				<label for="sigla"> Insira a sigla da delegação</label>
+            </div>
+
+            <div class="input-field col s12">
+                <input name="email" type="text" class="validate">
+                <label for="email"> Insira o email do delegado</label>
             </div>
             
             <button class="btn" type = "button" onclick="adicionar()">Adicionar</button> 
