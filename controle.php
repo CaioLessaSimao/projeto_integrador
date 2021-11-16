@@ -74,13 +74,13 @@
                 $cargo="";
                 if($i == 0){
                     $cargo = "geral";
-                    insertDir($nome_dir, $email_dir, $cargo, $id_comite, $nome_comite);
+                    $aux = insertDir($nome_dir, $email_dir, $cargo, $id_comite, $nome_comite);
 
                 }
 
                 else{
                     $cargo = "assistente";
-                    insertDir($nome_dir, $email_dir, $cargo, $id_comite, $nome_comite);
+                    $aux2 = insertDir($nome_dir, $email_dir, $cargo, $id_comite, $nome_comite);
                     
                 } 
             }
