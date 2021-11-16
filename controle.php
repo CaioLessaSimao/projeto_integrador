@@ -16,6 +16,7 @@
 
         $sql5 = "UPDATE diretor SET login = '$login', senha = '$senha' WHERE id = $id_dir;";
         $result5 = pg_query($conn, $sql5);
+        return;    
     }
 	require_once  "connection.php";
 
