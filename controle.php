@@ -98,5 +98,36 @@
         }  
     } 
 
+    if($oper == "add_del"){
+        
+        if (isset($_REQUEST['id_comite'])){
+
+            $id_comite_del = $_REQUEST['idcomite1'];
+            $nome = $_REQUEST['nome'];
+            $sigla = $_REQUEST['sigla'];
+            $email = $_REQUEST['email'];
+
+            if(empty($nome) || empty($sigla) || empty($email)){
+                echo  "<script>alert('Existem campos vazios!');</script>";
+                header("Location: criar_comite.html");
+            
+            }
+            else if(ctype_space($nome) || ctype_space($sigla) || ctype_space($email)){
+                echo  "<script>alert('Os campos não podem ficar em branco!');</script>";
+                header("Location: criar_comite.html");
+            }
+
+            $aux = int($_REQUEST['id_comite']);
+
+
+            $sql6 = "SELECT nome FROM comite WHERE id=$aux";
+            $result6 = pg_query($conn, $sql6);
+
+            $login_del = $result6.".".$sigla;
+            $senha_del = $sigla.strval(rand(0, 9)) .strval(rand(0, 9)) .strval(rand(0, 9));
+
+            $sql3 = "INSERT INTO delegacao (nome, email, login, senha, DPO, fk_comite_id) values ('$nome', '$email', '$login_del', '$senha_del', 'to_be_defined',$aux);";
+
+    }
 
 ?>
