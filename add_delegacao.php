@@ -106,7 +106,7 @@
             
             <button class="btn" type = "button" onclick="adicionar()">Adicionar</button> 
             <input type="hidden" name="funcao"  valeu="add_del"></input>
-            <input type="submit" name="btn_add_del" value="adicionar_delegacao">Finalizar</input>  
+            <input type="submit" name="btn_add_del" value="adicionar_delegacao" class="btn"></input>  
         
         </form>
         </div>   
