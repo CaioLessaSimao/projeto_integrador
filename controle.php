@@ -117,7 +117,7 @@
 
             $nome = $aux2[0];
 
-            for($i = 0; $i <count($arrayDelegacoes) - 1; $i += 3){
+            for($i = 0; $i <count($arrayDelegacoes) - 2; $i += 3){
                 $sigla = $arrayDelegacoes[i];
                 $nome = $arrayDelegacoes[i+1];
                 $emai = $arrayDelegacoes[i+2];
