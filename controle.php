@@ -101,8 +101,10 @@
     if($oper == "add_del"){
         
         if(isset($_REQUEST['delegacoes']) && isset($_REQUEST['comite'])){
-            $arrayDelegacoes = explode(",",$_REQUEST['delegacoes']);
+            echo $_REQUEST['delegacoes'];
             /*
+            $arrayDelegacoes = explode(",",$_REQUEST['delegacoes']);
+            
             $aux = int($_REQUEST['comite']);
             
             $sql6 = "SELECT nome FROM comite WHERE id=$aux";
