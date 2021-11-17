@@ -106,7 +106,7 @@
             $arrayDelegacoes = explode(",",$_REQUEST['delegacoes']);
             
             echo $arrayDelegacoes;
-            /*
+            
             $aux = int($_REQUEST['comite']);
             
             $sql6 = "SELECT nome FROM comite WHERE id=$aux";
@@ -116,7 +116,7 @@
             $aux2 = pg_fetch_array($result6);
 
             $nome = $aux2[0];
-
+            /*
             for($i = 0; $i <count($arrayDelegacoes) - 1; $i += 3){
                 $sigla = $arrayDelegacoes[i];
                 $nome = $arrayDelegacoes[i+1];
