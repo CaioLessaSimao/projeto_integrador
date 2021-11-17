@@ -103,7 +103,7 @@
             $arrayDelegacoes = explode(",",$_REQUEST['delegacoes']);
 
             $aux = int($_REQUEST['comite']);
-
+            /*
             $sql6 = "SELECT nome FROM comite WHERE id=$aux";
 
             $result6 = pg_query($conn,$sql6);
@@ -125,7 +125,7 @@
             }
             header("Location: final.php");
         }
-        
+        */
 
     }
 
