@@ -102,9 +102,11 @@
         
         if(isset($_REQUEST['delegacoes']) && isset($_REQUEST['comite'])){
             echo $_REQUEST['delegacoes'];
-            /*
+            
             $arrayDelegacoes = explode(",",$_REQUEST['delegacoes']);
             
+            echo $arrayDelegacoes;
+            /*
             $aux = int($_REQUEST['comite']);
             
             $sql6 = "SELECT nome FROM comite WHERE id=$aux";
