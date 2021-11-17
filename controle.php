@@ -97,37 +97,36 @@
             header("Location: add_delegacao.php?idcomite=$idc");
         }  
     } 
-/*
+
     if($oper == "add_del"){
-        
-        if (isset($_REQUEST['id_comite'])){
+        if(isset($_REQUEST['delegacoes']) && isset($_REQUEST['comite'])){
+            $arrayDelegacoes = explode(",",$_REQUEST['delegacoes']);
 
-            $id_comite_del = $_REQUEST['idcomite1'];
-            $nome = $_REQUEST['nome'];
-            $sigla = $_REQUEST['sigla'];
-            $email = $_REQUEST['email'];
-
-            if(empty($nome) || empty($sigla) || empty($email)){
-                echo  "<script>alert('Existem campos vazios!');</script>";
-                header("Location: criar_comite.html");
-            
-            }
-            else if(ctype_space($nome) || ctype_space($sigla) || ctype_space($email)){
-                echo  "<script>alert('Os campos não podem ficar em branco!');</script>";
-                header("Location: criar_comite.html");
-            }
-
-            $aux = int($_REQUEST['id_comite']);
-
+            $aux = int($_REQUEST['comite']);
 
             $sql6 = "SELECT nome FROM comite WHERE id=$aux";
-            $result6 = pg_query($conn, $sql6);
 
-            $login_del = $result6.".".$sigla;
-            $senha_del = $sigla.strval(rand(0, 9)) .strval(rand(0, 9)) .strval(rand(0, 9));
+            $result6 = pg_query($conn,$sql6);
 
-            $sql3 = "INSERT INTO delegacao (nome, email, login, senha, DPO, fk_comite_id) values ('$nome', '$email', '$login_del', '$senha_del', 'to_be_defined',$aux);";
+            $aux2 = pg_fetch_array($result6);
+
+            $nome = $aux2[0];
+
+            for($i = 0; $i <count($arrayDelegacoes) - 1; $i += 3){
+                $sigla = $arrayDelegacoes[i];
+                $nome = $arrayDelegacoes[i+1];
+                $emai = $arrayDelegacoes[i+2];
+
+                $login = $nome.".".$sigla;
+                $senha = $sigla.".".strval(rand(0, 9)) .strval(rand(0, 9)) .strval(rand(0, 9));
+
+                $sql7 = "INSERT INTO delegacao(nome,email,DPO,fk_comite_id,login,senha) values '$nome','$email','to_be_defined',$aux,'$login','$senha';";
+                $result7 = pg_query($conn,$sql7);
+            }
+            header("Location: final.php");
+        }
+        
 
     }
-*/
+
 ?>
