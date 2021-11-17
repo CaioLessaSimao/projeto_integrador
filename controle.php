@@ -127,8 +127,9 @@
                 $result7 = pg_query($conn,$sql7);
             }
             header("Location: final.php");
-        }
         */
+        }
+
 
     }
 
