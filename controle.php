@@ -97,7 +97,7 @@
             header("Location: add_delegacao.php?idcomite=$idc");
         }  
     } 
-
+/*
     if($oper == "add_del"){
         
         if (isset($_REQUEST['id_comite'])){
@@ -129,5 +129,5 @@
             $sql3 = "INSERT INTO delegacao (nome, email, login, senha, DPO, fk_comite_id) values ('$nome', '$email', '$login_del', '$senha_del', 'to_be_defined',$aux);";
 
     }
-
+*/
 ?>
