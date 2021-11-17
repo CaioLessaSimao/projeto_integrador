@@ -125,8 +125,6 @@
 
                 $sql7 = "INSERT INTO delegacao(nome,email,DPO,fk_comite_id,login,senha) values '$nome','$email','to_be_defined',$aux,'$login','$senha';";
                 $result7 = pg_query($conn,$sql7);
-
-                echo "teste";
             }
             header("Location: final.php");
         }
