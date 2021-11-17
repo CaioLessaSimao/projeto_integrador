@@ -28,29 +28,40 @@
         <script>
 
             /* Armazenando as delegaçoes e os nomes pra exibir */
+            var tbdelegacoes = [];
+
             var delegacoes = [];
 
             /* Função que adiciona as delegações no array, que em si é um array de arrays que contem o nome e a sigla*/
             function adicionar(){
                 
+                var delegacao = [];
                 
                 var nome = document.getElementById("nome").value;
                 var sigla = document.getElementById("sigla").value;
+                var email = document.getElementById("email").value;
+
+                delegacao.push(sigla);
+                delegacao.push(nome);
+                delegacao.push(email);
+
+                delegacoes.push(delegacao);
 
                 document.getElementById("nome").value = "";
                 document.getElementById("sigla").value = "";
+                document.getElementById("email").value = "";
 
                 console.log(nome);
                 console.log(sigla);
 
-                var linha = new create_item(nome,sigla);
+                var linha = new create_item(nome,sigla,email);
 
-                delegacoes.push(linha);
+                tbdelegacoes.push(linha);
                 var resultado = "";
                 
                 
-                for(var i of delegacoes){
-                    console.log(delegacoes[0].nome);    
+                for(var i of tbdelegacoes){
+                    console.log(tbdelegacoes[0].nome);    
                     resultado += i.html;
                     console.log(i.html);
                 }
@@ -59,18 +70,19 @@
 
             }
             
-            function create_item(nome,sigla){
+            function create_item(nome,sigla,email){
                 this.nome = nome;
                 this.sigla = sigla;
-                var string = "<tr><td>"+sigla+"</td><td>"+nome+"</td></tr>";
+                this.email = email;
+                var string = "<tr><td>"+sigla+"</td><td>"+nome+"</td><td>"+email+"</td></tr>";
                 this.html = string;
-        }           
+            } 
+
+            function finalizar(){
+                window.location.href = "controle.php?delegacoes="+delegacoes+"&comite="+<?php echo $_REQUEST['idcomite'];?>+"&funcao=add_del";
+            }          
 
         </script>
-        
-        <?php 
-            $idcomite1 = $_REQUEST['idcomite'];
-        ?>
 	</head>
 	
 		
@@ -93,27 +105,26 @@
 
         <div class="row">
             
-        <form class="col s12" action="controle.php?idcomite=<?php echo $idcomite1;?>"method="POST">  
+        <form class="col s12">  
                   
                 
             <div class="input-field col s12">
-                <input name="nome" type="text" class="validate" >
+                <input id="nome" type="text" class="validate" >
 				<label for="nome"> Insira o nome da delegação</label>
             </div>
                 
             <div class="input-field col s12">
-                <input name="sigla" type="text" class="validate">
+                <input id="sigla" type="text" class="validate">
 				<label for="sigla"> Insira a sigla da delegação</label>
             </div>
 
             <div class="input-field col s12">
-                <input name="email" type="text" class="validate">
+                <input id="email" type="text" class="validate">
                 <label for="email"> Insira o email do delegado</label>
             </div>
             
-            <button class="btn" type = "button" onclick="adicionar()">Adicionar</button> 
-            <input type="hidden" name="funcao"  valeu="add_del"></input>
-            <input type="submit" name="btn_add_del" value="adicionar delegação" class="btn"></input>  
+            <button class = "btn" type = "button" onclick="adicionar()">Adicionar</button> 
+            <button class = "btn" type = "button" onclick="finalizar()">Finalizar</button> 
         
         </form>
         </div>   
@@ -135,6 +146,6 @@
 
 	</body>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js">
-    <?php echo "funcionou"; ?>
+    
 </script>
 </html>
