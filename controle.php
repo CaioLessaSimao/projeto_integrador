@@ -116,7 +116,7 @@
             $aux2 = pg_fetch_array($result6);
 
             $nome = $aux2[0];
-            /*
+
             for($i = 0; $i <count($arrayDelegacoes) - 1; $i += 3){
                 $sigla = $arrayDelegacoes[i];
                 $nome = $arrayDelegacoes[i+1];
@@ -129,7 +129,6 @@
                 $result7 = pg_query($conn,$sql7);
             }
             header("Location: final.php");
-        */
         }
 
 
