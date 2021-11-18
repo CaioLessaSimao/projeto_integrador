@@ -111,9 +111,9 @@
             $sql6 = "SELECT nome FROM comite WHERE id=$aux";
             
             $result6 = pg_query($conn,$sql6);
-            /*
-            $aux2 = pg_fetch_array($result6);
 
+            $aux2 = pg_fetch_array($result6);
+            /*
             $nome = $aux2[0];
 
             $sigla = "";
