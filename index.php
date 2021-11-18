@@ -49,7 +49,7 @@
 	<?php 
 	$final = $_REQUEST['final'];
 	if($final == "1"){
-		echo  "<script>alert('Cadastro realizado com sucesso!');</script>";
+		echo  "<script>M.toast({html: 'I am a toast!'});</script>";
 	}
 
 	?>
