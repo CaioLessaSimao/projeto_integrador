@@ -101,14 +101,13 @@
 
 
     if($oper == "add_del"){
-        
-        $arrayDelegacoes = "";
 
         if(isset($_REQUEST['delegacoes']) && isset($_REQUEST['comite'])){
             
             $arrayDelegacoes = explode(",",$_REQUEST['delegacoes']);
             
-            
+            echo $arrayDelegacoes;
+            /*
             $aux = int($_REQUEST['comite']);
             
             $sql6 = "SELECT nome FROM comite WHERE id=$aux";
@@ -136,7 +135,7 @@
                 $sql7 = "INSERT INTO delegacao(nome,email,DPO,fk_comite_id,login,senha) values '$nome','$email','to_be_defined',$aux,'$login','$senha';";
                 $result7 = pg_query($conn,$sql7);
             }
-            
+            */
             header("Location: final.php");
         }
 
