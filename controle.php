@@ -106,9 +106,9 @@
             
             $arrayDelegacoes = explode(",",$_REQUEST['delegacoes']);
             
-            /*
-            $aux = int($_REQUEST['comite']);
             
+            $aux = int($_REQUEST['comite']);
+            /*
             $sql6 = "SELECT nome FROM comite WHERE id=$aux";
 
             $result6 = pg_query($conn,$sql6);
@@ -134,8 +134,9 @@
                 $sql7 = "INSERT INTO delegacao(nome,email,DPO,fk_comite_id,login,senha) values '$nome','$email','to_be_defined',$aux,'$login','$senha';";
                 $result7 = pg_query($conn,$sql7);
             }
-            */
+            
             header("Location: final.php");
+            */
         }
 
 
