@@ -106,7 +106,6 @@
             
             $arrayDelegacoes = explode(",",$_REQUEST['delegacoes']);
             
-            echo $arrayDelegacoes;
             /*
             $aux = int($_REQUEST['comite']);
             
