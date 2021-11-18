@@ -134,7 +134,7 @@
                 $login = $nome.".".$sigla;
                 $senha = $sigla.".".strval(rand(0, 9)) .strval(rand(0, 9)) .strval(rand(0, 9));
 
-                $sql7 = "INSERT INTO delegacao(nome,email,DPO,fk_comite_id,login,senha) values '$nome','$email','to_be_defined',$aux,'$login','$senha';";
+                $sql7 = "INSERT INTO delegacao(nome,email,DPO,fk_comite_id,login,senha) values ('$nome','$email','to_be_defined',$aux,'$login','$senha');";
                 $result7 = pg_query($conn,$sql7);
                 
             }
