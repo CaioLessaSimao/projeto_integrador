@@ -115,7 +115,7 @@
             $aux2 = pg_fetch_array($result6);
 
             $nome = $aux2[0];
-            /*
+
             $sigla = "";
             $nome = "";
             $email = "";
@@ -133,7 +133,7 @@
                 $sql7 = "INSERT INTO delegacao(nome,email,DPO,fk_comite_id,login,senha) values '$nome','$email','to_be_defined',$aux,'$login','$senha';";
                 $result7 = pg_query($conn,$sql7);
             }
-            
+            /*
             header("Location: final.php");
             */
         }
