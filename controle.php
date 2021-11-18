@@ -126,10 +126,6 @@
                 $sigla = $arrayDelegacoes[$i];
                 $nome = $arrayDelegacoes[$i+1];
                 $email = $arrayDelegacoes[$i+2];
-                
-                echo $sigla;
-                echo $nome;
-                echo $emai;
 
                 $login = $nome.".".$sigla;
                 $senha = $sigla.".".strval(rand(0, 9)) .strval(rand(0, 9)) .strval(rand(0, 9));
@@ -138,9 +134,7 @@
                 $result7 = pg_query($conn,$sql7);
                 
             }
-            /*
-            header("Location: final.php");
-            */
+            header("Location: index.php?final=1");
         }
 
 
