@@ -49,7 +49,7 @@
 	<?php 
 	$final = $_REQUEST['final'];
 	if($final == "1"){
-		echo  "<script>M.toast({html: 'I am a toast!'});</script>";
+		echo  "<script>alert('Os campos não podem ficar em branco!');</script>";
 	}
 
 	?>
