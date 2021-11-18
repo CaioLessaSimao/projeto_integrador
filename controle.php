@@ -98,11 +98,12 @@
         }  
     } 
 
-    echo phpinfo();
 
-/*
+
     if($oper == "add_del"){
         
+        $arrayDelegacoes = "";
+
         if(isset($_REQUEST['delegacoes']) && isset($_REQUEST['comite'])){
             
             $arrayDelegacoes = explode(",",$_REQUEST['delegacoes']);
@@ -117,6 +118,12 @@
             $aux2 = pg_fetch_array($result6);
 
             $nome = $aux2[0];
+
+            $sigla = "";
+            $nome = "";
+            $email = "";
+            $login = "";
+            $senha = "";
             
             for($i = 0; $i <count($arrayDelegacoes) - 2; $i += 3){
                 $sigla = $arrayDelegacoes[i];
@@ -135,5 +142,5 @@
 
 
     }
-*/
+
 ?>
