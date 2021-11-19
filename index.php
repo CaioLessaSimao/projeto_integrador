@@ -45,6 +45,39 @@
 			document.getElementById(login).style.display = "none";
 			document.body.style.backgroundColor = "white";
 		}
+
+		function validar_dir(){
+			<?php 
+				if(isset($_REQUEST['dir_usuario']) && isset($_REQUEST['dir_senha'])){
+            		$login = $_REQUEST['dir_usuario'];
+            
+            		$senha = $_REQUEST['dir_senha'];
+            
+		            $sql8 = "SELECT login,senha FROM diretor"; 
+
+		            $result8 = pg_query($conn,$sql8);
+
+		            $array = pg_fetch_array($result8);
+
+		            echo $array[0];
+
+		            for($i=0;$i<count($array)-1;$i+=2){
+		                $loginbd = $array[$i];
+
+		                $senhabd = $array[$i+1];
+
+		                if($login == $loginbd && $senha == $senhabd){
+		                    header("Location: pag_comite.php");
+		                }
+		            }
+		        }
+		    ?>
+		}
+
+
+
+
+
 	</script>
 	<?php 
 	$final = $_REQUEST['final'];
@@ -88,7 +121,7 @@
 			</div>
 			
 			<div id="login_diretor" class="row">
-				<form class="col s12" action = "controle.php" method = "POST">	
+				<form class="col s12">	
 					<h4 class="titulo">Logar como diretor</h4>
 				
 				
@@ -103,9 +136,10 @@
         		</div>
         		
         		<input type = "hidden" name = "funcao" value = "logar_dir">
-        		<button id = "botao" class = "btn waves-effect waves-light col s3 right green accent-3" type = "submit">Entrar</button>
-        	</form>
+        		<button id = "botao" class = "btn waves-effect waves-light col s3 right green accent-3" onclick="validar_dir()">Entrar</button>
         		<button id = "butn" class = "btn waves-effect waves-light col s3 top-right green accent-3" onclick = "closeDiv('login_diretor')">Cancelar</button>
+        	</form>
+        		
         	</div>
 
         	
