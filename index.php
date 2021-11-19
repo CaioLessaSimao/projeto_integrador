@@ -75,9 +75,10 @@
 		                }
 		            }
 
-		            echo "<script>alert('Login ou senha incorretos!');</script>";
+		            echo "<script></script>";
 		        }
 		    ?>
+		    alert('Login ou senha incorreto!');
 		}
 
 
