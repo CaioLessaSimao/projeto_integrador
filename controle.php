@@ -141,7 +141,24 @@
     }
 
     if($oper == "logar_dir"){
-        echo "teste";
+
+        if(isset($_REQUEST['dir_usuario']) && isset($_REQUEST['dir_senha'])){
+            $login = $_REQUEST['dir_usuario'];
+            
+            $senha = $_REQUEST['dir_senha'];
+            
+            $sql8 = "SELECT login,senha FROM diretor"; 
+
+            $result8 = pg_query($conn,$sql8);
+
+            $array = pg_fetch_array($result8);
+
+            echo $array[0];
+        }
+
+
+
+        
     }
 
 ?>
