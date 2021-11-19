@@ -6,6 +6,7 @@
 	
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<?php require_once "connection.php";?>
 	
 	<style type="text/css">
 		.container {
@@ -67,9 +68,14 @@
 		                $senhabd = $array[$i+1];
 
 		                if($login == $loginbd && $senha == $senhabd){
-		                    header("Location: pag_comite.php");
+		                    $sql9 = "SELECT fk_comite_id FROM diretor WHERE login='$login'";
+		                    $result9 = pg_query($conn,$sql9);
+		                    $aux = strval($result9[0]);
+		                    header("Location: pag_comite.php?idcomite=$aux");
 		                }
 		            }
+
+		            echo "<script>alert('Login ou senha incorretos!');</script>";
 		        }
 		    ?>
 		}
