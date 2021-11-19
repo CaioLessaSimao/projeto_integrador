@@ -104,8 +104,8 @@
         		
         		<input type = "hidden" name = "funcao" value = "logar_dir">
         		<button id = "botao" class = "btn waves-effect waves-light col s3 right green accent-3" type = "submit">Entrar</button>
-        		<button id = "butn" class = "btn waves-effect waves-light col s3 top-right green accent-3" onclick = "closeDiv('login_diretor')">Cancelar</button>
         	</form>
+        		<button id = "butn" class = "btn waves-effect waves-light col s3 top-right green accent-3" onclick = "closeDiv('login_diretor')">Cancelar</button>
         	</div>
 
         	
