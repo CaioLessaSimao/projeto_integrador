@@ -127,7 +127,7 @@
 			</div>
 			
 			<div id="login_diretor" class="row">
-				<form class="col s12">	
+					
 					<h4 class="titulo">Logar como diretor</h4>
 				
 				
@@ -141,10 +141,9 @@
           			<label for="dir_senha">Senha</label>
         		</div>
         		
-        		<input type = "hidden" name = "funcao" value = "logar_dir">
         		<button id = "botao" class = "btn waves-effect waves-light col s3 right green accent-3" onclick="validar_dir()">Entrar</button>
         		<button id = "butn" class = "btn waves-effect waves-light col s3 top-right green accent-3" onclick = "closeDiv('login_diretor')">Cancelar</button>
-        	</form>
+        	
         		
         	</div>
 
