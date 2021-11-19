@@ -140,4 +140,8 @@
 
     }
 
+    if($oper == "logar_dir"){
+        echo "teste";
+    }
+
 ?>

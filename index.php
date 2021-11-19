@@ -93,18 +93,18 @@
 				
 				
 				<div class="input-field col s12">
-          			<input id="dir_usuario" type="text" class="validate">
+          			<input name="dir_usuario" type="text" class="validate">
           			<label for="dir_usuario">Usuário</label>
           		</div>
           		
           		<div class="input-field col s12">
-          			<input id="dir_senha" type="password" class="validate">
+          			<input name="dir_senha" type="password" class="validate">
           			<label for="dir_senha">Senha</label>
         		</div>
         		
-        		
-        		<button id="botao" class="btn waves-effect waves-light col s3 right green accent-3" type="submit">Entrar</button>
-        		<button id="botao" class="btn waves-effect waves-light col s3 top-right green accent-3" onclick="closeDiv('login_diretor')">Cancelar</button>
+        		<input type = "hidden" name = "funcao" value = "logar_dir">
+        		<button id = "botao" class = "btn waves-effect waves-light col s3 right green accent-3" type = "submit">Entrar</button>
+        		<button id = "botao" class = "btn waves-effect waves-light col s3 top-right green accent-3" onclick = "closeDiv('login_diretor')">Cancelar</button>
         	</form>
         	</div>
 
