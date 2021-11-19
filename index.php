@@ -74,11 +74,9 @@
 		                    header("Location: pag_comite.php?idcomite=$aux");
 		                }
 		            }
-
-		            echo "<script></script>";
 		        }
 		    ?>
-		    alert('Login ou senha incorreto!');
+		    alert('Login e/ou senha incorretos!');
 		}
 
 
