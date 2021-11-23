@@ -60,8 +60,6 @@
 
 		            $array = pg_fetch_array($result8);
 
-		            echo $array[0];
-		            /*
 		            for($i=0;$i<count($array)-1;$i+=2){
 		                $loginbd = $array[$i];
 
@@ -73,11 +71,10 @@
 		                    $aux = strval($result9[0]);
 		                    header("Location: pag_comite.php?idcomite=$aux");
 		                }
-		            }*/
+		            }
 		        }
 		    ?>
 		    alert('Login e/ou senha incorretos!');
-		    //console.log(<?php echo $array[0];?>)
 		}
 
 		function validar_del(){
