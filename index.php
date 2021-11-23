@@ -77,6 +77,7 @@
 		        }
 		    ?>
 		    //alert('Login e/ou senha incorretos!');
+		    console.log(<?php echo $array[0];?>)
 		}
 
 		function validar_del(){
