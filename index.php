@@ -79,6 +79,40 @@
 		    alert('Login e/ou senha incorretos!');
 		}
 
+		function validar_del(){
+			<?php 
+				if(isset($_REQUEST['del_usuario']) && isset($_REQUEST['del_senha'])){
+            		$login = $_REQUEST['del_usuario'];
+            
+            		$senha = $_REQUEST['del_senha'];
+            
+		            $sql10 = "SELECT login,senha FROM delegacao"; 
+
+		            $result10 = pg_query($conn,$sql10);
+
+		            $array = pg_fetch_array($result10);
+
+		            echo $array[0];
+
+		            for($i=0;$i<count($array)-1;$i+=2){
+		                $loginbd = $array[$i];
+
+		                $senhabd = $array[$i+1];
+
+		                if($login == $loginbd && $senha == $senhabd){
+		                    $sql11 = "SELECT fk_comite_id FROM delegacao WHERE login='$login'";
+		                    $result11 = pg_query($conn,$sql11);
+		                    $aux = strval($result11[0]);
+		                    header("Location: pag_comite.php?idcomite=$aux");
+		                }
+		            }
+		        }
+		    ?>
+		    alert('Login e/ou senha incorretos!');
+		}
+
+		
+
 
 
 
@@ -107,7 +141,7 @@
 			</div>
 			
 			<div id="login_delegado" class="row">
-				<form class="col s12">	
+					
 					<h4 class="titulo">Logar como delegado</h4>
 				
 				<div class="input-field col s12">
@@ -120,9 +154,9 @@
           			<label for="del_senha">Senha</label>
         		</div>
         		
-        		<button id="botao" class="btn waves-effect waves-light col s3 right green accent-3" type="submit">Entrar</button>
+        		<button id="botao" class="btn waves-effect waves-light col s3 right green accent-3" onclick="validar_del()">Entrar</button>
         		<button id="botao" class="btn waves-effect waves-light col s3 top-right green accent-3" onclick="closeDiv('login_delegado')">Cancelar</button>
-        	</form>
+        	
 			</div>
 			
 			<div id="login_diretor" class="row">
