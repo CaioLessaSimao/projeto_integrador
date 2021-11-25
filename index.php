@@ -135,7 +135,7 @@
 			</div>
 			
 			<div id="login_delegado" class="row">
-			<form action="index.php" method="POST">	
+			<form action="controle.php" method="POST">	
 				<h4 class="titulo">Logar como delegado</h4>
 				
 				<div class="input-field col s12">
