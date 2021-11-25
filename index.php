@@ -47,6 +47,8 @@
 			document.body.style.backgroundColor = "white";
 		}
 
+	</script>
+		
 		<?php 
 			$oper = $_REQUEST['funcao'];
 
@@ -74,14 +76,10 @@
 			                header("Location: pag_comite.php?idcomite=$aux");
 			            }
 			        }
+			        header("Location: index.php?aux=erro");
 			    }
-			echo  "<script>alert('Login ou senha incorretos!');</script>";
 			}
-		?>
-		
-
-		function validar_del(){
-			<?php 
+ 			if($oper == "logar_del"){
 				if(isset($_REQUEST['del_usuario']) && isset($_REQUEST['del_senha'])){
             		$login = $_REQUEST['del_usuario'];
             
@@ -105,27 +103,18 @@
 		                    header("Location: pag_comite.php?idcomite=$aux");
 		                }
 		            }
+		            header("Location: index.php?aux=erro");
 		        }
-		    ?>
-		    alert('Login e/ou senha incorretos!');
-		}
-
-		
-
-
-
-
-
-	</script>
-	<?php 
-	$aux = $_REQUEST['aux'];
-	if($aux == "final"){
-		echo  "<script>alert('Os campos não podem ficar em branco!');</script>";
-	}
-	if($aux == "erro"){
-		echo  "<script>alert('Login ou senha incorretos!');</script>";
-	}
-	?>
+		    }
+		     
+			$aux = $_REQUEST['aux'];
+				if($aux == "final"){
+					echo  "<script>alert('Os campos não podem ficar em branco!');</script>";
+				}
+				if($aux == "erro"){
+					echo  "<script>alert('Login ou senha incorretos!');</script>";
+				}
+		?>
 
 </head>
 <body>
@@ -142,7 +131,7 @@
 			</div>
 			
 			<div id="login_delegado" class="row">
-					
+			<form action="index.php" method="POST">	
 				<h4 class="titulo">Logar como delegado</h4>
 				
 				<div class="input-field col s12">
@@ -154,9 +143,10 @@
           			<input id="del_senha" type="password" class="validate">
           			<label for="del_senha">Senha</label>
         		</div>
-        		
-        		<button id="botao" class="btn waves-effect waves-light col s3 right green accent-3" onclick="validar_del()">Entrar</button>
-        		<button id="botao" class="btn waves-effect waves-light col s3 top-right green accent-3" onclick="closeDiv('login_delegado')">Cancelar</button>
+        		<input type="hidden" name="funcao" value="logar_del">
+        		<button id="botao" class="btn waves-effect waves-light col s3 right green accent-3" type="submit">Entrar</button>
+        		<button id="butn" class="btn waves-effect waves-light col s3 top-right green accent-3" onclick="closeDiv('login_delegado')">Cancelar</button>
+        	</form>
         	
 			</div>
 			
