@@ -174,21 +174,23 @@
     if($oper == "logar_del"){
                 if(isset($_REQUEST['del_usuario']) && isset($_REQUEST['del_senha'])){
                     $login = $_REQUEST['del_usuario'];
-                    echo $login."<br>";    
+                        
                     $senha = $_REQUEST['del_senha'];
-                    echo $senha."<br>";
+                    
                     $sql10 = "SELECT login,senha FROM delegacao"; 
 
                     $result10 = pg_query($conn,$sql10);
 
                     $array = pg_fetch_array($result10);
-                    echo $array[0]."<br>";
-                    /*
+                    
+                    
                     for($i=0;$i<count($array)-1;$i+=2){
                         $loginbd = $array[$i];
-
+                        echo $loginbd."<br>";
+                        
                         $senhabd = $array[$i+1];
-
+                        echo $senhabd."<br>";
+                        
                         if($login == $loginbd && $senha == $senhabd){
                             $sql11 = "SELECT fk_comite_id FROM delegacao WHERE login='$login'";
                             $result11 = pg_query($conn,$sql11);
@@ -196,6 +198,7 @@
                             header("Location: pag_comite.php?idcomite=$aux");
                         }
                     }
+                    /*
                     header("Location: index.php?aux=erro");
                     */
                 }
