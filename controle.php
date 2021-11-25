@@ -145,7 +145,7 @@
                     $login = $_REQUEST['dir_usuario'];
                     echo $login;
                     
-                    $senha = $_REQUEST['del_senha'];
+                    $senha = $_REQUEST['dir_senha'];
                     echo $senha;
                     /*         
                     $sql10 = "SELECT login,senha FROM delegacao"; 
