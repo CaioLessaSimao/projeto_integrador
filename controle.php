@@ -185,7 +185,7 @@
                     
                     $tst = ['1','2','3'];
 
-                    for($i=0;$i<count($tst)-1;$i+=1){
+                    for($i=0;$i<count($tst);$i+=1){
                         echo $tst[$i];
                     }
 
