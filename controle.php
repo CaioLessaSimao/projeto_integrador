@@ -187,7 +187,7 @@
 
                     echo count($tst);
 
-                    for($i=0;$i<count($tst)-1;$i+=1){
+                    for($i=0;$i<count($tst)+1;$i+=1){
                         echo $i."<br>";
                         echo $tst[$i]."<br>";
                     }
