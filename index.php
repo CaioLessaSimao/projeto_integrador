@@ -139,12 +139,12 @@
 				<h4 class="titulo">Logar como delegado</h4>
 				
 				<div class="input-field col s12">
-          			<input id="del_usuario" type="text" class="validate">
+          			<input name="del_usuario" type="text" class="validate">
           			<label for="del_usuario">Usuário</label>
           		</div>
           		
           		<div class="input-field col s12">
-          			<input id="del_senha" type="password" class="validate">
+          			<input name="del_senha" type="password" class="validate">
           			<label for="del_senha">Senha</label>
         		</div>
         		<input type="hidden" name="funcao" value="logar_del">
