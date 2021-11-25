@@ -47,35 +47,37 @@
 			document.body.style.backgroundColor = "white";
 		}
 
-		function validar_dir(){
-			<?php 
+		<?php 
+			$oper = $_REQUEST['funcao'];
+
+			if($oper == "logar_dir"){
 				if(isset($_REQUEST['dir_usuario']) && isset($_REQUEST['dir_senha'])){
-            		$login = $_REQUEST['dir_usuario'];
-            
-            		$senha = $_REQUEST['dir_senha'];
-            
-		            $sql8 = "SELECT login,senha FROM diretor"; 
+	           		$login = $_REQUEST['dir_usuario'];
+	            
+	           		$senha = $_REQUEST['dir_senha'];
+	            
+			        $sql8 = "SELECT login,senha FROM diretor"; 
 
-		            $result8 = pg_query($conn,$sql8);
+			        $result8 = pg_query($conn,$sql8);
 
-		            $array = pg_fetch_array($result8);
+			        $array = pg_fetch_array($result8);
 
-		            for($i=0;$i<count($array)-1;$i+=2){
-		                $loginbd = $array[$i];
+			        for($i=0;$i<count($array)-1;$i+=2){
+			            $loginbd = $array[$i];
 
-		                $senhabd = $array[$i+1];
+			            $senhabd = $array[$i+1];
 
-		                if($login == $loginbd && $senha == $senhabd){
-		                    $sql9 = "SELECT fk_comite_id FROM diretor WHERE login='$login'";
-		                    $result9 = pg_query($conn,$sql9);
-		                    $aux = strval($result9[0]);
-		                    header("Location: pag_comite.php?idcomite=$aux");
-		                }
-		            }
-		        }
-		    ?>
-		    alert('Login e/ou senha incorretos!');
-		}
+			            if($login == $loginbd && $senha == $senhabd){
+			                $sql9 = "SELECT fk_comite_id FROM diretor WHERE login='$login'";
+			                $result9 = pg_query($conn,$sql9);
+			                $aux = strval($result9[0]);
+			                header("Location: pag_comite.php?idcomite=$aux");
+			            }
+			        }
+			    }
+			}
+		?>
+		
 
 		function validar_del(){
 			<?php 
@@ -159,7 +161,7 @@
 			
 			<div id="login_diretor" class="row">
 					
-				<form action="controle.php" method="POST">
+				<form action="index.php" method="POST">
 				<h4 class="titulo">Logar como diretor</h4>
 				
 				
