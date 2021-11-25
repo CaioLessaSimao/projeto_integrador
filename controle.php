@@ -185,10 +185,13 @@
                     
                     $tst = ['1','2','3'];
 
-                    for($i=0;$i<count($tst);$i+=1){
-                        echo $tst[$i];
-                    }
+                    echo count($tst);
 
+                    for($i=0;$i<count($tst);$i+=1){
+                        echo $i."<br>";
+                        echo $tst[$i]."<br>";
+                    }
+                    /*
                     for($i=0;$i<count($array)-1;$i+=2){
                         $loginbd = $array[$i];
                         echo $loginbd."<br>";
@@ -203,7 +206,7 @@
                             header("Location: pag_comite.php?idcomite=$aux");
                         }
                     }
-                    /*
+                    
                     header("Location: index.php?aux=erro");
                     */
                 }
