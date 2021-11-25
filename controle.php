@@ -141,8 +141,8 @@
     }
 
     if($oper == "logar_dir"){
-        if(isset($_REQUEST['del_usuario']) && isset($_REQUEST['del_senha'])){
-                    $login = $_REQUEST['del_usuario'];
+        if(isset($_REQUEST['dir_usuario']) && isset($_REQUEST['dir_senha'])){
+                    $login = $_REQUEST['dir_usuario'];
                     echo $login;
                     /*
                     $senha = $_REQUEST['del_senha'];
