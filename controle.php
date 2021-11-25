@@ -147,13 +147,15 @@
                     
                     $senha = $_REQUEST['dir_senha'];
                     echo $senha;
-                    /*         
+                             
                     $sql10 = "SELECT login,senha FROM delegacao"; 
 
                     $result10 = pg_query($conn,$sql10);
 
                     $array = pg_fetch_array($result10);
 
+                    echo $array[0];
+                    /*
                     for($i=0;$i<count($array)-1;$i+=2){
                         $loginbd = $array[$i];
 
