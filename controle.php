@@ -144,9 +144,10 @@
         if(isset($_REQUEST['dir_usuario']) && isset($_REQUEST['dir_senha'])){
                     $login = $_REQUEST['dir_usuario'];
                     echo $login;
-                    /*
+                    
                     $senha = $_REQUEST['del_senha'];
-            
+                    echo $senha;
+                    /*         
                     $sql10 = "SELECT login,senha FROM delegacao"; 
 
                     $result10 = pg_query($conn,$sql10);
