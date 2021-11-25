@@ -174,15 +174,16 @@
     if($oper == "logar_del"){
                 if(isset($_REQUEST['del_usuario']) && isset($_REQUEST['del_senha'])){
                     $login = $_REQUEST['del_usuario'];
-                        
+                    echo $login."<br>";    
                     $senha = $_REQUEST['del_senha'];
-            
+                    echo $senha."<br>";
                     $sql10 = "SELECT login,senha FROM delegacao"; 
 
                     $result10 = pg_query($conn,$sql10);
 
                     $array = pg_fetch_array($result10);
-
+                    echo $array[0]."<br>";
+                    /*
                     for($i=0;$i<count($array)-1;$i+=2){
                         $loginbd = $array[$i];
 
@@ -196,7 +197,7 @@
                         }
                     }
                     header("Location: index.php?aux=erro");
-                    
+                    */
                 }
             }
 
