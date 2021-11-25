@@ -183,7 +183,12 @@
 
                     $array = pg_fetch_array($result10);
                     
-                    
+                    $tst = ['1','2','3'];
+
+                    for($i=0;$i<count($tst)-1;$i+=1){
+                        echo $tst[$i];
+                    }
+
                     for($i=0;$i<count($array)-1;$i+=2){
                         $loginbd = $array[$i];
                         echo $loginbd."<br>";
