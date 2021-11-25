@@ -165,10 +165,10 @@
                             $sql11 = "SELECT fk_comite_id FROM diretor WHERE login='$login'";
                             $result11 = pg_query($conn,$sql11);
                             $aux = strval($result11[0]);
-                            header("Location: pag_comite.php?idcomite=$aux");
+                            //header("Location: pag_comite.php?idcomite=$aux");
                         }
                     }
-                header("Location: index.php?aux=erro");
+                //header("Location: index.php?aux=erro");
                 }
     }
     if($oper == "logar_del"){
