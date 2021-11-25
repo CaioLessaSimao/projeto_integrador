@@ -115,11 +115,11 @@
 
 	</script>
 	<?php 
-	$final = $_REQUEST['final'];
-	if($final == "1"){
+	$aux = $_REQUEST['aux'];
+	if($aux == "final"){
 		echo  "<script>alert('Os campos não podem ficar em branco!');</script>";
 	}
-	if($erro == "1"){
+	if($aux == "erro"){
 		echo  "<script>alert('Login ou senha incorretos!');</script>";
 	}
 	?>

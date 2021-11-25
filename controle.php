@@ -134,7 +134,7 @@
                 $result7 = pg_query($conn,$sql7);
                 
             }
-            header("Location: index.php?final=1");
+            header("Location: index.php?aux=final");
         }
 
 
@@ -168,7 +168,7 @@
                             header("Location: pag_comite.php?idcomite=$aux");
                         }
                     }
-                header("Location: index.php?erro=1");
+                header("Location: index.php?aux=erro");
                 }
     }
 
