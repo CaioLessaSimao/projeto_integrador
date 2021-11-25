@@ -183,7 +183,7 @@
 
                     $array = pg_fetch_array($result10);
                     
-                    echo $array[0."<br>";
+                    echo $array[0]."<br>";
                     echo $array[1]."<br>";
                     echo $array[2]."<br>";
                     echo $array[3]."<br>";
