@@ -75,6 +75,7 @@
 			            }
 			        }
 			    }
+			echo "<script>alert('Os campos não podem ficar em branco!');</script>";
 			}
 		?>
 		
