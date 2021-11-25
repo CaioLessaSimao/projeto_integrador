@@ -138,7 +138,7 @@
 			
 			<div id="login_delegado" class="row">
 					
-					<h4 class="titulo">Logar como delegado</h4>
+				<h4 class="titulo">Logar como delegado</h4>
 				
 				<div class="input-field col s12">
           			<input id="del_usuario" type="text" class="validate">
@@ -157,7 +157,8 @@
 			
 			<div id="login_diretor" class="row">
 					
-					<h4 class="titulo">Logar como diretor</h4>
+				<form action="controle.php" method="POST">
+				<h4 class="titulo">Logar como diretor</h4>
 				
 				
 				<div class="input-field col s12">
@@ -169,10 +170,10 @@
           			<input name="dir_senha" type="password" class="validate">
           			<label for="dir_senha">Senha</label>
         		</div>
-        		
-        		<button id = "botao" class = "btn waves-effect waves-light col s3 right green accent-3" onclick="validar_dir()">Entrar</button>
+        		<input type="hidden" name="funcao" value="logar_dir">
+        		<button id = "botao" class = "btn waves-effect waves-light col s3 right green accent-3" type="submit">Entrar</button>
         		<button id = "butn" class = "btn waves-effect waves-light col s3 top-right green accent-3" onclick = "closeDiv('login_diretor')">Cancelar</button>
-        	
+				</form>        	
         		
         	</div>
 
