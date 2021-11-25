@@ -158,9 +158,9 @@
                     
                     for($i=0;$i<count($array)-1;$i+=2){
                         $loginbd = $array[$i];
-
+                        echo $loginbd."<br>";
                         $senhabd = $array[$i+1];
-
+                        echo $senhabd."<br>";
                         if($login == $loginbd && $senha == $senhabd){
                             $sql11 = "SELECT fk_comite_id FROM diretor WHERE login='$login'";
                             $result11 = pg_query($conn,$sql11);
