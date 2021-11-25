@@ -183,15 +183,9 @@
 
                     $array = pg_fetch_array($result10);
                     
-                    $tst = ['1','2','3'];
-
-                    //echo count($tst);
-
-                    for($i=0;$i<count($tst)-1;$i+=1){
-                        echo $tst[$i]."<br>";
-                    }
+                    echo count($array);
                     /*
-                    for($i=0;$i<count($array)-1;$i+=2){
+                    for($i=0;$i<count($array);$i+=2){
                         $loginbd = $array[$i];
                         echo $loginbd."<br>";
                         
