@@ -148,28 +148,28 @@
                     $senha = $_REQUEST['dir_senha'];
                     echo $senha."<br>";
                              
-                    $sql10 = "SELECT login,senha FROM delegacao"; 
+                    $sql10 = "SELECT login,senha FROM diretor"; 
 
                     $result10 = pg_query($conn,$sql10);
 
                     $array = pg_fetch_array($result10);
 
                     echo $array[0];
-                    /*
+                    
                     for($i=0;$i<count($array)-1;$i+=2){
                         $loginbd = $array[$i];
 
                         $senhabd = $array[$i+1];
 
                         if($login == $loginbd && $senha == $senhabd){
-                            $sql11 = "SELECT fk_comite_id FROM delegacao WHERE login='$login'";
+                            $sql11 = "SELECT fk_comite_id FROM diretor WHERE login='$login'";
                             $result11 = pg_query($conn,$sql11);
                             $aux = strval($result11[0]);
                             header("Location: pag_comite.php?idcomite=$aux");
                         }
                     }
                 echo "<script>alert('Login e/ou senha incorretos!');</script>";
-                */
+                
                 }
     }
 
