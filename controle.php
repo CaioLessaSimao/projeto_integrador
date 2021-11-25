@@ -168,8 +168,7 @@
                             header("Location: pag_comite.php?idcomite=$aux");
                         }
                     }
-                echo "<script>alert('Login e/ou senha incorretos!');</script>";
-                
+                header("Location: index.php?erro=1");
                 }
     }
 

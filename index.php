@@ -119,7 +119,9 @@
 	if($final == "1"){
 		echo  "<script>alert('Os campos não podem ficar em branco!');</script>";
 	}
-
+	if($erro == "1"){
+		echo  "<script>alert('Login ou senha incorretos!');</script>";
+	}
 	?>
 
 </head>
