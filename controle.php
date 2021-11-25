@@ -183,9 +183,10 @@
 
                     $array = pg_fetch_array($result10);
                     
-                    echo count($array);
-                    /*
+                    
                     for($i=0;$i<count($array);$i+=2){
+                        echo $i."<br>";
+
                         $loginbd = $array[$i];
                         echo $loginbd."<br>";
                         
@@ -199,7 +200,7 @@
                             header("Location: pag_comite.php?idcomite=$aux");
                         }
                     }
-                    
+                    /*
                     header("Location: index.php?aux=erro");
                     */
                 }
