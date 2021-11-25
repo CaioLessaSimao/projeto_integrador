@@ -172,35 +172,10 @@
                 }
     }
     if($oper == "logar_del"){
-                if(isset($_REQUEST['del_usuario']) && isset($_REQUEST['del_senha'])){
-                    $login = $_REQUEST['del_usuario'];
-                        
-                    echo $login;
-
-                    /*
-                    $senha = $_REQUEST['del_senha'];
-            
-                    $sql10 = "SELECT login,senha FROM delegacao"; 
-
-                    $result10 = pg_query($conn,$sql10);
-
-                    $array = pg_fetch_array($result10);
-
-                    for($i=0;$i<count($array)-1;$i+=2){
-                        $loginbd = $array[$i];
-
-                        $senhabd = $array[$i+1];
-
-                        if($login == $loginbd && $senha == $senhabd){
-                            $sql11 = "SELECT fk_comite_id FROM delegacao WHERE login='$login'";
-                            $result11 = pg_query($conn,$sql11);
-                            $aux = strval($result11[0]);
-                            header("Location: pag_comite.php?idcomite=$aux");
-                        }
-                    }
-                    header("Location: index.php?aux=erro");
-                    */
-                }
-            }
+        if(isset($_REQUEST['del_usuario']) && isset($_REQUEST['del_senha'])){
+            $login = $_REQUEST['del_usuario'];
+            echo $login;
+        }
+    }
 
 ?>
