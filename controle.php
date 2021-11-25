@@ -154,7 +154,7 @@
 
                     $array = pg_fetch_array($result10);
 
-                    echo $array[0];
+                    echo count($array);
                     
                     for($i=0;$i<count($array)-1;$i+=2){
                         $loginbd = $array[$i];
