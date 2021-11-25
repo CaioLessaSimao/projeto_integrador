@@ -143,7 +143,8 @@
     if($oper == "logar_dir"){
         if(isset($_REQUEST['del_usuario']) && isset($_REQUEST['del_senha'])){
                     $login = $_REQUEST['del_usuario'];
-            
+                    echo $login;
+                    /*
                     $senha = $_REQUEST['del_senha'];
             
                     $sql10 = "SELECT login,senha FROM delegacao"; 
@@ -165,6 +166,7 @@
                         }
                     }
                 echo "<script>alert('Login e/ou senha incorretos!');</script>";
+                */
                 }
     }
 
