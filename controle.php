@@ -185,7 +185,7 @@
                     
                     $tst = ['1','2','3'];
 
-                    echo count($tst);
+                    //echo count($tst);
 
                     for($i=0;$i<count($tst)+1;$i+=1){
                         echo $i."<br>";
