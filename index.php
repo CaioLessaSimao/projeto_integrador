@@ -113,7 +113,7 @@
 		     
 			$aux = $_REQUEST['aux'];
 				if($aux == "final"){
-					echo  "<script>alert('Os campos não podem ficar em branco!');</script>";
+					echo  "<script>alert('Cadastro finalizado!');</script>";
 				}
 				if($aux == "erro"){
 					echo  "<script>alert('Login ou senha incorretos!');</script>";
