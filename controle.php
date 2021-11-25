@@ -187,6 +187,7 @@
                     echo $array[1]."<br>";
                     echo $array[2]."<br>";
                     echo $array[3]."<br>";
+                    echo count($array);
                     /*
                     for($i=0;$i<count($array);$i+=2){
                         echo $i."<br>";
