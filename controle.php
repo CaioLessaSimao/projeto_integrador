@@ -182,17 +182,17 @@
                         
                     $senha = $_REQUEST['del_senha'];
                     
-                    $sql10 = "SELECT login,senha FROM delegacao"; 
+                    $sql10 = "SELECT login FROM delegacao";
+                    $sql11 = "SELECT senha FROM delegacao"; 
 
                     $result10 = pg_query($conn,$sql10);
+                    $result11 = pg_query($conn,$sql11);
 
-                    $array = pg_fetch_array($result10);
-                    
-                    echo $array[0]."<br>";
-                    echo $array[1]."<br>";
-                    echo $array[2]."<br>";
-                    echo $array[3]."<br>";
-                    echo count($array);
+                    $array_log = pg_fetch_array($result10);
+                    $array_pssw = pg_fetch_array($result11);
+
+                    echo count($array_log);
+                    echo count($array_pssw);
                     /*
                     for($i=0;$i<count($array);$i+=2){
                         echo $i."<br>";
