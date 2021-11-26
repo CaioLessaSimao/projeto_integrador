@@ -148,14 +148,18 @@
                     $senha = $_REQUEST['dir_senha'];
                     echo $senha."<br>";
                              
-                    $sql10 = "SELECT login,senha FROM diretor"; 
+                    $sql10 = "SELECT login FROM diretor";
+                    $sql11 = "SELECT senha FROM diretor"; 
 
                     $result10 = pg_query($conn,$sql10);
+                    $result11 = pg_query($conn,$sql11);
 
-                    $array = pg_fetch_array($result10);
+                    $array_log = pg_fetch_array($result10);
+                    $array_pssw = pg_fetch_array($result11);
 
-                    echo count($array);
-                    
+                    echo count($array_log);
+                    echo count($array_pssw);
+                    /*
                     for($i=0;$i<count($array)-1;$i+=2){
                         $loginbd = $array[$i];
                         echo $loginbd."<br>";
@@ -169,6 +173,7 @@
                         }
                     }
                 header("Location: index.php?aux=erro");
+                */
                 }
     }
     if($oper == "logar_del"){
