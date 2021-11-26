@@ -195,7 +195,11 @@
                     $row = pg_num_rows($result9);
 
                     if ($row == 1) {
-                        header("Location: pag_comite.php");
+                        $query2 = "SELECT fk_comite_id FROM delegacao WHERE login='$login';";
+                        $result10 = pg_query($conn,$query2);
+                        $array = pg_fetch_array($result10);
+                        $idcomite = $array[0];
+                        header("Location: pag_comite.php?idcomite=$idcomite");
                     }
                     else{
                         header("Location: index.php?aux=erro");
