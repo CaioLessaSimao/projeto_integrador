@@ -141,41 +141,36 @@
     }
 
     if($oper == "logar_dir"){
-        if(isset($_REQUEST['dir_usuario']) && isset($_REQUEST['dir_senha'])){
-                    $login = $_REQUEST['dir_usuario'];
-                    echo $login;
+                if(isset($_REQUEST['dir_usuario']) && isset($_REQUEST['dir_senha'])){
                     
+                    $login = $_REQUEST['dir_usuario'];
+                        
                     $senha = $_REQUEST['dir_senha'];
-                    echo $senha."<br>";
-                             
-                    $sql10 = "SELECT login FROM diretor";
-                    $sql11 = "SELECT senha FROM diretor"; 
-
-                    $result10 = pg_query($conn,$sql10);
-                    $result11 = pg_query($conn,$sql11);
-
-                    $array_log = pg_fetch_array($result10);
-                    $array_pssw = pg_fetch_array($result11);
-
-                    echo count($array_log);
-                    echo count($array_pssw);
-                    /*
-                    for($i=0;$i<count($array)-1;$i+=2){
-                        $loginbd = $array[$i];
-                        echo $loginbd."<br>";
-                        $senhabd = $array[$i+1];
-                        echo $senhabd."<br>";
-                        if($login == $loginbd && $senha == $senhabd){
-                            $sql11 = "SELECT fk_comite_id FROM diretor WHERE login='$login'";
-                            $result11 = pg_query($conn,$sql11);
-                            $aux = strval($result11[0]);
-                            header("Location: pag_comite.php?idcomite=$aux");
-                        }
+                    
+                    if(empty($login) || empty($senha)){
+                        echo  "<script>alert('Existem campos vazios!');</script>";
+                        header("Location: criar_comite.html");
+            
                     }
-                header("Location: index.php?aux=erro");
-                */
+                    else if(ctype_space($login) || ctype_space($senha)){
+                        echo  "<script>alert('Os campos não podem ficar em branco!');</script>";
+                        header("Location: criar_comite.html");
+                    }
+
+                    $query = "SELECT id FROM diretor WHERE login='$login' and senha='$senha';";
+
+                    $result9 = pg_query($conn, $query);
+
+                    $row = pg_num_rows($result9);
+
+                    if ($row == 1) {
+                        header("Location: pag_comite.php");
+                    }
+                    else{
+                        header("Location: index.php?aux=erro");
+                    }
                 }
-    }
+            }
     if($oper == "logar_del"){
                 if(isset($_REQUEST['del_usuario']) && isset($_REQUEST['del_senha'])){
                     
