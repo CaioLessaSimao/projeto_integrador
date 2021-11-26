@@ -193,9 +193,9 @@
                         header("Location: criar_comite.html");
                     }
 
-                    $query = "SELECT id FROM delegacao WHERE login='$login' and senha='$senha'";
+                    $query = "SELECT id FROM delegacao WHERE login='$login' and senha='$senha';";
 
-                    $result9 = pg_connect($conn, $query);
+                    $result9 = pg_query($conn, $query);
 
                     $row = pg_num_rows($result9);
 
