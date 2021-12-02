@@ -22,8 +22,9 @@
   	</nav>
   	<div class="row">
   		<div class="col s12">
-  			<img class="responsive-img" src="teste.jpg">
+  			
   		</div>
+  		<img class="responsive-img" src="teste.jpg">
 
   	</div>
 
