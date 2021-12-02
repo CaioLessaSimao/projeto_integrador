@@ -51,7 +51,7 @@
   	</nav>
 	<div class="imagem_principal">
 		<h1>Programa das Nações Unidas para o Meio Ambiente</h1>
-		<h4>Acordo Internacional de Preservação Amazônica</h4>
+		<!--<h4>Acordo Internacional de Preservação Amazônica</h4>-->
 	</div>
 
 	<div class="imagem_dpo">
