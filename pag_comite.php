@@ -13,8 +13,11 @@
 		    height: 560px;
 		}
 		#imagem_principal{
-		    
-		    
+		    background: url(teste2.jpg) no-repeat center center;
+		    -webkit-background-size: cover;
+		    -moz-background-size: cover;
+		    -o-background-size: cover;
+		    background-size: cover;
 		}
 		
 		h1{
