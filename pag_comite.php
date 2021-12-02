@@ -31,7 +31,7 @@
   	</nav>
 	<div class="row"> 
 
-	    <div class="col s12" id="img_principal">
+	    <div id="img_principal">
 	    	<!--<img class="responsive-img" src="teste2.jpg">-->
 	    </div>
 
