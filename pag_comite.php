@@ -13,11 +13,7 @@
 		    height: 560px;
 		}
 		.imagem_principal{
-		    background: url(teste2.jpg) no-repeat center center;
-		    -webkit-background-size: cover;
-		    -moz-background-size: cover;
-		    -o-background-size: cover;
-		    background-size: cover;
+		    
 		    z-index: 1;
 		    display: flex;
 		    justify-content: center;
@@ -25,11 +21,11 @@
 		}
 		
 		h1{
-			color: white;
+			color: black;
 		}
 
 		h4{
-			color: white;
+			color: black;
 		}
 
 		.quadro{
@@ -51,14 +47,8 @@
     	</div>
   	</nav>
 	<div class="imagem_principal">
-		<div class="row">
-			<div col="s12">
-				<h1>Programa das Nações Unidas para o Meio Ambiente</h1>
-			</div>
-			<div col=s12>
-				<h4>Acordo Internacional de Preservação Amazônica</h4>
-			</div>
-		</div>	
+		<h1>Programa das Nações Unidas para o Meio Ambiente</h1>
+		<h4>Acordo Internacional de Preservação Amazônica</h4>
 	</div>
 
 	<div class="imagem_dpo">
