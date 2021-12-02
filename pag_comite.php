@@ -18,7 +18,7 @@
 		    -moz-background-size: cover;
 		    -o-background-size: cover;
 		    background-size: cover;
-		    display: flex;
+		    display: grid;
 		    justify-content: center;
 		    align-items: center;
 		}
