@@ -20,13 +20,24 @@
     	
     	</div>
   	</nav>
-  	<div class="row">
-  		<div class="col s12">
-  			
-  		</div>
-  		<img class="responsive-img" src="teste.jpg">
-
+	<div class="row"> 
+	    <div class="col s12">
+	    	<p>s12</p>
+	    </div>
+	    
+	    <div class="col s12 m4 l2">
+	    	<p>s12 m4</p>
+	    </div>
+	    
+	    <div class="col s12 m4 l8">
+	    	<img class="responsive-img" src="teste.jpg">
+	    </div>
+	    
+	    <div class="col s12 m4 l2">
+	    	<p>s12 m4</p>
+	    </div>
   	</div>
+
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 </body>
