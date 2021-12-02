@@ -21,27 +21,10 @@
     	</div>
   	</nav>
   	<div class="row">
-  		<div class="col s1">
-  			<p>Aqui fica imagem</p>
-  		</div>
-  		<div class="col s11">
-  			<h4>Nome do comitê</h4>		
-  		</div>
   		<div class="col s12">
-  			<h4>Tema do comite</h4>
+  			<img src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.cnnbrasil.com.br%2Finternacional%2Fao-vivo-assista-ao-discurso-do-presidente-jair-bolsonaro-na-assembleia-geral-da-onu%2F&psig=AOvVaw08X1t0sGcYKOogInvHpTvg&ust=1638549488722000&source=images&cd=vfe&ved=0CAsQjRxqFwoTCPDP8NTGxfQCFQAAAAAdAAAAABAD">
   		</div>
-  		<div class="col s12">
-  			<h4>Diretor geral: george</h4>
-  		</div>
-  		<div class="col s12">
-  			<h4>Diretores assistentes: bush</h4>
-  		</div>
-  		<div class="col s12">
-  			<h4>Descrição do comite auhsduahsdhsaudhuahduhaudhsaudha</h4>
-  		</div>
-  		<div class="col s12">
-  			<h4>Link do blog</h4>
-  		</div>
+
   	</div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
