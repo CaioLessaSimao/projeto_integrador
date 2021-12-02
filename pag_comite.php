@@ -20,7 +20,14 @@
 		    background-size: cover;
 		    z-index: 1;
 		}
+		
+		#imagem_principal h1{
+			color: white;
+		}
 
+		#imagem_principal h4{
+			color: white;
+		}
 
 		.quadro{
 		  z-index: 2;
@@ -40,7 +47,7 @@
     	
     	</div>
   	</nav>
-
+  	<div class="container">
 	<div class="center-align" id="imagem_principal">
 		<h1>Programa das Nações Unidas para o Meio Ambiente</h1>
 		<h4>Acordo Internacional de Preservação Amazônica</h4>
@@ -58,7 +65,7 @@
   		<h2>Iniciar Simulação</h2>
 	</div>
 
-
+</div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 </body>
 </html>
