@@ -29,13 +29,13 @@
     	
     	</div>
   	</nav>
-	<div class="row"> 
+	 
 
 	    <div id="img_principal">
 	    	<!--<img class="responsive-img" src="teste2.jpg">-->
 	    </div>
 
-  	</div>
+  	
 
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
