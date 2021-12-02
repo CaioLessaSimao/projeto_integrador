@@ -21,11 +21,11 @@
 		    z-index: 1;
 		}
 		
-		#imagem_principal h1{
+		h1{
 			color: white;
 		}
 
-		#imagem_principal h4{
+		h4{
 			color: white;
 		}
 
@@ -47,10 +47,14 @@
     	
     	</div>
   	</nav>
-  	<div class="container">
-	<div class="center-align" id="imagem_principal">
-		<h1>Programa das Nações Unidas para o Meio Ambiente</h1>
-		<h4>Acordo Internacional de Preservação Amazônica</h4>
+	<div class="row center-align" id="imagem_principal">
+		<div class="col s12"></div>
+		<div class="col s12">
+			<h1>Programa das Nações Unidas para o Meio Ambiente</h1>
+		</div>
+		<div class="col s12">
+			<h4>Acordo Internacional de Preservação Amazônica</h4>
+		</div>
 	</div>
 
 	<div class="imagem_dpo">
@@ -65,7 +69,6 @@
   		<h2>Iniciar Simulação</h2>
 	</div>
 
-</div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 </body>
 </html>
