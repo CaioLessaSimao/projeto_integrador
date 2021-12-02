@@ -51,11 +51,13 @@
     	</div>
   	</nav>
 	<div class="imagem_principal">
-		<div>
-			<h1>Programa das Nações Unidas para o Meio Ambiente</h1>
-		</div>
-		<div>
-			<h4>Acordo Internacional de Preservação Amazônica</h4>
+		<div class="row">
+			<div col="s12">
+				<h1>Programa das Nações Unidas para o Meio Ambiente</h1>
+			</div>
+			<div col=s12>
+				<h4>Acordo Internacional de Preservação Amazônica</h4>
+			</div>
 		</div>	
 	</div>
 
