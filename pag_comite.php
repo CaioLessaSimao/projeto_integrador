@@ -22,7 +22,7 @@
   	</nav>
   	<div class="row">
   		<div class="col s12">
-  			<img src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.cnnbrasil.com.br%2Finternacional%2Fao-vivo-assista-ao-discurso-do-presidente-jair-bolsonaro-na-assembleia-geral-da-onu%2F&psig=AOvVaw08X1t0sGcYKOogInvHpTvg&ust=1638549488722000&source=images&cd=vfe&ved=0CAsQjRxqFwoTCPDP8NTGxfQCFQAAAAAdAAAAABAD">
+  			<img src="teste.jpg">
   		</div>
 
   	</div>
