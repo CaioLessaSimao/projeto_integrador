@@ -12,13 +12,16 @@
 		    width: 100%;
 		    height: 560px;
 		}
-		#imagem_principal{
+		.imagem_principal{
 		    background: url(teste2.jpg) no-repeat center center;
 		    -webkit-background-size: cover;
 		    -moz-background-size: cover;
 		    -o-background-size: cover;
 		    background-size: cover;
 		    z-index: 1;
+		    display: flex;
+		    justify-content: center;
+		    align-items: center;
 		}
 		
 		h1{
@@ -47,10 +50,9 @@
     	
     	</div>
   	</nav>
-	<div class="row center-align" id="imagem_principal">
-			<h1>Programa das Nações Unidas para o Meio Ambiente</h1>
-
-			<h4>Acordo Internacional de Preservação Amazônica</h4>
+	<div class="imagem_principal">
+		<h1>Programa das Nações Unidas para o Meio Ambiente</h1>
+		<h4>Acordo Internacional de Preservação Amazônica</h4>
 
 	</div>
 
