@@ -7,6 +7,11 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
 	
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<style type="text/css">
+		#img_principal{
+			background-size: cover; 
+		}
+	</style>
 </head>
 <body>
 	<nav>
@@ -26,7 +31,7 @@
 	    	<p>s12 m4</p>
 	    </div>
 	    -->
-	    <div class="col s12 m4 l8">
+	    <div class="col s12 m4 l8" id="img_principal">
 	    	<img class="responsive-img" src="teste2.jpg">
 	    </div>
 	    <!--
