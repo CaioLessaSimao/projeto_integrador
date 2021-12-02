@@ -14,10 +14,7 @@
 		}
 		#imagem_principal{
 		    
-		    z-index: 1;
-		    display: flex;
-		    justify-content: center;
-		    align-items: center;
+		    
 		}
 		
 		h1{
