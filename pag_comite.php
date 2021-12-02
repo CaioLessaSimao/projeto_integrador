@@ -9,7 +9,11 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	<style type="text/css">
 		#img_principal{
-			background-size: cover; 
+			background: url(teste2.jpg) no-repeat center center fixed; 
+  			-webkit-background-size: cover;
+  			-moz-background-size: cover;
+  			-o-background-size: cover;
+  			background-size: cover; 
 		}
 	</style>
 </head>
@@ -26,19 +30,11 @@
     	</div>
   	</nav>
 	<div class="row"> 
-	    <!--
-	    <div class="col s12 m4 l2">
-	    	<p>s12 m4</p>
+
+	    <div class="col s12" id="img_principal">
+	    	<!--<img class="responsive-img" src="teste2.jpg">-->
 	    </div>
-	    -->
-	    <div class="col s12 m4 l8" id="img_principal">
-	    	<img class="responsive-img" src="teste2.jpg">
-	    </div>
-	    <!--
-	    <div class="col s12 m4 l2">
-	    	<p>s12 m4</p>
-	    </div>
-		-->
+
   	</div>
 
 
