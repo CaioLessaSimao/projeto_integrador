@@ -25,22 +25,22 @@
   			<p>Aqui fica imagem</p>
   		</div>
   		<div class="col s11">
-  			<h2>Nome do comitê</h2>		
+  			<h4>Nome do comitê</h4>		
   		</div>
   		<div class="col s12">
-  			<h3>Tema do comite</h3>
+  			<h4>Tema do comite</h4>
   		</div>
   		<div class="col s12">
-  			<h3>Diretor geral: george</h3>
+  			<h4>Diretor geral: george</h4>
   		</div>
   		<div class="col s12">
-  			<h3>Diretores assistentes: bush</h3>
+  			<h4>Diretores assistentes: bush</h4>
   		</div>
   		<div class="col s12">
-  			<h3>Descrição do comite auhsduahsdhsaudhuahduhaudhsaudha</h3>
+  			<h4>Descrição do comite auhsduahsdhsaudhuahduhaudhsaudha</h4>
   		</div>
   		<div class="col s12">
-  			<h3>Link do blog</h3>
+  			<h4>Link do blog</h4>
   		</div>
   	</div>
 
