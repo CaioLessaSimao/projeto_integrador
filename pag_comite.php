@@ -20,6 +20,29 @@
     	
     	</div>
   	</nav>
+  	<div class="row">
+  		<div class="col s1">
+  			<p>Aqui fica imagem</p>
+  		</div>
+  		<div class="col s2">
+  			<h2>Nome do comitê</h2>		
+  		</div>
+  		<div class="col s2">
+  			<h3>Tema do comite</h3>
+  		</div>
+  		<div class="col s2">
+  			<h3>Diretor geral: george</h3>
+  		</div>
+  		<div class="col s2">
+  			<h3>Diretores assistentes: bush</h3>
+  		</div>
+  		<div class="col s2">
+  			<h3>Descrição do comite auhsduahsdhsaudhuahduhaudhsaudha</h3>
+  		</div>
+  		<div class="col s2">
+  			<h3>Link do blog</h3>
+  		</div>
+  	</div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 </body>
