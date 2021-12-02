@@ -48,13 +48,10 @@
     	</div>
   	</nav>
 	<div class="row center-align" id="imagem_principal">
-		<div class="col s12"></div>
-		<div class="col s12">
 			<h1>Programa das Nações Unidas para o Meio Ambiente</h1>
-		</div>
-		<div class="col s12">
+
 			<h4>Acordo Internacional de Preservação Amazônica</h4>
-		</div>
+
 	</div>
 
 	<div class="imagem_dpo">
