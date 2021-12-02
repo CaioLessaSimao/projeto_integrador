@@ -12,7 +12,7 @@
 		    width: 100%;
 		    height: 560px;
 		}
-		.minhaClass{
+		#imagem_principal{
 		    background: url(teste2.jpg) no-repeat center center;
 		    -webkit-background-size: cover;
 		    -moz-background-size: cover;
@@ -20,6 +20,8 @@
 		    background-size: cover;
 		    z-index: 1;
 		}
+
+
 		.quadro{
 		  z-index: 2;
 		  background-color: red;
@@ -39,17 +41,20 @@
     	</div>
   	</nav>
 
-	<div class="minhaClass">
-  		<div class="quadro">
-    		<h2>Lista de Delegações</h2>
-  		</div>
+	<div class="center-align" id="imagem_principal">
+		<h1>Programa das Nações Unidas para o Meio Ambiente</h1>
+		<h4>Acordo Internacional de Preservação Amazônica</h4>
 	</div>
 
-	<div class="minhaClass">
+	<div class="imagem_dpo">
   		<h2>Lista de DPOs</h2>
 	</div>
 	
-	<div class="minhaClass">
+	<div class="imagem_del">
+  		<h2>Iniciar Simulação</h2>
+	</div>
+
+	<div class="imagem_sim">
   		<h2>Iniciar Simulação</h2>
 	</div>
 
