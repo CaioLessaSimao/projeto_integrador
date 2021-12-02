@@ -22,7 +22,7 @@
   	</nav>
   	<div class="row">
   		<div class="col s12">
-  			<img src="teste.jpg">
+  			<img class="responsive-img" src="teste.jpg">
   		</div>
 
   	</div>
