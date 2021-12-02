@@ -12,7 +12,7 @@
 		    width: 100%;
 		    height: 560px;
 		}
-		.imagem_principal{
+		#imagem_principal{
 		    
 		    z-index: 1;
 		    display: flex;
@@ -46,7 +46,7 @@
     	
     	</div>
   	</nav>
-	<div class="imagem_principal">
+	<div class="center-align" id="imagem_principal">
 		<h1>Programa das Nações Unidas para o Meio Ambiente</h1><br>
 		<h4>Acordo Internacional de Preservação Amazônica</h4>
 	</div>
