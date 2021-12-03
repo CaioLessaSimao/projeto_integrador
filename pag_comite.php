@@ -18,6 +18,9 @@
 		    -moz-background-size: cover;
 		    -o-background-size: cover;
 		    background-size: cover;
+		    flex-direction: column;
+			justify-content: center;
+			align-items: center;
 		    
 		}
 		
@@ -47,7 +50,7 @@
     	
     	</div>
   	</nav>
-	<div class="center-align" id="imagem_principal">
+	<div id="imagem_principal">
 			<h1>Programa das Nações Unidas para o Meio Ambiente</h1>
 			<h4>Acordo Internacional de Preservação Amazônica</h4>
 	</div>
