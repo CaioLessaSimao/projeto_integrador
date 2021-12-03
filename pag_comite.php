@@ -18,15 +18,20 @@
 		    -moz-background-size: cover;
 		    -o-background-size: cover;
 		    background-size: cover;
-		    -webkit-filter: blur(5px);
-  			-moz-filter: blur(5px);
-  			-o-filter: blur(5px);
-  			-ms-filter: blur(5px);
 		    display: flex;
 		    flex-direction: column;
 			justify-content: center;
-			align-items: center;
-			z-index: -1;		    
+			align-items: center;		    
+		}
+
+		.background-filter::after {
+			-webkit-backdrop-filter: blur(5px); /* Use for Safari 9+, Edge 17+ (not a mistake) and iOS Safari 9.2+ */
+  			backdrop-filter: blur(5px); /* Supported in Chrome 76 */
+
+  			content: "";
+  			display: block;
+  			position: absolute;
+ 			width: 100%; height: 100%;
 		}
 
 		.imagem_del{
@@ -101,7 +106,7 @@
     	
     	</div>
   	</nav>
-		<div class="imagem_principal">
+		<div class="imagem_principal background-filter">
 			<h2><?php echo $nome; ?></h2>
 			<h4><?php echo $tema; ?></h4>
 		</div>
