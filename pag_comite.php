@@ -24,8 +24,21 @@
 			align-items: center;
 		    
 		}
+
+		.imagem_dpo{
+		    background: url(teste3.jpg) no-repeat center center;
+		    -webkit-background-size: cover;
+		    -moz-background-size: cover;
+		    -o-background-size: cover;
+		    background-size: cover;
+		    display: flex;
+		    flex-direction: column;
+			justify-content: center;
+			align-items: center;
+		}
+
 		
-		h1{
+		h2{
 			color: white;
 		}
 
@@ -69,12 +82,12 @@
 			<h4><?php echo $tema; ?></h4>
 	</div>
 
-	<div class="" id="imagem_dpo">
+	<div class="imagem_dpo">
   		<h2>Lista de DPOs</h2>
 	</div>
 	
 	<div class="imagem_del">
-  		<h2>Iniciar Simulação</h2>
+  		<h2>Lista de delegação</h2>
 	</div>
 
 	<div class="imagem_sim">
