@@ -106,12 +106,11 @@
     	
     	</div>
   	</nav>
-		<div class="imagem_principal">
-			<div class="auxiliar">
+		<div class="imagem_principal"></div>
+		<div class="auxiliar">
 				<h2><?php echo $nome; ?></h2>
 				<h4><?php echo $tema; ?></h4>
 			</div>
-		</div>
 
 		<div class="imagem_dpo">
 	  		<h2>Lista de DPOs</h2>
