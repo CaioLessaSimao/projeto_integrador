@@ -18,11 +18,16 @@
 		    -moz-background-size: cover;
 		    -o-background-size: cover;
 		    background-size: cover;
+		    -webkit-filter: blur(5px);
+			-moz-filter: blur(5px);
+			-o-filter: blur(5px);
+			-ms-filter: blur(5px);
+			filter: blur(5px);
 		    display: flex;
 		    flex-direction: column;
 			justify-content: center;
 			align-items: center;
-			filter: brightness(54%);		    
+			z-index: -1;		    
 		}
 
 		.imagem_del{
@@ -63,7 +68,7 @@
 		}
 		
 		.imagem_principal div{
-			filter: brightness(100%);
+			z-index: 0;
 		}
 
 		.auxiliar h2{
