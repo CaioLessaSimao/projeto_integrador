@@ -65,12 +65,12 @@
 		
 		.imagem_principal h2{
 			color: white;
-			filter: brightness(0%);
+			filter: brightness(100%);
 		}
 
 		.imagem_principal h4{
 			color: white;
-			filter: brightness(0%);
+			filter: brightness(100%);
 		}
 
 		.quadro{
