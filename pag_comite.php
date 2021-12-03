@@ -12,7 +12,7 @@
 		    width: 100%;
 		    height: 560px;
 		}
-		#imagem_principal{
+		.imagem_principal{
 		    background: url(teste2.jpg) no-repeat center center;
 		    -webkit-background-size: cover;
 		    -moz-background-size: cover;
@@ -26,11 +26,11 @@
 		}
 		
 		h1{
-			color: black;
+			color: white;
 		}
 
 		h4{
-			color: black;
+			color: white;
 		}
 
 		.quadro{
@@ -38,6 +38,19 @@
 		  background-color: red;
 		}
 	</style>
+	<?php 
+		require_once "connection.php";
+		if(isset($_REQUEST['idcomite'])){
+			$comite = (int)$_REQUEST['idcomite'];
+			$sql = "SELECT nome,tema FROM comite WHERE id=$comite";
+			$query = pg_query($conn, $sql);
+			$array = pg_fetch_array($query)
+			$nome = $array[0];
+			$tema = $array[1];	
+		}
+		
+
+	?>
 </head>
 <body>
 	<nav>
@@ -51,9 +64,9 @@
     	
     	</div>
   	</nav>
-	<div id="imagem_principal">
-			<h2>Programa das Nações Unidas para o Meio Ambiente</h2>
-			<h4>Acordo Internacional de Preservação Amazônica</h4>
+	<div class="imagem_principal">
+			<h2><?php echo $nome; ?></h2>
+			<h4><?php echo $tema; ?></h4>
 	</div>
 
 	<div class="" id="imagem_dpo">
