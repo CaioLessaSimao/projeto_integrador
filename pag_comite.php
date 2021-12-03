@@ -44,7 +44,7 @@
 			$comite = (int)$_REQUEST['idcomite'];
 			$sql = "SELECT nome,tema FROM comite WHERE id=$comite";
 			$query = pg_query($conn, $sql);
-			$array = pg_fetch_array($query)
+			$array = pg_fetch_array($query);
 			$nome = $array[0];
 			$tema = $array[1];	
 		}
