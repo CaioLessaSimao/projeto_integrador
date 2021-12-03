@@ -22,6 +22,7 @@
 		    flex-direction: column;
 			justify-content: center;
 			align-items: center;
+			filter: brightness(54%);
 		    
 		}
 
@@ -47,7 +48,7 @@
 		    flex-direction: column;
 			justify-content: center;
 			align-items: center;
-			filter: brightness(54%);
+			
 		}
 
 		.imagem_sim{
