@@ -47,6 +47,7 @@
 		    flex-direction: column;
 			justify-content: center;
 			align-items: center;
+			filter: brightness(54%);
 		}
 
 		.imagem_sim{
@@ -59,12 +60,13 @@
 		    flex-direction: column;
 			justify-content: center;
 			align-items: center;
+		}
 		
-		h2{
+		.imagem_principal h2{
 			color: white;
 		}
 
-		h4{
+		.imagem_principal h4{
 			color: white;
 		}
 
