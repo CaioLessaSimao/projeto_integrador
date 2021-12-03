@@ -33,6 +33,10 @@
 		  z-index: 2;
 		  background-color: red;
 		}
+
+		#conteudo{
+			margin-top: 50%;
+		}
 	</style>
 </head>
 <body>
@@ -48,8 +52,10 @@
     	</div>
   	</nav>
 	<div class="center-align" id="imagem_principal">
-		<h1>Programa das Nações Unidas para o Meio Ambiente</h1>
-		<h4>Acordo Internacional de Preservação Amazônica</h4>
+		<div class="center-align" id="conteudo">
+			<h1>Programa das Nações Unidas para o Meio Ambiente</h1>
+			<h4>Acordo Internacional de Preservação Amazônica</h4>
+		</div>
 	</div>
 
 	<div class="" id="imagem_dpo">
