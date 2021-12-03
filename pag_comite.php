@@ -48,6 +48,17 @@
 			justify-content: center;
 			align-items: center;
 		}
+
+		.imagem_sim{
+		    background: url(teste5.jpg) no-repeat center center;
+		    -webkit-background-size: cover;
+		    -moz-background-size: cover;
+		    -o-background-size: cover;
+		    background-size: cover;
+		    display: flex;
+		    flex-direction: column;
+			justify-content: center;
+			align-items: center;
 		
 		h2{
 			color: white;
