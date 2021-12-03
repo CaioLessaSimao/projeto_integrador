@@ -12,7 +12,7 @@
 		    width: 100%;
 		    height: 560px;
 		}
-		.imagem_principal{
+		.imagem_principal::before {
 		    background: url(teste2.jpg) no-repeat center center;
 		    -webkit-background-size: cover;
 		    -moz-background-size: cover;
@@ -21,11 +21,8 @@
 		    display: flex;
 		    flex-direction: column;
 			justify-content: center;
-			align-items: center;		    
-		}
-
-		.imagem_principal img{
-			filter: brightness(54%);
+			align-items: center;
+			filter: brightness(54%);		    
 		}
 
 		.imagem_del{
@@ -65,12 +62,12 @@
 			align-items: center;
 		}
 		
-		.imagem_principal h2{
+		.imagem_principal::after h2{
 			color: white;
 
 		}
 
-		.imagem_principal h4{
+		.imagem_principal::after h4{
 			color: white;
 
 		}
