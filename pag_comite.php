@@ -18,6 +18,10 @@
 		    -moz-background-size: cover;
 		    -o-background-size: cover;
 		    background-size: cover;
+		    -webkit-filter: blur(5px);
+  			-moz-filter: blur(5px);
+  			-o-filter: blur(5px);
+  			-ms-filter: blur(5px);
 		    display: flex;
 		    flex-direction: column;
 			justify-content: center;
