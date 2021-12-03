@@ -66,6 +66,10 @@
 			filter: brightness(100%);
 		}
 
+		.auxiliar h2{
+			color: white;
+		}
+
 		.quadro{
 		  z-index: 2;
 		  background-color: red;
