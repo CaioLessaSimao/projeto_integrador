@@ -22,8 +22,7 @@
 		    flex-direction: column;
 			justify-content: center;
 			align-items: center;
-			filter: brightness(54%);
-			z-index: -1;		    
+			filter: brightness(54%);		    
 		}
 
 		.imagem_del{
@@ -63,16 +62,8 @@
 			align-items: center;
 		}
 		
-		.imagem_principal h2{
-			color: white;
-			z-index: 0;
-
-		}
-
-		.imagem_principal h4{
-			color: white;
-			z-index: 0;
-
+		.imagem_principal div{
+			filter: brightness(100%);
 		}
 
 		.quadro{
@@ -106,22 +97,24 @@
     	
     	</div>
   	</nav>
-	<div class="imagem_principal">
-			<h2><?php echo $nome; ?></h2>
-			<h4><?php echo $tema; ?></h4>
-	</div>
+		<div class="imagem_principal">
+			<div class="auxiliar">
+				<h2><?php echo $nome; ?></h2>
+				<h4><?php echo $tema; ?></h4>
+			</div>
+		</div>
 
-	<div class="imagem_dpo">
-  		<h2>Lista de DPOs</h2>
-	</div>
-	
-	<div class="imagem_del">
-  		<h2>Lista de delegação</h2>
-	</div>
+		<div class="imagem_dpo">
+	  		<h2>Lista de DPOs</h2>
+		</div>
+		
+		<div class="imagem_del">
+	  		<h2>Lista de delegação</h2>
+		</div>
 
-	<div class="imagem_sim">
-  		<h2>Iniciar Simulação</h2>
-	</div>
+		<div class="imagem_sim">
+	  		<h2>Iniciar Simulação</h2>
+		</div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 </body>
