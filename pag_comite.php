@@ -21,9 +21,11 @@
 		    display: flex;
 		    flex-direction: column;
 			justify-content: center;
-			align-items: center;
+			align-items: center;		    
+		}
+
+		.imagem_principal img{
 			filter: brightness(54%);
-		    
 		}
 
 		.imagem_del{
@@ -65,12 +67,12 @@
 		
 		.imagem_principal h2{
 			color: white;
-			filter: brightness(154%);
+
 		}
 
 		.imagem_principal h4{
 			color: white;
-			filter: brightness(154%);
+
 		}
 
 		.quadro{
