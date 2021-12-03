@@ -12,7 +12,7 @@
 		    width: 100%;
 		    height: 560px;
 		}
-		#imagem_principal {
+		.imagem_principal {
 		    background: url(teste2.jpg) no-repeat center center;
 		    -webkit-background-size: cover;
 		    -moz-background-size: cover;
@@ -66,14 +66,6 @@
 			z-index: 0;
 		}
 
-		#auxiliar{
-			z-index: 1;
-		}
-
-		#auxiliar h2{
-			color: white;
-		}
-
 		.quadro{
 		  z-index: 2;
 		  background-color: red;
@@ -105,11 +97,10 @@
     	
     	</div>
   	</nav>
-		<div class="col s12" id="imagem_principal"></div>
-		<div class="col s12" id="auxiliar">
-				<h2><?php echo $nome; ?></h2>
-				<h4><?php echo $tema; ?></h4>
-			</div>
+		<div class="imagem_principal">
+			<h2><?php echo $nome; ?></h2>
+			<h4><?php echo $tema; ?></h4>
+		</div>
 
 		<div class="imagem_dpo">
 	  		<h2>Lista de DPOs</h2>
