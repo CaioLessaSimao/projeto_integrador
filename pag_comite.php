@@ -23,12 +23,10 @@
 		
 		h1{
 			color: black;
-			margin-top: 50%;
 		}
 
 		h4{
 			color: black;
-			margin-top: 51%;
 		}
 
 		.quadro{
