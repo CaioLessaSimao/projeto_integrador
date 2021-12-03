@@ -25,7 +25,7 @@
 		    
 		}
 
-		.imagem_dpo{
+		.imagem_del{
 		    background: url(teste3.jpg) no-repeat center center;
 		    -webkit-background-size: cover;
 		    -moz-background-size: cover;
@@ -37,6 +37,17 @@
 			align-items: center;
 		}
 
+		.imagem_dpo{
+		    background: url(teste4.jpg) no-repeat center center;
+		    -webkit-background-size: cover;
+		    -moz-background-size: cover;
+		    -o-background-size: cover;
+		    background-size: cover;
+		    display: flex;
+		    flex-direction: column;
+			justify-content: center;
+			align-items: center;
+		}
 		
 		h2{
 			color: white;
