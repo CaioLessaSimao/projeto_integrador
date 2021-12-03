@@ -12,7 +12,7 @@
 		    width: 100%;
 		    height: 560px;
 		}
-		.imagem_principal::before {
+		.imagem_principal {
 		    background: url(teste2.jpg) no-repeat center center;
 		    -webkit-background-size: cover;
 		    -moz-background-size: cover;
@@ -22,7 +22,8 @@
 		    flex-direction: column;
 			justify-content: center;
 			align-items: center;
-			filter: brightness(54%);		    
+			filter: brightness(54%);
+			z-index: -1;		    
 		}
 
 		.imagem_del{
@@ -62,13 +63,15 @@
 			align-items: center;
 		}
 		
-		.imagem_principal::after h2{
+		.imagem_principal h2{
 			color: white;
+			z-index: 0;
 
 		}
 
-		.imagem_principal::after h4{
+		.imagem_principal h4{
 			color: white;
+			z-index: 0;
 
 		}
 
