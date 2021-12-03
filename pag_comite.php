@@ -52,7 +52,7 @@
     	</div>
   	</nav>
 	<div id="imagem_principal">
-			<h1>Programa das Nações Unidas para o Meio Ambiente</h1>
+			<h2>Programa das Nações Unidas para o Meio Ambiente</h2>
 			<h4>Acordo Internacional de Preservação Amazônica</h4>
 	</div>
 
