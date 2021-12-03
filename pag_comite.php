@@ -12,17 +12,12 @@
 		    width: 100%;
 		    height: 560px;
 		}
-		.imagem_principal {
+		#imagem_principal {
 		    background: url(teste2.jpg) no-repeat center center;
 		    -webkit-background-size: cover;
 		    -moz-background-size: cover;
 		    -o-background-size: cover;
 		    background-size: cover;
-		    -webkit-filter: blur(5px);
-			-moz-filter: blur(5px);
-			-o-filter: blur(5px);
-			-ms-filter: blur(5px);
-			filter: blur(5px);
 		    display: flex;
 		    flex-direction: column;
 			justify-content: center;
@@ -71,7 +66,11 @@
 			z-index: 0;
 		}
 
-		.auxiliar h2{
+		#auxiliar{
+			z-index: 1;
+		}
+
+		#auxiliar h2{
 			color: white;
 		}
 
@@ -106,8 +105,8 @@
     	
     	</div>
   	</nav>
-		<div class="imagem_principal"></div>
-		<div class="auxiliar">
+		<div class="col s12" id="imagem_principal"></div>
+		<div class="col s12" id="auxiliar">
 				<h2><?php echo $nome; ?></h2>
 				<h4><?php echo $tema; ?></h4>
 			</div>
