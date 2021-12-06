@@ -12,7 +12,7 @@
 				$sql = "SELECT nome,email FROM delegacao WHERE fk_comite_id=$comite";
 				$result = pg_query($conn,$sql);
 				$aux = pg_fetch_array($result);
-				echo count($aux);
+				echo count($aux)."<br>";
 				while ($dados = pg_fetch_array($result)):
 		?>
 		<tr>
