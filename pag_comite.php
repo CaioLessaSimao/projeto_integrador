@@ -23,17 +23,6 @@
 			justify-content: center;
 			align-items: center;		    
 		}
-
-		.background-filter::after {
-			-webkit-backdrop-filter: blur(5px); 
-  			backdrop-filter: blur(5px); 
-
-  			content: "";
-  			display: block;
-  			position: absolute;
- 			width: 100%; height: 100%;
-		}
-
 		.imagem_del{
 		    background: url(teste3.jpg) no-repeat center center;
 		    -webkit-background-size: cover;
@@ -107,7 +96,7 @@
     	
     	</div>
   	</nav>
-		<div class="imagem_principal background-filter">
+		<div class="imagem_principal">
 			<h2><?php echo $nome; ?></h2>
 			<h4><?php echo $tema; ?></h4>
 		</div>
