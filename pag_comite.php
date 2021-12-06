@@ -25,8 +25,8 @@
 		}
 
 		.background-filter::after {
-			-webkit-backdrop-filter: blur(5px); /* Use for Safari 9+, Edge 17+ (not a mistake) and iOS Safari 9.2+ */
-  			backdrop-filter: blur(5px); /* Supported in Chrome 76 */
+			-webkit-backdrop-filter: blur(5px); 
+  			backdrop-filter: blur(5px); 
 
   			content: "";
   			display: block;
@@ -84,6 +84,7 @@
 		require_once "connection.php";
 		if(isset($_REQUEST['idcomite'])){
 			$comite = (int)$_REQUEST['idcomite'];
+			$comite2 = $_REQUEST['idcomite']; 
 			$sql = "SELECT nome,tema FROM comite WHERE id=$comite";
 			$query = pg_query($conn, $sql);
 			$array = pg_fetch_array($query);
@@ -112,11 +113,11 @@
 		</div>
 
 		<div class="imagem_dpo">
-	  		<h2>Lista de DPOs</h2>
+	  		<a href="lst_dpo.php?idcomite=<?php echo $comite2; ?>">Lista de DPOs</a>
 		</div>
 		
 		<div class="imagem_del">
-	  		<h2>Lista de delegação</h2>
+	  		<a href="lst_del.php?idcomite=<?php echo $comite2; ?>">Lista de delegações</a>
 		</div>
 
 		<div class="imagem_sim">
