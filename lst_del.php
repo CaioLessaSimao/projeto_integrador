@@ -4,9 +4,16 @@
 	<?php
 		require_once "connection.php";
 		
-		function create_item($nome,$email){
-			$string = "<tr><td>".$nome."</td><td>".$email."</td><td></tr";
-			$html = $string;
+		class create_item($nome,$email){
+			public $nome;
+			public $email;
+			public $string;
+			public $html;
+
+			function __construct($nome, $email){
+				$this->string = "<tr><td>".$nome."</td><td>".$email."</td><td></tr";
+				$this->html = $this->string;
+			}
 		}
 
 		$comite = (int)$_REQUEST['idcomite'];
@@ -23,7 +30,7 @@
 			
 			$email = $array[$i+1];
 			
-			$linha = create_item($nome,$email);
+			$linha = new create_item($nome,$email);
 			
 			$tbdelegacoes[] = $linha;
 		}
