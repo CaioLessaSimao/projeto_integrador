@@ -55,8 +55,10 @@
 		</thead>
 		<tbody>
 			<?php 
-			echo $array['nome']; 
-			echo $array['email'];
+			for($i=0; $i<6;$i++){
+				echo $array['nome']; 
+				echo $array['email'];
+			}
 			?>
 		</tbody>
 	</table>
