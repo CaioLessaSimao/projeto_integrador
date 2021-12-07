@@ -4,7 +4,7 @@
 	<?php
 		require_once "connection.php";
 		
-		class create_item($nome,$email){
+		class create_item {
 			public $nome;
 			public $email;
 			public $string;
