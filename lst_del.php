@@ -28,12 +28,10 @@
 			$tbdelegacoes[] = $linha;
 		}
 		$resultado = "";
-		/*
+	
 		foreach($tbdelegacoes as $i){
 			$resultado .= $i->html;
 		}
-	*/
-		
 	
 	?>
 </head>
@@ -47,7 +45,6 @@
 		</thead>
 		<tbody>
 			<?php echo $resultado; ?>
-			<p>jorge</p>
 		</tbody>
 	</table>
 </body>
