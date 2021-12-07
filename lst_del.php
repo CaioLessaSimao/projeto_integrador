@@ -55,10 +55,7 @@
 		</thead>
 		<tbody>
 			<?php 
-			for($i=0; $i<5;$i++){
-				echo $array[$i]; 
-				echo $array[$i+1];
-			}
+			var_dump($array);
 			?>
 		</tbody>
 	</table>
