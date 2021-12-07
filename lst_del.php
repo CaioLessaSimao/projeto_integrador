@@ -56,7 +56,7 @@
 		<tbody>
 			<?php 
 			echo $array['nome']; 
-			echo $array['nome'];
+			echo $array['email'];
 			?>
 		</tbody>
 	</table>
