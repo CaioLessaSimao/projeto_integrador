@@ -4,6 +4,13 @@
 	<?php
 		require_once "connection.php";
 		
+		function create_item($nome,$email){
+			$this->nome = $nome;
+			$this->email = $email;
+			$string = "<tr><td>".$nome."</td><td>".$email."</td><td></tr";
+			$this->html = $string;
+		}
+
 		$comite = (int)$_REQUEST['idcomite'];
 		$sql = "SELECT nome, email FROM delegacao WHERE fk_comite_id=$comite;";
 		
@@ -28,12 +35,7 @@
 			$resultado .= $i->html;
 		}
 	*/
-		function create_item($nome,$email){
-			$this->nome = $nome;
-			$this->email = $email;
-			$string = "<tr><td>".$nome."</td><td>".$email."</td><td></tr";
-			$this->html = $string;
-		}
+		
 	
 	?>
 </head>
