@@ -21,7 +21,7 @@
 		
 		$result = pg_query($conn,$sql);
 		
-		$array = pg_fetch_assoc($result);
+		//$array = pg_fetch_assoc($result);
 		
 		
 
@@ -55,7 +55,10 @@
 		</thead>
 		<tbody>
 			<?php 
-			echo $sql;
+			while ($row = pg_fetch_assoc($result)) {
+		      echo $row['nome'];
+		      echo $row['email'];
+			}
 
 			?>
 		</tbody>
