@@ -10,7 +10,7 @@
 		$result = pg_query($conn,$sql);
 		
 		$array = pg_fetch_array($result);
-		/*
+		
 		$tbdelegacoes = [];
 		
 		for($i=0; $i < count($array)-1; $i+=2){
@@ -23,6 +23,7 @@
 			$tbdelegacoes[] = $linha;
 		}
 		$resultado = "";
+		/*
 		foreach($tbdelegacoes as $i){
 			$resultado .= $i->html;
 		}
