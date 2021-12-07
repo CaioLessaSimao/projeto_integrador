@@ -8,6 +8,7 @@
 		$sql = "SELECT nome, email FROM delegacao WHERE fk_comite_id=$comite;";
 		
 		$result = pg_query($conn,$sql);
+		/*
 		$array = pg_fetch_array($result);
 		
 		$tbdelegacoes = [];
@@ -32,7 +33,7 @@
 			$string = "<tr><td>".$nome."</td><td>".$email."</td><td></tr";
 			$this->html = $string;
 		}
-
+	*/
 	?>
 </head>
 <body>
