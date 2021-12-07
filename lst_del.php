@@ -25,7 +25,7 @@
 			
 			$email = $array[$i+1];
 			
-			$linha = new create_item($nome,$email);
+			$linha = create_item($nome,$email);
 			
 			$tbdelegacoes[] = $linha;
 		}
