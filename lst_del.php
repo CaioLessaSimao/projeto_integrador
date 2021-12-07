@@ -17,7 +17,7 @@
 		}
 
 		$comite = (int)$_REQUEST['idcomite'];
-		$sql = "SELECT nome, email FROM delegacao WHERE fk_comite_id=$comite;";
+		$sql = "SELECT nome, email FROM delegacao;";
 		
 		$result = pg_query($conn,$sql);
 		
@@ -56,6 +56,7 @@
 		<tbody>
 			<?php 
 			var_dump($array);
+			
 			?>
 		</tbody>
 	</table>
