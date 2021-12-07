@@ -18,7 +18,7 @@
 		
 		$tbdelegacoes = [];
 		
-		for($i=0; $i < count($array)-1; $i+=2){
+		for($i=0; $i < count($array)-2; $i+=2){
 			$nome = $array[$i];
 			
 			$email = $array[$i+1];
