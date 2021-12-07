@@ -21,8 +21,11 @@
 		
 		$result = pg_query($conn,$sql);
 		
-		$array = pg_fetch_array($result);
+		$array = pg_fetch_assoc($result);
 		
+		
+
+		/*
 		$tbdelegacoes = [];
 		
 		for($i=0; $i < count($array)-2; $i+=2){
@@ -39,7 +42,7 @@
 		foreach($tbdelegacoes as $i){
 			$resultado .= $i->html;
 		}
-	
+		*/
 	?>
 </head>
 <body>
@@ -51,7 +54,7 @@
 			</tr>
 		</thead>
 		<tbody>
-			<?php echo $resultado; ?>
+			<?php echo $array; ?>
 		</tbody>
 	</table>
 </body>
