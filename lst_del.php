@@ -8,9 +8,9 @@
 		$sql = "SELECT nome, email FROM delegacao WHERE fk_comite_id=$comite;";
 		
 		$result = pg_query($conn,$sql);
-		/*
-		$array = pg_fetch_array($result);
 		
+		$array = pg_fetch_array($result);
+		/*
 		$tbdelegacoes = [];
 		
 		for($i=0; $i < count($array)-1; $i+=2){
