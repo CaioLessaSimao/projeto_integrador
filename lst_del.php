@@ -27,7 +27,7 @@
 		foreach($tbdelegacoes as $i){
 			$resultado .= $i->html;
 		}
-
+	*/
 		function create_item($nome,$email){
 			$this->nome = $nome;
 			$this->email = $email;
