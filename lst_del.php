@@ -54,7 +54,7 @@
 			</tr>
 		</thead>
 		<tbody>
-			<?php echo $array; ?>
+			<?php echo $array['nome']; ?>
 		</tbody>
 	</table>
 </body>
