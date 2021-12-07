@@ -55,9 +55,9 @@
 		</thead>
 		<tbody>
 			<?php 
-			for($i=0; $i<6;$i++){
-				echo $array['nome']; 
-				echo $array['email'];
+			for($i=0; $i<5;$i++){
+				echo $array[$i]; 
+				echo $array[$i+1];
 			}
 			?>
 		</tbody>
