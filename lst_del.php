@@ -5,10 +5,8 @@
 		require_once "connection.php";
 		
 		function create_item($nome,$email){
-			$this->nome = $nome;
-			$this->email = $email;
 			$string = "<tr><td>".$nome."</td><td>".$email."</td><td></tr";
-			$this->html = $string;
+			$html = $string;
 		}
 
 		$comite = (int)$_REQUEST['idcomite'];
