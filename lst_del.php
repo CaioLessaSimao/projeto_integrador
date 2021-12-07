@@ -34,7 +34,7 @@
 			$string = "<tr><td>".$nome."</td><td>".$email."</td><td></tr";
 			$this->html = $string;
 		}
-	*/
+	
 	?>
 </head>
 <body>
@@ -47,6 +47,7 @@
 		</thead>
 		<tbody>
 			<?php echo $resultado; ?>
+			<p>jorge</p>
 		</tbody>
 	</table>
 </body>
