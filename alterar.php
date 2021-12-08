@@ -40,6 +40,7 @@
 			<input type="text" name="email">
 			<label for="email">Escreva a sigla da delegação</label>
 		</div>
+		<input type="submit" name="submit" value="Alterar">
 	</form>
 </body>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
