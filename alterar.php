@@ -12,26 +12,35 @@
 
     	require_once "connection.php";
 
-    	$id = $_REQUEST['id'];
-    	$jg = 2;
+    	$id = (int)$_REQUEST['id'];
+
+    	$nome = $_REQUEST['nome'];
+
+    	$email = $_REQUEST['email'];
+
+    	$sql = "UPDATE delegacao SET nome='$nome', email='$email' WHERE id=$id;";
+
+    	$result = pg_query($conn,$sql);
 
     ?>
 </head>
 <body>
-	<div class="input-field">
-		<input type="text" name="nome">
-		<label for="nome">Escreva o nome da delegação</label>
-	</div>
+	<form action="alterar.php" method="POST">
+		<div class="input-field">
+			<input type="text" name="nome">
+			<label for="nome">Escreva o nome da delegação</label>
+		</div>
 
-	<div class="input-field">
-		<input type="text" name="sigla">
-		<label for="sigla">Escreva a sigla da delegação</label>
-	</div>
+		<div class="input-field">
+			<input type="text" name="sigla">
+			<label for="sigla">Escreva a sigla da delegação</label>
+		</div>
 
-	<div class="input-field">
-		<input type="text" name="email">
-		<label for="email">Escreva a sigla da delegação</label>
-	</div>
+		<div class="input-field">
+			<input type="text" name="email">
+			<label for="email">Escreva a sigla da delegação</label>
+		</div>
+	</form>
 </body>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 </html>

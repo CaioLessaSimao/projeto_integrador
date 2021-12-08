@@ -47,7 +47,7 @@
 
 			$id = $ids[$i];
 			
-			$linha = new create_item($nome,$email,$ids);
+			$linha = new create_item($nome,$email,$id);
 			
 			$tbdelegacoes[] = $linha;
 		}
