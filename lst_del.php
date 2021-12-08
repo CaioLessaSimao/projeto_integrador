@@ -11,7 +11,7 @@
 			public $html;
 
 			function __construct($nome, $email){
-				$this->string = "<tr><td>".$nome."</td><td>".$email."</td><td></tr";
+				$this->string = "<tr><td>".$nome."</td><td>".$email."</td><td></tr>";
 				$this->html = $this->string;
 			}
 		}
@@ -31,7 +31,7 @@
 		
 		$tbdelegacoes = [];
 		
-		for($i=0; $i < count($nomes)-1; $i++){
+		for($i=0; $i < count($nomes); $i++){
 			$nome = $nomes[$i];
 			
 			$email = $emails[$i];
