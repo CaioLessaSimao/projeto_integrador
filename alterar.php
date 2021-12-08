@@ -10,22 +10,13 @@
 
     <?php
 
-    	require_once "connection.php";
-
-    	$id = (int)$_REQUEST['id'];
-
-    	$nome = $_REQUEST['nome'];
-
-    	$email = $_REQUEST['email'];
-
-    	$sql = "UPDATE delegacao SET nome='$nome', email='$email' WHERE id=$id;";
-
-    	$result = pg_query($conn,$sql);
+    	$id = $_REQUEST['id'];
+    	$comite = $_REQUEST['idcomite'];
 
     ?>
 </head>
 <body>
-	<form action="alterar.php" method="POST">
+	<form action="controle.php?funcao=alterar?idDelegacao=<?php echo $id;?>?idcomite=<?php echo $comite; ?>" method="POST">
 		<div class="input-field">
 			<input type="text" name="nome">
 			<label for="nome">Escreva o nome da delegação</label>
@@ -38,7 +29,7 @@
 
 		<div class="input-field">
 			<input type="text" name="email">
-			<label for="email">Escreva a sigla da delegação</label>
+			<label for="email">Escreva o email da delegação</label>
 		</div>
 		<input type="submit" name="submit" value="Alterar">
 	</form>

@@ -17,8 +17,8 @@
 			public $string;
 			public $html;
 
-			function __construct($nome, $email, $id){
-				$this->string = "<tr><td>".$nome."</td><td>".$email."</td><td><a href='alterar.php?id=$id'>Alterar</a></td><td><a href='deletar.php?id=$id?funcao=deletar'>Deletar</a></td></tr>";
+			function __construct($nome, $email, $id, $comite){
+				$this->string = "<tr><td>".$nome."</td><td>".$email."</td><td><a href='alterar.php?id=$id?idcomite=$comite'>Alterar</a></td><td><a href='deletar.php?id=$id?funcao=deletar'>Deletar</a></td></tr>";
 				$this->html = $this->string;
 			}
 		}
@@ -27,6 +27,8 @@
 		$sql = "SELECT nome,email,id FROM delegacao WHERE fk_comite_id=$comite;";
 		
 		$result = pg_query($conn,$sql);
+
+		$comite = strval($_REQUEST['idcomite'])
 
 		$nomes = [];
 		$emails = [];
@@ -47,7 +49,7 @@
 
 			$id = $ids[$i];
 			
-			$linha = new create_item($nome,$email,$id);
+			$linha = new create_item($nome,$email,$id,$comite);
 			
 			$tbdelegacoes[] = $linha;
 		}
