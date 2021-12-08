@@ -10,23 +10,25 @@
 			public $string;
 			public $html;
 
-			function __construct($nome, $email){
-				$this->string = "<tr><td>".$nome."</td><td>".$email."</td><td></tr>";
+			function __construct($nome, $email, $id){
+				$this->string = "<tr><td>".$nome."</td><td>".$email."</td><td><a href='alterar.php?id=$id?funcao=alterar'>Alterar</a></td><td><a href='deletar.php?id=$id?funcao=deletar'>Deletar</a></td></tr>";
 				$this->html = $this->string;
 			}
 		}
 
 		$comite = (int)$_REQUEST['idcomite'];
-		$sql = "SELECT nome, email FROM delegacao WHERE fk_comite_id=$comite;";
+		$sql = "SELECT nome,email,id FROM delegacao WHERE fk_comite_id=$comite;";
 		
 		$result = pg_query($conn,$sql);
 
 		$nomes = [];
 		$emails = [];
+		$ids = [];
 		
 		while ($row = pg_fetch_assoc($result)) {
 		    $nomes[] = $row['nome'];
 		    $emails[] =  $row['email'];
+		    $ids[] = strval($row['id']); 
 		}
 		
 		$tbdelegacoes = [];
@@ -35,8 +37,10 @@
 			$nome = $nomes[$i];
 			
 			$email = $emails[$i];
+
+			$id = $ids[$i];
 			
-			$linha = new create_item($nome,$email);
+			$linha = new create_item($nome,$email,$ids);
 			
 			$tbdelegacoes[] = $linha;
 		}
