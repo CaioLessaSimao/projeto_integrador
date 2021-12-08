@@ -13,6 +13,7 @@
     	require_once "connection.php";
 
     	$id = $_REQUEST['id'];
+    	$jg = 2;
 
     ?>
 </head>
@@ -26,7 +27,7 @@
 		<input type="text" name="sigla">
 		<label for="sigla">Escreva a sigla da delegação</label>
 	</div>
-	
+
 	<div class="input-field">
 		<input type="text" name="email">
 		<label for="email">Escreva a sigla da delegação</label>
