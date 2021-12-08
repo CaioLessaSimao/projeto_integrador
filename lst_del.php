@@ -20,18 +20,21 @@
 		$sql = "SELECT nome, email FROM delegacao WHERE fk_comite_id=$comite;";
 		
 		$result = pg_query($conn,$sql);
-		
-		//$array = pg_fetch_assoc($result);
-		
-		
 
-		/*
+		$nomes = [];
+		$emails = [];
+		
+		while ($row = pg_fetch_assoc($result)) {
+		    $nomes[] = $row['nome'];
+		    $emails[] =  $row['email'];
+		}
+		
 		$tbdelegacoes = [];
 		
-		for($i=0; $i < count($array)-2; $i+=2){
-			$nome = $array[$i];
+		for($i=0; $i < count($nomes)-1; $i++){
+			$nome = $nomes[$i];
 			
-			$email = $array[$i+1];
+			$email = $emails[$i];
 			
 			$linha = new create_item($nome,$email);
 			
@@ -42,7 +45,7 @@
 		foreach($tbdelegacoes as $i){
 			$resultado .= $i->html;
 		}
-		*/
+		
 	?>
 </head>
 <body>
@@ -54,13 +57,7 @@
 			</tr>
 		</thead>
 		<tbody>
-			<?php 
-			while ($row = pg_fetch_assoc($result)) {
-		      echo $row['nome'];
-		      echo $row['email'];
-			}
-
-			?>
+			<?php echo $resultado; ?>
 		</tbody>
 	</table>
 </body>
