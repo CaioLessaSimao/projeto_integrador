@@ -28,7 +28,7 @@
 		
 		$result = pg_query($conn,$sql);
 
-		$comite = $_REQUEST['idcomite']
+		$comit = strval($comite)
 
 		$nomes = [];
 		$emails = [];
@@ -49,7 +49,7 @@
 
 			$id = $ids[$i];
 			
-			$linha = new create_item($nome,$email,$id,$comite);
+			$linha = new create_item($nome,$email,$id,$comit);
 			
 			$tbdelegacoes[] = $linha;
 		}
