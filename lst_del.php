@@ -1,6 +1,13 @@
 <html>
 <head>
 	<title>Lista de delegados</title>
+
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
 	<?php
 		require_once "connection.php";
 		
@@ -11,7 +18,7 @@
 			public $html;
 
 			function __construct($nome, $email, $id){
-				$this->string = "<tr><td>".$nome."</td><td>".$email."</td><td><a href='alterar.php?id=$id?funcao=alterar'>Alterar</a></td><td><a href='deletar.php?id=$id?funcao=deletar'>Deletar</a></td></tr>";
+				$this->string = "<tr><td>".$nome."</td><td>".$email."</td><td><a href='alterar.php?id=$id'>Alterar</a></td><td><a href='deletar.php?id=$id?funcao=deletar'>Deletar</a></td></tr>";
 				$this->html = $this->string;
 			}
 		}
@@ -65,4 +72,5 @@
 		</tbody>
 	</table>
 </body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 </html>
