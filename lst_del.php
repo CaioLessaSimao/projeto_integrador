@@ -28,7 +28,7 @@
 		
 		$result = pg_query($conn,$sql);
 
-		$comite = strval($_REQUEST['idcomite'])
+		$comite = $_REQUEST['idcomite']
 
 		$nomes = [];
 		$emails = [];
