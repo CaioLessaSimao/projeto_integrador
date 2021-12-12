@@ -13,7 +13,7 @@ possuirá plataforma web e mobile, ambas com interfaces intuitivas e
 compreensivas
 
 <h1> Dsis </h1>
-  <a href="https://drive.google.com/file/d/1Kc1DxtKMtAX_GyL6gRT4aX309G7aHpwe/view?usp=sharing">Protótipo do Sistema</a>
+  <a href="https://drive.google.com/file/d/1Kc1DxtKMtAX_GyL6gRT4aX309G7aHpwe/view?usp=sharing" target="_blank">Protótipo do Sistema</a>
   
 <h1> Revisão de Usabilidade </h1>
   
