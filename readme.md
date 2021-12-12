@@ -21,7 +21,7 @@ compreensivas
   ![imagem](imagens/tech.jpg?)
 
 <h1> Modelo de Classe</h1>
-  ![image](https://user-images.githubusercontent.com/67928073/145730262-587b1358-3407-494f-ae71-3010312546c5.png)
+  ![image](imagens/tech.JPG)
 
  <h1> Lições Aprendidas</h1>
   ![image](https://user-images.githubusercontent.com/67928073/145730288-031a577a-801a-41ec-afca-e922b009fd05.png)
