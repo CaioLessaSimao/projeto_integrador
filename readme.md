@@ -11,6 +11,7 @@ de verba, etc). Nele devemos permitir ao usuário que cadastre um perfil e
 que, através dele, participe ou crie comitês de simulação. O simulador
 possuirá plataforma web e mobile, ambas com interfaces intuitivas e
 compreensivas
+
   
 <h1> Protótipo do Sistema </h1>
   
@@ -19,14 +20,18 @@ compreensivas
   
 <h1> Backlog </h1>
 
-  ![image](imagens/backlog-func.PNG)
-  ![image](imagens/backlog-nfunc.PNG)
+  ![imagem](imagens/backlog-func.PNG)
+  
+  ![imagem](imagens/backlog-nfunc.PNG)
 
 <h1> Modelo de Classe</h1>
-  ![image](imagens/dia-class.PNG)
+
+  ![imagem](imagens/dia-class.png)
 
  <h1> Lições Aprendidas</h1>
-  ![image](imagens/lic.PNG)
+ 
+  ![imagem](imagens/lic.png)
 
  <h1> Projeto do Sistema </h1>
-   ![image](imagens/tech.PNG)
+ 
+![imagem](imagens/tech.png)
