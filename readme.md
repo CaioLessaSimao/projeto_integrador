@@ -1,4 +1,4 @@
-<h1> Minimundo </h1>
+<h2> Minimundo </h2>
   Simulações geopolíticas são uma forma de levar para o mundo estudantil
 o universo da geopolítica. Compreender como funcionam essas reuniões é
 muito útil para o entendimento de relações internacionais. Dito isso, uma
@@ -12,16 +12,17 @@ que, através dele, participe ou crie comitês de simulação. O simulador
 possuirá plataforma web e mobile, ambas com interfaces intuitivas e
 compreensivas
 
-<h1> Dsis </h1>
+<h2> Entregas </h2>
   <a href="https://drive.google.com/file/d/1Kc1DxtKMtAX_GyL6gRT4aX309G7aHpwe/view?usp=sharing/">Protótipo do Sistema</a>
   
-<h1> Revisão de Usabilidade </h1>
+  <a href="https://drive.google.com/file/d/1Kc1DxtKMtAX_GyL6gRT4aX309G7aHpwe/view?usp=sharing/">Revisão de Usabilidade</a>
+
+  <a href="https://drive.google.com/file/d/1Kc1DxtKMtAX_GyL6gRT4aX309G7aHpwe/view?usp=sharing/">Backlog</a>
+
+  <a href="https://drive.google.com/file/d/1Kc1DxtKMtAX_GyL6gRT4aX309G7aHpwe/view?usp=sharing/">Modelo de Classe</a>
+
+  <a href="https://drive.google.com/file/d/1Kc1DxtKMtAX_GyL6gRT4aX309G7aHpwe/view?usp=sharing/">Lições Aprendidas</a>
+
+  <a href="https://drive.google.com/file/d/1Kc1DxtKMtAX_GyL6gRT4aX309G7aHpwe/view?usp=sharing/">Projeto do Sistema</a>
   
-<h1> Backlog </h1>
 
-<h1> Modelo de Classe</h1>
-
-<h1> Lições Aprendidas</h1>
- 
-<h1> Projeto do Sistema </h1>
- 
