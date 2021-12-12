@@ -19,13 +19,15 @@ compreensivas
   
 <h1> Backlog </h1>
 
-  ![imagem](imagens/tech.JPG)
+  ![imagem](imagens/backlog-func.PNG)
+  ![imagem](imagens/backlog-nfunc.PNG)
 
 <h1> Modelo de Classe</h1>
-  ![image](imagens/tech.JPG)
+  ![imagem](imagens/dia-class .PNG)
+
 
  <h1> Lições Aprendidas</h1>
-  ![image](https://user-images.githubusercontent.com/67928073/145730288-031a577a-801a-41ec-afca-e922b009fd05.png)
+  ![imagem](imagens/lic.PNG)
 
  <h1> Projeto do Sistema </h1>
-   ![tech](https://user-images.githubusercontent.com/67928073/145731040-b2153835-9876-4887-b64f-52da89582dd7.png)
+   ![imagem](imagens/tech.PNG)
