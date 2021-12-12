@@ -18,7 +18,8 @@ compreensivas
 <h1> Revisão de Usabilidade </h1>
   
 <h1> Backlog </h1>
-  ![imagem](imagens/tech.jpg?)
+
+  ![imagem](imagens/tech.JPG)
 
 <h1> Modelo de Classe</h1>
   ![image](imagens/tech.JPG)
@@ -27,4 +28,4 @@ compreensivas
   ![image](https://user-images.githubusercontent.com/67928073/145730288-031a577a-801a-41ec-afca-e922b009fd05.png)
 
  <h1> Projeto do Sistema </h1>
-   ![image](https://user-images.githubusercontent.com/67928073/145730311-5b8e24b4-1eda-45fd-b0f6-7ffd56c1c6db.png)
+   ![tech](https://user-images.githubusercontent.com/67928073/145731040-b2153835-9876-4887-b64f-52da89582dd7.png)
