@@ -18,7 +18,7 @@ compreensivas
 <h1> Revisão de Usabilidade </h1>
   
 <h1> Backlog </h1>
-  ![alt text](https://github.com/CaioLessaSimao/projeto_integrador/blob/main/imagens/tech.jpg?)
+  ![imagem](imagens/tech.jpg?)
 
 <h1> Modelo de Classe</h1>
   ![image](https://user-images.githubusercontent.com/67928073/145730262-587b1358-3407-494f-ae71-3010312546c5.png)
