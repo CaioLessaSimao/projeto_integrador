@@ -19,15 +19,14 @@ compreensivas
   
 <h1> Backlog </h1>
 
-  ![imagem](imagens/backlog-func.PNG)
-  ![imagem](imagens/backlog-nfunc.PNG)
+  ![image](imagens/backlog-func.PNG)
+  ![image](imagens/backlog-nfunc.PNG)
 
 <h1> Modelo de Classe</h1>
-  ![imagem](imagens/dia-class .PNG)
-
+  ![image](imagens/dia-class.PNG)
 
  <h1> Lições Aprendidas</h1>
-  ![imagem](imagens/lic.PNG)
+  ![image](imagens/lic.PNG)
 
  <h1> Projeto do Sistema </h1>
-   ![imagem](imagens/tech.PNG)
+   ![image](imagens/tech.PNG)
