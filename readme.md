@@ -1,4 +1,4 @@
-<h1> Minimundo <h1>
+<h1> Minimundo </h1>
   Simulações geopolíticas são uma forma de levar para o mundo estudantil
 o universo da geopolítica. Compreender como funcionam essas reuniões é
 muito útil para o entendimento de relações internacionais. Dito isso, uma
