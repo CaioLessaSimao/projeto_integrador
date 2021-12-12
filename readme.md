@@ -21,10 +21,10 @@ compreensivas
   ![image](https://user-images.githubusercontent.com/67928073/145730213-8496d88c-7379-43b1-b8ad-e06d3982a160.png)
   ![image](https://user-images.githubusercontent.com/67928073/145730222-70bf0a63-0474-4fa7-96a5-e7f819dde613.png)
 
-<h1 Modelo de Classe </h1>
+<h1> Modelo de Classe</h1>
   ![image](https://user-images.githubusercontent.com/67928073/145730262-587b1358-3407-494f-ae71-3010312546c5.png)
 
- <h1 Lições Aprendidas </h1>
+ <h1> Lições Aprendidas</h1>
   ![image](https://user-images.githubusercontent.com/67928073/145730288-031a577a-801a-41ec-afca-e922b009fd05.png)
 
  <h1> Projeto do Sistema </h1>
