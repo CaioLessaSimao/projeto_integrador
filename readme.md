@@ -15,23 +15,13 @@ compreensivas
   
 <h1> Protótipo do Sistema </h1>
   
-  
 <h1> Revisão de Usabilidade </h1>
   
 <h1> Backlog </h1>
 
-  ![imagem](imagens/backlog-func.png)
-  
-  ![imagem](imagens/backlog-nfunc.png)
-
 <h1> Modelo de Classe</h1>
 
-  ![imagem](imagens/dia-class.png)
-
- <h1> Lições Aprendidas</h1>
+<h1> Lições Aprendidas</h1>
  
-  ![imagem](imagens/lic.png)
-
- <h1> Projeto do Sistema </h1>
+<h1> Projeto do Sistema </h1>
  
-![imagem](imagens/tech.png)
