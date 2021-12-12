@@ -20,9 +20,9 @@ compreensivas
   
 <h1> Backlog </h1>
 
-  ![imagem](imagens/backlog-func.PNG)
+  ![imagem](imagens/backlog-func.png)
   
-  ![imagem](imagens/backlog-nfunc.PNG)
+  ![imagem](imagens/backlog-nfunc.png)
 
 <h1> Modelo de Classe</h1>
 
