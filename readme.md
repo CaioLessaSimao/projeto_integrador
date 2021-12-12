@@ -13,8 +13,8 @@ possuirá plataforma web e mobile, ambas com interfaces intuitivas e
 compreensivas
 
 <h2> Entregas </h2>
+
   <a href="https://drive.google.com/file/d/1Kc1DxtKMtAX_GyL6gRT4aX309G7aHpwe/view?usp=sharing/">Protótipo do Sistema</a>
-  
   
   <a href="https://drive.google.com/file/d/1Kc1DxtKMtAX_GyL6gRT4aX309G7aHpwe/view?usp=sharing/">Revisão de Usabilidade</a>
 
