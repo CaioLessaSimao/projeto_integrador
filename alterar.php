@@ -11,6 +11,8 @@
     <?php
     	require_once "connection.php";
 
+    	var_dump($_REQUEST);
+
     	if(isset($_REQUEST['nome']) && isset($_REQUEST['sigla']) && isset($_REQUEST['email']) && isset($_REQUEST['id']) && isset($_REQUEST['idcomite'])){
     		
     		$id = (int)$_REQUEST['id'];
