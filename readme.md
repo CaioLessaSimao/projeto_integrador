@@ -28,6 +28,9 @@ compreensivas
   
   <a href="https://drive.google.com/file/d/1wWN_00gjaTHxjQlhVm4kO_278qyUztd2/view?usp=sharing">Diagrama do MER</a>
   
+  <a href="https://drive.google.com/file/d/1-kEUz1kc1gDwoRZyF1BTZSgz2U0yz3SS/view?usp=sharing">Banco de dados</a>
+  
+  <a href="https://psgd.herokuapp.com">Link do sistema</a>
   
   
   
