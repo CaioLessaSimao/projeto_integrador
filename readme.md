@@ -13,18 +13,16 @@ possuirá plataforma web e mobile, ambas com interfaces intuitivas e
 compreensivas
 
 <h2> Entregas </h2>
-
-  <a href="https://drive.google.com/file/d/1Kc1DxtKMtAX_GyL6gRT4aX309G7aHpwe/view?usp=sharing/">Protótipo do Sistema</a>
   
-  <a href="https://drive.google.com/file/d/1Kc1DxtKMtAX_GyL6gRT4aX309G7aHpwe/view?usp=sharing/">Revisão de Usabilidade</a>
+  <a href="https://drive.google.com/file/d/1GWJANBPGYtUjcNVaoHsX1fAiK5qULI3P/view">Revisão de Usabilidade</a>
 
-  <a href="https://drive.google.com/file/d/1Kc1DxtKMtAX_GyL6gRT4aX309G7aHpwe/view?usp=sharing/">Backlog</a>
+  <a href="https://drive.google.com/file/d/13mpWNJk8OvqijeLolXCm486PlOyxjiSw/view">Backlog</a>
 
-  <a href="https://drive.google.com/file/d/1Kc1DxtKMtAX_GyL6gRT4aX309G7aHpwe/view?usp=sharing/">Modelo de Classe</a>
+  <a href="https://drive.google.com/file/d/1lq6KaCw5lvFdJp4dmsKpWj_jiS9ZANfc/view">Modelo de Classe</a>
 
-  <a href="https://drive.google.com/file/d/1Kc1DxtKMtAX_GyL6gRT4aX309G7aHpwe/view?usp=sharing/">Lições Aprendidas</a>
+  <a href="https://drive.google.com/file/d/1QJ6lwunyRaUk2giOciTwTewn34al7yB0/view">Lições Aprendidas</a>
 
-  <a href="https://drive.google.com/file/d/1Kc1DxtKMtAX_GyL6gRT4aX309G7aHpwe/view?usp=sharing/">Projeto do Sistema</a>
+  <a href="https://drive.google.com/file/d/1potXD0ODxbXHvSjgkgXuB8jKELcZbn5f/view">Projeto do Sistema</a>
   
   <a href="https://drive.google.com/file/d/1tClSiA9WvnwgOCeqtJgG8VcCUXulH3xt/view?usp=sharing">RoadMap</a>
   
