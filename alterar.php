@@ -31,7 +31,7 @@
     ?>
 </head>
 <body>
-	<form action="controle.php?funcao=alterar?idDelegacao=<?php echo $id;?>?idcomite=<?php echo $comite; ?>" method="POST">
+	<form action="alterar.php" method="POST">
 		<div class="input-field">
 			<input type="text" name="nome">
 			<label for="nome">Escreva o nome da delegação</label>
