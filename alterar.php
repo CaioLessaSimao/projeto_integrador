@@ -23,12 +23,12 @@
 
     		$email = $_REQUEST['email'];
 
-    		$sql = "UPDATE delegacao SET nome = '$nome', $email = '$email'	WHERE id=$id";
+    		$sql = "UPDATE delegacao SET nome = '$nome', email = '$email' WHERE id=$id";
 
     		$result = pg_query($conn, $sql);
 
     		var_dump($result);
-    		echo $sql;
+    		echo "<br>".$sql;
 
     		//header("Location: lst_del.php");
 
