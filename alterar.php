@@ -27,7 +27,10 @@
 
     		$result = pg_query($conn, $sql);
 
-    		header("Location: lst_del.php");
+    		var_dump($result);
+    		echo $sql;
+
+    		//header("Location: lst_del.php");
 
     	}
     ?>
