@@ -9,14 +9,34 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 
     <?php
+    	require_once "connection.php";
 
-    	$id = $_REQUEST['id'];
-    	$comite = $_REQUEST['idcomite'];
+    	var_dump($_REQUEST);
 
+    	if(isset($_REQUEST['nome']) && isset($_REQUEST['sigla']) && isset($_REQUEST['email']) && isset($_REQUEST['id'])){
+    		
+    		$id = (int)$_REQUEST['id'];
+    		
+    		$comite = $_REQUEST['idcomite'];
+
+    		$nome = $_REQUEST['nome'];
+
+    		$email = $_REQUEST['email'];
+
+    		$sql = "UPDATE delegacao SET nome = '$nome', email = '$email' WHERE id=$id";
+
+    		$result = pg_query($conn, $sql);
+
+    		var_dump($result);
+    		echo "<br>".$sql;
+
+    		//header("Location: lst_del.php");
+
+    	}
     ?>
 </head>
 <body>
-	<form action="controle.php?funcao=alterar?idDelegacao=<?php echo $id;?>?idcomite=<?php echo $comite; ?>" method="POST">
+	<form action="alterar.php?id=<?php echo $_REQUEST['id']; ?>" method="POST">
 		<div class="input-field">
 			<input type="text" name="nome">
 			<label for="nome">Escreva o nome da delegação</label>
