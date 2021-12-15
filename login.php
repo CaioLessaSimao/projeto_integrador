@@ -1,7 +1,7 @@
 <?php
 
 // connecting to db
-$con = pg_connect(getenv("https://psgd.herokuapp.com"));
+$con = pg_connect(getenv("DATABASE_URL"));
 
 // array for JSON response
 $response = array();
