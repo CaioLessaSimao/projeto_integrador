@@ -220,7 +220,7 @@
         $sql = "DELETE FROM delegacao WHERE id = $id;";
         $result = pg_query($conn, $sql);
 
-        header("Location: lst_del.php?idcomite=$id_comite");
+        header("Location: pag_comite.php?idcomite=$id_comite");
 
     }
     
