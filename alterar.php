@@ -11,12 +11,18 @@
     <?php
     	require_once "connection.php";
 
-    	if(isset($_REQUEST['nome']) && isset($_REQUEST['sigla']) && isset($_REQUEST['email']) && isset($_REQUEST['id']) && isset($_REQUEST['idcomite'])){
+    	if(isset($_REQUEST['nome']) && isset($_REQUEST['sigla']) && isset($_REQUEST['email']) && isset($_REQUEST['id'])){
     		
     		$id = (int)$_REQUEST['id'];
     		
-    		$comite = $_REQUEST['idcomite'];
-			var_dump($_REQUEST['idcomite']);
+			$test_sql = "SELECT fk_comite_id FROM delegacao WHERE id = $id;";
+
+			$test_result = pg_query($conn, $test_sql);
+
+			$test_array = pg_fetch_array($test_result);
+
+			$comite = $test_array[0];
+
     		$nome = $_REQUEST['nome'];
 
     		$email = $_REQUEST['email'];
@@ -34,7 +40,7 @@
     ?>
 </head>
 <body>
-	<form action="alterar.php?id=<?php echo $_REQUEST['id'];?>?idcomite=<?php echo $_REQUEST['idcomite'];?>" method="POST">
+	<form action="alterar.php?id=<?php echo $_REQUEST['id'];?>" method="POST">
 		<div class="input-field">
 			<input type="text" name="nome">
 			<label for="nome">Escreva o nome da delegação</label>
