@@ -16,7 +16,7 @@
     		$id = (int)$_REQUEST['id'];
     		
     		$comite = $_REQUEST['idcomite'];
-
+			var_dump($comite);
     		$nome = $_REQUEST['nome'];
 
     		$email = $_REQUEST['email'];
@@ -25,7 +25,7 @@
 
     		$result = pg_query($conn, $sql);
 
-    		header("Location: lst_del.php?idcomite=$comite");
+    		//header("Location: lst_del.php?idcomite=$comite");
 
     	}
     ?>
