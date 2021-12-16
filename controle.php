@@ -3,6 +3,8 @@
 
     $oper = $_REQUEST['funcao'];
 
+    echo $oper;
+
     if($oper == "criar_comite"){
         header("Location: criar_comite.html");
     }
@@ -221,7 +223,7 @@
         header("Location: lst_del.php?idcomite=$id_comite");
 
     }
-    echo $oper;
+    
         
 
 ?>
