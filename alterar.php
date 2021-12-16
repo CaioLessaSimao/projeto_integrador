@@ -11,7 +11,7 @@
     <?php
     	require_once "connection.php";
 
-    	if(isset($_REQUEST['nome']) && isset($_REQUEST['sigla']) && isset($_REQUEST['email']) && isset($_REQUEST['id'])){
+    	if(isset($_REQUEST['nome']) && isset($_REQUEST['sigla']) && isset($_REQUEST['email']) && isset($_REQUEST['id']) && isset($_REQUEST['idcomite'])){
     		
     		$id = (int)$_REQUEST['id'];
     		
@@ -28,6 +28,9 @@
     		//header("Location: lst_del.php?idcomite=$comite");
 
     	}
+		else{
+			echo "eita poura";
+		}
     ?>
 </head>
 <body>
