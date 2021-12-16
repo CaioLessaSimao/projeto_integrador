@@ -25,7 +25,7 @@
 
     		$result = pg_query($conn, $sql);
 
-    		header("Location: lst_del.php?idcomite= $comite");
+    		header("Location: lst_del.php?idcomite=$comite");
 
     	}
     ?>
