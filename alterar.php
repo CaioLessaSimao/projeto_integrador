@@ -34,9 +34,6 @@
     		header("Location: lst_del.php?idcomite=$comite");
 
     	}
-		else{
-			echo "eita poura";
-		}
     ?>
 </head>
 <body>
