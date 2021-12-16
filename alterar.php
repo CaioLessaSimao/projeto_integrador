@@ -11,8 +11,6 @@
     <?php
     	require_once "connection.php";
 
-    	var_dump($_REQUEST);
-
     	if(isset($_REQUEST['nome']) && isset($_REQUEST['sigla']) && isset($_REQUEST['email']) && isset($_REQUEST['id'])){
     		
     		$id = (int)$_REQUEST['id'];
@@ -27,10 +25,7 @@
 
     		$result = pg_query($conn, $sql);
 
-    		var_dump($result);
-    		echo "<br>".$sql;
-
-    		//header("Location: lst_del.php");
+    		header("Location: lst_del.php");
 
     	}
     ?>
