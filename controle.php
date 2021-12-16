@@ -211,7 +211,7 @@
                 }
     }
 
-    if($oper == 'deletar_delegado'){
+    if($oper == 'deletar_delegacao'){
         $id_del = (int)$_REQUEST['id'];
         $id_comite = $_REQUEST['idcomite'];
 
