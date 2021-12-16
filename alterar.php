@@ -16,7 +16,7 @@
     		$id = (int)$_REQUEST['id'];
     		
     		$comite = $_REQUEST['idcomite'];
-			var_dump($comite);
+			var_dump($_REQUEST['idcomite']);
     		$nome = $_REQUEST['nome'];
 
     		$email = $_REQUEST['email'];
