@@ -217,10 +217,10 @@
         $id_del = (int)$_REQUEST['id'];
         $id_comite = $_REQUEST['idcomite'];
 
-        $sql = "DELETE FROM delegacao WHERE id = $id;";
+        $sql = "DELETE FROM delegacao WHERE id = $id_del;";
         $result = pg_query($conn, $sql);
 
-        header("Location: pag_comite.php?idcomite=$id_comite");
+        header("Location: lst_del.php?idcomite=$id_comite");
 
     }
     
