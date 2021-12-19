@@ -32,11 +32,11 @@ compreensivas
   
   <a href="https://drive.google.com/file/d/1-kEUz1kc1gDwoRZyF1BTZSgz2U0yz3SS/view?usp=sharing">Banco de dados</a>
   
+  <a href="https://drive.google.com/file/d/1VMn8gUy-bjAWHDeUSE42grRMQDxod8O9/view?usp=sharing">Plano de testes</a>
+  
   <a href="https://psgd.herokuapp.com">Link do sistema</a>
   
   <a href="https://docs.google.com/presentation/d/1Q1s4NLI5mt92naixYYwUzRXIHm268IPJsYJgkJw3OZo/edit?usp=sharing">Esboço da apresentação</a>
-  
-  <a href="https://drive.google.com/file/d/1VMn8gUy-bjAWHDeUSE42grRMQDxod8O9/view?usp=sharing">Plano de testes</a>
   
   
   
