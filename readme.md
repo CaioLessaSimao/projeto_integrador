@@ -32,6 +32,8 @@ compreensivas
   
   <a href="https://psgd.herokuapp.com">Link do sistema</a>
   
+  <a href="https://docs.google.com/presentation/d/1Q1s4NLI5mt92naixYYwUzRXIHm268IPJsYJgkJw3OZo/edit?usp=sharing">Esboço da apresentação</a>
+  
   
   
 
