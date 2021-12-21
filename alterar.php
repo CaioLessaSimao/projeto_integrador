@@ -23,11 +23,26 @@
 
 			$comite = $test_array[0];
 
+			$aux = (int)$comite;
+
+			$teste_sql2 = "SELECT nome FROM comite WHERE id = $aux;";
+
+			$test_result2 = pg_query($conn, $test_sql2);
+
+			$test_array2 = pg_fetch_array($test_result2);
+
+			$aux2 = $test_array2[0];
+
     		$nome = $_REQUEST['nome'];
+			
+			$sigla = $_REQUEST['sigla'];
+
+			$login = $sigla.".".$aux2;
+			$senha = $sigla.".".strval(rand(0, 9)) .strval(rand(0, 9)) .strval(rand(0, 9));
 
     		$email = $_REQUEST['email'];
 
-    		$sql = "UPDATE delegacao SET nome = '$nome', email = '$email' WHERE id=$id";
+    		$sql = "UPDATE delegacao SET nome = '$nome', email = '$email', login = '$login', senha = '$senha' WHERE id=$id";
 
     		$result = pg_query($conn, $sql);
 
