@@ -11,6 +11,8 @@
 				$comite = (int)$_REQUEST['idcomite'];
 				$sql = "SELECT nome,dpo FROM delegacao WHERE fk_comite_id=$comite";
 				$result = pg_query($conn,$sql);
+				$aux = pg_fetch_array($result);
+				echo count($aux);
 				while ($dados = pg_fetch_array($result)):
 			
 		?>

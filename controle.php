@@ -148,13 +148,11 @@
                     $senha = $_REQUEST['dir_senha'];
                     
                     if(empty($login) || empty($senha)){
-                        echo  "<script>alert('Existem campos vazios!');</script>";
-                        header("Location: criar_comite.html");
+                        header("Location: index.php");
             
                     }
                     else if(ctype_space($login) || ctype_space($senha)){
-                        echo  "<script>alert('Os campos não podem ficar em branco!');</script>";
-                        header("Location: criar_comite.html");
+                        header("Location: index.php");
                     }
 
                     $query = "SELECT id FROM diretor WHERE login='$login' and senha='$senha';";
@@ -183,13 +181,11 @@
                     $senha = $_REQUEST['del_senha'];
                     
                     if(empty($login) || empty($senha)){
-                        echo  "<script>alert('Existem campos vazios!');</script>";
-                        header("Location: criar_comite.html");
+                        header("Location: index.php");
             
                     }
                     else if(ctype_space($login) || ctype_space($senha)){
-                        echo  "<script>alert('Os campos não podem ficar em branco!');</script>";
-                        header("Location: criar_comite.html");
+                        header("Location: index.php");
                     }
 
                     $query = "SELECT id FROM delegacao WHERE login='$login' and senha='$senha';";
