@@ -3,6 +3,8 @@
 
     $oper = $_REQUEST['funcao'];
 
+    echo $oper;
+
     if($oper == "criar_comite"){
         header("Location: criar_comite.html");
     }
@@ -205,6 +207,19 @@
                         header("Location: index.php?aux=erro");
                     }
                 }
-            }
+    }
+
+    if($oper == 'deletar_delegacao'){
+        $id_del = (int)$_REQUEST['id'];
+        $id_comite = $_REQUEST['idcomite'];
+
+        $sql = "DELETE FROM delegacao WHERE id = $id_del;";
+        $result = pg_query($conn, $sql);
+
+        header("Location: lst_del.php?idcomite=$id_comite");
+
+    }
+    
+        
 
 ?>

@@ -11,32 +11,48 @@
     <?php
     	require_once "connection.php";
 
-    	var_dump($_REQUEST);
-
     	if(isset($_REQUEST['nome']) && isset($_REQUEST['sigla']) && isset($_REQUEST['email']) && isset($_REQUEST['id'])){
     		
     		$id = (int)$_REQUEST['id'];
     		
-    		$comite = $_REQUEST['idcomite'];
+			$test_sql = "SELECT fk_comite_id FROM delegacao WHERE id = $id;";
+
+			$test_result = pg_query($conn, $test_sql);
+
+			$test_array = pg_fetch_array($test_result);
+
+			$comite = $test_array[0];
+
+			$aux = (int)$comite;
+
+			$teste_sql2 = "SELECT nome FROM comite WHERE id = $aux;";
+
+			$test_result2 = pg_query($conn, $test_sql2);
+
+			$test_array2 = pg_fetch_array($test_result2);
+
+			$aux2 = $test_array2[0];
 
     		$nome = $_REQUEST['nome'];
+			
+			$sigla = $_REQUEST['sigla'];
+
+			$login = $sigla.".".$aux2;
+			$senha = $sigla.".".strval(rand(0, 9)) .strval(rand(0, 9)) .strval(rand(0, 9));
 
     		$email = $_REQUEST['email'];
 
-    		$sql = "UPDATE delegacao SET nome = '$nome', email = '$email' WHERE id=$id";
+    		$sql = "UPDATE delegacao SET nome = '$nome', email = '$email', login = '$login', senha = '$senha' WHERE id=$id";
 
     		$result = pg_query($conn, $sql);
 
-    		var_dump($result);
-    		echo "<br>".$sql;
-
-    		//header("Location: lst_del.php");
+    		header("Location: lst_del.php?idcomite=$comite");
 
     	}
     ?>
 </head>
 <body>
-	<form action="alterar.php?id=<?php echo $_REQUEST['id']; ?>" method="POST">
+	<form action="alterar.php?id=<?php echo $_REQUEST['id'];?>" method="POST">
 		<div class="input-field">
 			<input type="text" name="nome">
 			<label for="nome">Escreva o nome da delegação</label>

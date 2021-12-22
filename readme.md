@@ -15,6 +15,8 @@ compreensivas
 <h2> Entregas </h2>
   
   <a href="https://drive.google.com/file/d/1GWJANBPGYtUjcNVaoHsX1fAiK5qULI3P/view">Revisão de Usabilidade</a>
+  
+  <a href="https://drive.google.com/file/d/1Kc1DxtKMtAX_GyL6gRT4aX309G7aHpwe/view?usp=sharing">Protótipo do Sistema</a>
 
   <a href="https://drive.google.com/file/d/13mpWNJk8OvqijeLolXCm486PlOyxjiSw/view">Backlog</a>
 
@@ -30,7 +32,13 @@ compreensivas
   
   <a href="https://drive.google.com/file/d/1-kEUz1kc1gDwoRZyF1BTZSgz2U0yz3SS/view?usp=sharing">Banco de dados</a>
   
+  <a href="https://drive.google.com/file/d/1VMn8gUy-bjAWHDeUSE42grRMQDxod8O9/view?usp=sharing">Plano de testes</a>
+  
   <a href="https://psgd.herokuapp.com">Link do sistema</a>
+  
+  <a href="https://docs.google.com/presentation/d/1Q1s4NLI5mt92naixYYwUzRXIHm268IPJsYJgkJw3OZo/edit?usp=sharing">Esboço da apresentação</a>
+  
+  
   
   
   
