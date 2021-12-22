@@ -27,16 +27,13 @@ if(is_null($username)) {
 }
 // Se houve envio dos dados
 else {
-    $query = pg_query($con, "SELECT senha FROM delegacao WHERE login='$username'");
-
-    $query2 = pg_query($con, "SELECT fk_comite_id FROM delegacao WHERE login='$username'");
+    $query = pg_query($con, "SELECT senha,fk_comite_id FROM delegacao WHERE login='$username'");
 
 	if(pg_num_rows($query) > 0){
 		$row = pg_fetch_array($query);
-		$row2 = pg_fetch_array($query2);
 		if($password == $row['senha']){
 			$response["success"] = 1;
-			$response["idComite"] = $row2['fk_comite_id'];
+			$response["idComite"] = $row['fk_comite_id'];
 		}
 		else {
 			// senha ou usuario nao confere
