@@ -36,9 +36,11 @@ if(!is_null($username)){
 if($isAuth) {
 	if(isset($_GET['idComite'])){
 
-		$idComite = $_GET['idComite'];
+		$idComite = (int)$_GET['idComite'];
 
-		$query = pg_query($con, "SELECT nome,tema FROM comite WHERE fk_comite_id='$idComite';");
+		$sql = "SELECT nome,tema FROM comite WHERE fk_comite_id=$idComite;"
+
+		$query = pg_query($con, $sql);
 
 		if (!empty($query)) {
         	if (pg_num_rows($query) > 0) {
