@@ -70,6 +70,7 @@ else {
 	$response["error"] = "falha de autenticação";
 }
 
+echo "<script> console.log(".$response.");</script>";
 pg_close($con);
 echo json_encode($response);
 ?>
