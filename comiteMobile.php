@@ -38,7 +38,7 @@ if($isAuth) {
 
 		$idComite = (int)$_GET['idComite'];
 
-		$sql = "SELECT nome,tema FROM comite WHERE fk_comite_id=$idComite;"
+		$sql = "SELECT nome,tema FROM comite WHERE fk_comite_id=$idComite;";
 
 		$query = pg_query($con, $sql);
 
