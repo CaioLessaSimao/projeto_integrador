@@ -46,7 +46,7 @@
 
 	</head>
 
-	<body onload="verificar()">
+	<body>
 
     
 	<nav>
@@ -66,7 +66,7 @@
         
         <div class = "row">
             <h2 class="light" >Criar comite</h2>
-		    <form class = "col s12" name="criar_comite" action = 'controle.php' method="post">
+		    <form class = "col s12" name="criar_comite" method="post">
 				<input type = 'hidden' name = 'funcao' value = 'inserir_comite'/>
                 <div class = "col s6">
 					<label for="orgao">Orgao:</label>
@@ -91,11 +91,12 @@
 				<div class = "col s12" >
 				</div>
 		    </form>
-           <!--<a href="#meu-modal" class="btn waves-effect waves-light modal-trigger" id="modalsinho">Cadastrar</a>-->
+
            <button data-target="meu-modal" class="btn modal-trigger" id="modalsinho">Próximo</button>
+
 		</div> 
     </div>
-    <div id="meu-modal" class="modal"> <!-- bottom-sheet -->
+    <div id="meu-modal" class="modal">
         <div class="row modal-content">
             <h4 id="title">Cadastrar diretor geral</h4>
             
@@ -127,20 +128,6 @@
     </body>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script type="text/javascript">
-        function verfificar(){
-            var aux = document.getElementById("orgao").value;
-            var aux2 = document.getElementById("tema").value;
-            var aux3 = document.getElementById("desc").value;
-            var aux4 = document.getElementById("blog").value;
-
-
-            if(aux==""||aux2==""||aux3==""||aux4==""){
-                document.getElementById("modalsinho").disabled = true;
-            }else{
-                document.getElementById("modalsinho").disabled = false;
-            }
-        }
-
 
         const elemsModal = document.querySelectorAll(".modal");
         const instancesModal = M.Modal.init(elemsModal);
@@ -157,6 +144,12 @@
             comite.push(document.getElementById("blog").value);
 
             var dirG = [];
+            
+            if(document.getElementById('dir_nome') == "" && document.getElementById('dir_email') == ""){
+                alert("Há campos vazios");
+            }
+            else{
+            
             dirG.push(document.getElementById("dir_nome").value);
             dirG.push(document.getElementById("dir_email").value);
             dirs_mtz.push(dirG);
@@ -168,7 +161,9 @@
             document.getElementById("fin").style.display = "block";
             document.getElementById("fin").disabled = true;
             document.getElementById("mod").style.display = "none";
-            document.getElementById("ad").style.display = "block"; 
+            document.getElementById("ad").style.display = "block";
+
+            } 
         }
 
         function add_ass(){
