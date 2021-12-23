@@ -69,28 +69,7 @@
 					<input type = 'hidden' name = 'funcao' value = 'criar_comite'/>
 					<input type = 'submit' name="btn_criar_comite" class="btn" value = 'Criar Comitê'></input>
 				</form>
-				<button type = 'button' id="btn_options" class="btn" onclick = "openDiv('login_delegado')">Entrar como delegado</button>
 				<button type = 'button' id="btn_options" class="btn" onclick = "openDiv('login_diretor')">Entrar como diretor</button>
-			</div>
-			
-			<div id="login_delegado" class="row">
-			<form action="controle.php" method="POST">	
-				<h4 class="titulo">Logar como delegado</h4>
-				
-				<div class="input-field col s12">
-          			<input name="del_usuario" type="text" class="validate">
-          			<label for="del_usuario">Usuário</label>
-          		</div>
-          		
-          		<div class="input-field col s12">
-          			<input name="del_senha" type="password" class="validate">
-          			<label for="del_senha">Senha</label>
-        		</div>
-        		<input type="hidden" name="funcao" value="logar_del">
-        		<button id="botao" class="btn waves-effect waves-light col s3 right green accent-3" type="submit">Entrar</button>
-        		<button id="butn" class="btn waves-effect waves-light col s3 top-right green accent-3" onclick="closeDiv('login_delegado')">Cancelar</button>
-        	</form>
-        	
 			</div>
 			
 			<div id="login_diretor" class="row">
