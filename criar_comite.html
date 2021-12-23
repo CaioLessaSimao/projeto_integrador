@@ -168,6 +168,11 @@
 
         function add_ass(){
             var dirAss = [];
+            
+            if(document.getElementById('dir_nome').value == "" && document.getElementById('dir_email').value == ""){
+                alert("Há campos vazios");
+            }
+            else{
             dirAss.push(document.getElementById("dir_nome").value);
             dirAss.push(document.getElementById("dir_email").value);
             dirs_mtz.push(dirAss);
@@ -176,6 +181,7 @@
             document.getElementById("dir_email").value = "";
 
             document.getElementById("fin").disabled = false;
+            }
         }
 
         function finalizar(){
