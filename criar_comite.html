@@ -92,7 +92,7 @@
 				</div>
 		    </form>
 
-           <button data-target="meu-modal" class="btn modal-trigger" id="modalsinho">Próximo</button>
+           <button data-target="meu-modal" class="btn modal-trigger" id="modalsinho" onclick="add_comit()">Próximo</button>
 
 		</div> 
     </div>
@@ -134,18 +134,25 @@
         
         var dirs_mtz = []; 
         var comite = [];
+
+        function add_comit(){
+            if(document.getElementById('orgao').value == "" || document.getElementById('tema').value == "" || document.getElementById('desc').value == "" || document.getElementById('blog').value == ""){
+                alert("Há campos vazios");
+            }
+            else{
+                comite.push(document.getElementById("orgao").value);
+                comite.push(document.getElementById("tema").value);
+                comite.push(document.getElementById("desc").value);
+                comite.push(document.getElementById("blog").value);
+            }
+        }
         
         
         function adicionar(){
-            
-            comite.push(document.getElementById("orgao").value);
-            comite.push(document.getElementById("tema").value);
-            comite.push(document.getElementById("desc").value);
-            comite.push(document.getElementById("blog").value);
 
             var dirG = [];
             
-            if(document.getElementById('dir_nome').value == "" && document.getElementById('dir_email').value == ""){
+            if(document.getElementById('dir_nome').value == "" || document.getElementById('dir_email').value == ""){
                 alert("Há campos vazios");
             }
             else{
@@ -169,7 +176,7 @@
         function add_ass(){
             var dirAss = [];
             
-            if(document.getElementById('dir_nome').value == "" && document.getElementById('dir_email').value == ""){
+            if(document.getElementById('dir_nome').value == "" || document.getElementById('dir_email').value == ""){
                 alert("Há campos vazios");
             }
             else{
