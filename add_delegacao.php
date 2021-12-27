@@ -37,6 +37,10 @@
                 
                 var delegacao = [];
                 
+                if(document.getElementById('nome').value == "" || document.getElementById('email').value == "" || document.getElementById('sigla').value == ""){
+                    alert("Há campos vazios");
+                }
+                else{
                 var nome = document.getElementById("nome").value;
                 var sigla = document.getElementById("sigla").value;
                 var email = document.getElementById("email").value;
@@ -68,6 +72,7 @@
                console.log(resultado);
                document.getElementById("corpo_tabela").innerHTML = resultado;               
 
+                }
             }
             
             function create_item(nome,sigla,email){
