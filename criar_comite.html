@@ -161,7 +161,10 @@
 
             var dirG = [];
             
-            if(document.getElementById('dir_nome').value == "" || document.getElementById('dir_email').value == ""){
+            var dir_nome = document.getElementById('dir_nome');
+            var dir_email = document.getElementById('dir_email');
+
+            if(dir_nome.length === 0 || !dir_nome.trim() || dir_email.length === 0 || !dir_email.trim() ){
                 alert("Há campos vazios");
             }
             else{
@@ -185,7 +188,7 @@
         function add_ass(){
             var dirAss = [];
             
-            if(document.getElementById('dir_nome').value == "" || document.getElementById('dir_email').value == ""){
+            if(dir_nome.length === 0 || !dir_nome.trim() || dir_email.length === 0 || !dir_email.trim() ){
                 alert("Há campos vazios");
             }
             else{
