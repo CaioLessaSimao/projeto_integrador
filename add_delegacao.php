@@ -39,7 +39,7 @@
                 
                 var aux = document.getElementById('nome').value;
                 var aux2 = document.getElementById('email').value;
-                var aux3 = document.getElementById('sigla').
+                var aux3 = document.getElementById('sigla').value;
 
 
                 if(aux.length === 0 || !aux.trim() || aux2.length === 0 || !aux2.trim() || aux3.length === 0 || !aux3.trim()){
