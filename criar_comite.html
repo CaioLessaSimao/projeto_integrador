@@ -188,6 +188,9 @@
         function add_ass(){
             var dirAss = [];
             
+            var dir_nome = document.getElementById('dir_nome').value;
+            var dir_email = document.getElementById('dir_email').value;
+
             if(dir_nome.length === 0 || !dir_nome.trim() || dir_email.length === 0 || !dir_email.trim() ){
                 alert("Há campos vazios");
             }
