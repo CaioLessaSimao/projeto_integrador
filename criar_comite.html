@@ -135,7 +135,14 @@
         var comite = [];
 
         function add_comit(){
-            if(document.getElementById('orgao').value == "" || document.getElementById('tema').value == "" || document.getElementById('desc').value == "" || document.getElementById('blog').value == ""){
+            
+            var orgao = document.getElementById('orgao').value;
+            var tema = document.getElementById('tema').value;
+            var desc = document.getElementById('desc').value;
+            var blog = document.getElementById('blog').value;
+
+
+            if(orgao.length === 0 || !orgao.trim() || tema.length === 0 || !tema.trim() || desc.length === 0 || !desc.trim() || blog.length === 0 || !blog.trim()){
                 alert("Há campos vazios");
             }
             else{
