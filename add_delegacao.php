@@ -37,7 +37,12 @@
                 
                 var delegacao = [];
                 
-                if(document.getElementById('nome').value == "" || document.getElementById('email').value == "" || document.getElementById('sigla').value == ""){
+                var aux = document.getElementById('nome').value;
+                var aux2 = document.getElementById('email').value;
+                var aux3 = document.getElementById('sigla').
+
+
+                if(aux.length === 0 || !aux.trim() || aux2.length === 0 || !aux2.trim() || aux3.length === 0 || !aux3.trim()){
                     alert("Há campos vazios");
                 }
                 else{
