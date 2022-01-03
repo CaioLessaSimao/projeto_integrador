@@ -116,7 +116,7 @@
 
             $aux2 = pg_fetch_array($result6);
 
-            $nome = $aux2[0];
+            $nomeComite = $aux2[0];
 
             $sigla = "";
             $nome = "";
@@ -129,7 +129,7 @@
                 $nome = $arrayDelegacoes[$i+1];
                 $email = $arrayDelegacoes[$i+2];
 
-                $login = $nome.".".$sigla;
+                $login = $sigla.".".$nomeComite;
                 $senha = $sigla.".".strval(rand(0, 9)) .strval(rand(0, 9)) .strval(rand(0, 9));
 
                 $sql7 = "INSERT INTO delegacao(nome,email,DPO,fk_comite_id,login,senha) values ('$nome','$email','to_be_defined',$aux,'$login','$senha');";
