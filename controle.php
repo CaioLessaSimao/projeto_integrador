@@ -95,7 +95,7 @@
             }
             $idc = strval($id_comite);
             var_dump($arrayDir);
-            //header("Location: add_delegacao.php?idcomite=$idc");
+            header("Location: add_delegacao.php?idcomite=$idc");
         }  
     } 
 
