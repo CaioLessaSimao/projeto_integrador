@@ -13,6 +13,19 @@
 
     	if(isset($_REQUEST['nome']) && isset($_REQUEST['sigla']) && isset($_REQUEST['email']) && isset($_REQUEST['id'])){
     		
+    		$aux = $_REQUEST['nome'];
+    		$aux2 = $_REQUEST['sigla'];
+    		$aux3 = $_REQUEST['email'];
+    		$aux4 = $_REQUEST['id'];
+
+    		if(empty($aux) || empty($aux2) || empty($aux3) || empty($aux4)){
+    			echo "Há campos vazios";
+    		}
+    		elseif (ctype_space($aux) || ctype_space($aux2) || ctype_space($aux3) || ctype_space($aux4)) {
+    			echo "Há campos vazios";
+    		}
+    		else{
+
     		$id = (int)$_REQUEST['id'];
     		
 			$test_sql = "SELECT fk_comite_id FROM delegacao WHERE id = $id;";
@@ -48,6 +61,7 @@
 
     		header("Location: lst_del.php?idcomite=$comite");
 
+    		}
     	}
     ?>
 </head>
