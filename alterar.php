@@ -12,7 +12,7 @@
     	require_once "connection.php";
 
     	if(isset($_REQUEST['nome']) && isset($_REQUEST['sigla']) && isset($_REQUEST['email']) && isset($_REQUEST['id'])){
-    		/*
+    		
     		$xau = $_REQUEST['nome'];
     		$xau2 = $_REQUEST['sigla'];
     		$xau3 = $_REQUEST['email'];
@@ -25,7 +25,7 @@
     			echo "Há campos vazios";
     		}
     		else{
-			*/
+			
     		$id = (int)$_REQUEST['id'];
     		
 			$test_sql = "SELECT fk_comite_id FROM delegacao WHERE id = $id;";
@@ -38,7 +38,7 @@
 
 			$aux = (int)$comite;
 
-			$teste_sql2 = "SELECT nome FROM comite WHERE id = $aux;";
+			$test_sql2 = "SELECT nome FROM comite WHERE id = $aux;";
 
 			$test_result2 = pg_query($conn, $test_sql2);
 
@@ -61,7 +61,7 @@
 
     		header("Location: lst_del.php?idcomite=$comite");
 
-    		/*}*/
+    		}
     	}
     ?>
 </head>
