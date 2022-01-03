@@ -140,7 +140,7 @@
             }
             
             $arrayDir = $_REQUEST['diretores'];
-
+            echo "";
             var_dump($arrayDir);
 
             
