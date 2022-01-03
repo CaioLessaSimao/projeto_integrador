@@ -3,14 +3,12 @@
 
     $oper = $_REQUEST['funcao'];
 
-    echo $oper;
-
     if($oper == "criar_comite"){
         header("Location: criar_comite.html");
     }
 
-    $arrayDir;
-    $arrayDel;
+    $arrayDir = [];
+    $arrayDel = [];
 
     if($oper == 'inserir_comite'){
         $orgao = "a";
