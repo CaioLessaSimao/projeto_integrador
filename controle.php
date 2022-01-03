@@ -70,6 +70,8 @@
                                 
                     $senha = $nome_comite ."." .strval(rand(0, 9)) .strval(rand(0, 9)) .strval(rand(0, 9));
 
+                    mail($email_dir, "Login do diretor geral do comite: ".$nome_comite, "Login: ".$login."<br>"."Senha: ".$senha);
+
                     $sql5 = "UPDATE diretor SET login = '$login', senha = '$senha' WHERE id = $id_dir;";
                     $result5 = pg_query($conn, $sql5);
 
