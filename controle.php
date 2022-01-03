@@ -9,6 +9,9 @@
         header("Location: criar_comite.html");
     }
 
+    $arrayDir;
+    $arrayDel;
+
     if($oper == 'inserir_comite'){
         $orgao = "a";
         $tema = "a";
@@ -26,16 +29,6 @@
             $desc = $arrayComite[2];
             $blog = $arrayComite[3];
     
-            if(empty($orgao) || empty($tema) || empty($desc) || empty($blog)){
-                echo  "<script>alert('Existem campos vazios!');</script>";
-                header("Location: criar_comite.html");
-            
-            }
-            else if(ctype_space($orgao) || ctype_space($tema) || ctype_space($desc) || ctype_space($blog)){
-                echo  "<script>alert('Os campos não podem ficar em branco!');</script>";
-                header("Location: criar_comite.html");
-            }
-           
             $sql = "INSERT INTO comite (nome, tema, descricao, link_blog, logo) VALUES ('$orgao', '$tema', '$desc', '$blog', '$logo');";
             
             $result = pg_query($conn, $sql);
@@ -70,7 +63,9 @@
                                 
                     $senha = $nome_comite ."." .strval(rand(0, 9)) .strval(rand(0, 9)) .strval(rand(0, 9));
 
-                    mail($email_dir, "Login do diretor geral do comite: ".$nome_comite, "Login: ".$login."<br>"."Senha: ".$senha);
+                    $arrayLS = array($login, $senha, $email_dir);
+
+                    $arrayDados[] = $arrayLS;
 
                     $sql5 = "UPDATE diretor SET login = '$login', senha = '$senha' WHERE id = $id_dir;";
                     $result5 = pg_query($conn, $sql5);
@@ -92,13 +87,17 @@
                                 
                     $senha = $nome_comite ."." .strval(rand(0, 9)) .strval(rand(0, 9)) .strval(rand(0, 9));
 
+                    $arrayLS = array($login, $senha, $email_dir);
+                    $arrayDados[] = $arrayLS;
+
                     $sql5 = "UPDATE diretor SET login = '$login', senha = '$senha' WHERE id = $id_dir;";
                     $result5 = pg_query($conn, $sql5);
                     
                 } 
             }
             $idc = strval($id_comite);
-            header("Location: add_delegacao.php?idcomite=$idc");
+            var_dump($arrayDir);
+            //header("Location: add_delegacao.php?idcomite=$idc");
         }  
     } 
 
@@ -134,11 +133,15 @@
                 $login = $sigla.".".$nomeComite;
                 $senha = $sigla.".".strval(rand(0, 9)) .strval(rand(0, 9)) .strval(rand(0, 9));
 
+                $arrayLS = array($nome, $email, $login, $senha);
+                $arrayDel[] = $arrayLS;
+
                 $sql7 = "INSERT INTO delegacao(nome,email,DPO,fk_comite_id,login,senha) values ('$nome','$email','to_be_defined',$aux,'$login','$senha');";
                 $result7 = pg_query($conn,$sql7);
                 
             }
-            header("Location: index.php?aux=final");
+            //header("Location: index.php?aux=final");
+            var_dump($arrayDel);
         }
 
 
