@@ -94,8 +94,8 @@
                 } 
             }
             $idc = strval($id_comite);
-            var_dump($arrayDir);
-            header("Location: add_delegacao.php?idcomite=$idc");
+            //var_dump($arrayDir);
+            header("Location: add_delegacao.php?idcomite=$idc?diretores=$arrayDir");
         }  
     } 
 
@@ -138,8 +138,26 @@
                 $result7 = pg_query($conn,$sql7);
                 
             }
+            
+            $arrayDir = $_REQUEST['diretores'];
+
+            var_dump($arrayDir);
+
+            
+            for($i == 0; $i < count($arrayDir); $i++){
+                if($i == 0){
+
+                }    
+            }
+
+            for($i == 0; $i < count($arrayDel); $i++){
+
+            }
+
+
+
             //header("Location: index.php?aux=final");
-            var_dump($arrayDel);
+            
         }
 
 
