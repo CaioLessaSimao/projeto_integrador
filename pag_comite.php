@@ -108,10 +108,7 @@
 
                 <!-- Dropdown -->
                 <ul id="dropdown-menu" class="dropdown-content">
-                    <li><a href="#">Telefone</a></li>
-                    <li><a href="#">E-mail</a></li>
-                    <li class="divider"></li>
-                    <li><a href="#">Redes sociais</a></li>
+                    <li><a href="index.php">Sair</a></li>
                 </ul>
             </div>
         </nav>
