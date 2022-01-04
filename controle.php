@@ -152,8 +152,7 @@
 
             
             for($i == 0; $i < count($arrayDir); $i++){
-                if($i == 0){
-                    $nome = 
+                if($i == 0){ 
                 }    
             }
 
