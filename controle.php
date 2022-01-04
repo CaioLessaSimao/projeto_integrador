@@ -1,6 +1,8 @@
 <?php
 	require_once  "connection.php";
 
+    session_start();
+
     $oper = $_REQUEST['funcao'];
 
     if($oper == "criar_comite"){
@@ -94,9 +96,6 @@
                 } 
             }
             $idc = strval($id_comite);
-            //var_dump($arrayDir);
-            
-            session_start();
            
             $_SESSION['diretores'] = $arrayDir;
 
@@ -145,8 +144,6 @@
                 $result7 = pg_query($conn,$sql7);
                 
             }
-            
-            session_start();
 
 
             $arrayDir = $_SESSION['diretores'];
