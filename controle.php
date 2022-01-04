@@ -99,8 +99,10 @@
             session_start();
            
             $_SESSION['diretores'] = $arrayDir;
+
+            var_dump($_SESSION['diretores']);
             
-            header("Location: add_delegacao.php?idcomite=$idc");
+            //header("Location: add_delegacao.php?idcomite=$idc");
         }  
     } 
 
