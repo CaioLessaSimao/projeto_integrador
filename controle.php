@@ -205,7 +205,7 @@
         }
 
 
-    /*}*/
+    }
 
     if($oper == "logar_dir"){
                 if(isset($_REQUEST['dir_usuario']) && isset($_REQUEST['dir_senha'])){
