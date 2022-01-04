@@ -166,7 +166,7 @@
 
                     $emailDirG = $email;
 
-                    $mensagem += "Diretor geral: ".$nome."/n"."Login: ".$login."/n"."Senha: ".$senha."/n";
+                    $mensagem .= "Diretor geral: ".$nome."/n"."Login: ".$login."/n"."Senha: ".$senha."/n";
                 }
                 else{
                     $nome = $array[0];
@@ -174,7 +174,7 @@
                     $login = $array[2];
                     $senha = $array[3];
 
-                    $mensagem += "Diretor assistente: ".$nome."/n"."Login: ".$login."/n"."Senha: ".$senha."/n";
+                    $mensagem .= "Diretor assistente: ".$nome."/n"."Login: ".$login."/n"."Senha: ".$senha."/n";
                 }    
             }
 
@@ -185,7 +185,7 @@
                 $login = $array[2];
                 $senha = $array[3];
 
-                $mensagem += "Delegação: ".$nome."/n"."Login: ".$login."/n"."Senha: ".$senha."/n";
+                $mensagem .= "Delegação: ".$nome."/n"."Login: ".$login."/n"."Senha: ".$senha."/n";
             }
 
 
