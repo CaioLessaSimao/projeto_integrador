@@ -89,7 +89,7 @@
             } 
 
             function finalizar(){
-                window.location.href = "controle.php?delegacoes="+delegacoes+"&comite="+<?php echo $_REQUEST['idcomite'];?>+"&funcao=add_del&diretores="+<?php echo $_REQUEST['diretores']; ?>;
+                window.location.href = "controle.php?delegacoes="+delegacoes+"&comite="+<?php echo $_REQUEST['idcomite'];?>+"&funcao=add_del";
             }          
 
         </script>
