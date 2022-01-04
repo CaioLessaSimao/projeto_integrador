@@ -104,10 +104,6 @@
             <div class="nav-wrapper green accent-3">
                 
                 <a href="index.php" class="brand-logo">PSGD</a>
-                
-                <ul id="nav-mobile" class="right hide-on-med-and-down">
-                    <li><a href="#"><i class="material-icons right">account_circle</i></a></li>
-                </ul>
             
             </div>
         </nav>
