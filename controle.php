@@ -188,7 +188,7 @@
 
 
 
-            echo $mensagem;
+            var_dump($mensagem);
 
             mail($emailDirG, "Logins do comite ".$nomeComite, $mensagem);
 
