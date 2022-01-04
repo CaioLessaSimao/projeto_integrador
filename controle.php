@@ -154,7 +154,7 @@
             $emailDirG = "";
 
 
-            for($i == 0; $i < count($arrayDir); $i++){
+            for($i = 0; $i < count($arrayDir); $i++){
                 echo "porra"."<br>";
                 /*
                 $array = $arrayDir[$i];
@@ -182,7 +182,7 @@
                 }    
             }
 
-            for($i == 0; $i < count($arrayDel); $i++){
+            for($i = 0; $i < count($arrayDel); $i++){
                 echo "porra"."<br>";
                 /*
                 $array = $arrayDel[$i];
