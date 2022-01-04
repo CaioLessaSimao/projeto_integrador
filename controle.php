@@ -95,7 +95,12 @@
             }
             $idc = strval($id_comite);
             //var_dump($arrayDir);
-            header("Location: add_delegacao.php?idcomite=$idc&diretores=$arrayDir");
+            
+            session_start();
+           
+            $_SESSION['diretores'] = $arrayDir;
+            
+            header("Location: add_delegacao.php?idcomite=$idc");
         }  
     } 
 
@@ -139,8 +144,11 @@
                 
             }
             
-            $arrayDir = $_REQUEST['diretores'];
-            echo "";
+            session_start();
+
+
+            $arrayDir = $_SESSION['diretores'];
+        
             var_dump($arrayDir);
 
             
