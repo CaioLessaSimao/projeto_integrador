@@ -101,7 +101,7 @@
 
             var_dump($_SESSION['diretores']);
             
-            //header("Location: add_delegacao.php?idcomite=$idc");
+            header("Location: add_delegacao.php?idcomite=$idc");
         }  
     } 
 
@@ -150,7 +150,7 @@
         
             var_dump($arrayDir);
 
-            
+            /*
             for($i == 0; $i < count($arrayDir); $i++){
                 if($i == 0){
 
@@ -160,7 +160,7 @@
             for($i == 0; $i < count($arrayDel); $i++){
 
             }
-
+*/
 
 
             //header("Location: index.php?aux=final");
