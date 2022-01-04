@@ -8,10 +8,30 @@
 	
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	<style type="text/css">
-		div{
-		    width: 100%;
-		    height: 560px;
+		.container {
+			width: 100vw;
+			height: 80vh;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			line-height: 0px;
 		}
+		.row{
+			display: none;
+			background-color: #00897b;
+			position: absolute;
+			width: 500px;
+			padding-bottom: 25px;
+			border: 4px solid gray;
+			transition: top 0ms ease-in-out 200ms
+						opacity 200ms ease-in-out 0ms
+						transform 200ms ease-in-out 0ms;
+		}
+		.titulo{
+			color: white;	 
+		}
+		
 	</style>
 	<?php 
 		require_once "connection.php";
@@ -59,21 +79,20 @@
     </div>
 
 
-		<div class="imagem_principal">
-			<h2><?php echo $nome; ?></h2>
-			<h4><?php echo $tema; ?></h4>
-		</div>
-
-		<div class="imagem_dpo">
-	  		<a href="lst_dpo.php?idcomite=<?php echo $comite2; ?>">Lista de DPOs</a>
-		</div>
 		
-		<div class="imagem_del">
-	  		<a href="lst_del.php?idcomite=<?php echo $comite2; ?>">Lista de delegações</a>
-		</div>
-
-		<div class="imagem_sim">
-	  		<h2>Iniciar Simulação</h2>
+    	<div class="container">
+			<div class='center-align'>
+				
+				<h1><?php echo $nome; ?></h1>
+				<h4>(<?php echo $tema; ?>)</h4>
+				
+				<form  action = "controle.php" method = "POST">
+					<input type = 'hidden' name = 'funcao' value = 'criar_comite'/>
+					<input type = 'submit' name="btn_criar_comite" class="btn" value = 'Criar Comitê'></input>
+				</form>
+				
+				<button type = 'button' id="btn_options" class="btn" onclick = "openDiv('login_diretor')">Entrar como diretor</button>
+				</div>
 		</div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
