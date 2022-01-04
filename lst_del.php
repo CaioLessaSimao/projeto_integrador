@@ -24,6 +24,8 @@
 		}
 
 		$comite = (int)$_REQUEST['idcomite'];
+		$comite2 = $_REQUEST['idcomite'];
+
 		$sql = "SELECT nome,email,id FROM delegacao WHERE fk_comite_id=$comite;";
 		
 		$result = pg_query($conn,$sql);
@@ -62,6 +64,30 @@
 	?>
 </head>
 <body>
+
+	<div class="navbar-fixed">
+        <nav>
+            <div class="nav-wrapper green accent-3">
+                <!-- Logo -->
+                <a href="pag_comite.php?idcomite=<?php echo $comite2: ?>" class="brand-logo">Voltar</a>
+>
+
+                <ul id="navbar-items" class="right hide-on-med-and-down">
+                    <li>
+                        <a class="dropdown-trigger" data-target="dropdown-menu" href="#">
+                    		<?php echo $nome2;?> <i class="material-icons right">account_circle</i>
+                        </a>
+                    </li>
+                </ul>
+
+                <!-- Dropdown -->
+                <ul id="dropdown-menu" class="dropdown-content">
+                    <li><a href="index.php">Sair</a></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+
 	<table>
 		<thead>
 			<tr>
