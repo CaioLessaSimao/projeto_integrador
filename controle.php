@@ -194,11 +194,11 @@
 
 
 
-            echo $emailDirG;
+            //echo $emailDirG;
 
-            mail($emailDirG, "Logins do comite", $mensagem);
+            $teste = mail($emailDirG, "Logins do comite", $mensagem);
 
-
+            echo $teste;
 
             //header("Location: index.php?aux=final");
             
