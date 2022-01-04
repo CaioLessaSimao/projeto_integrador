@@ -31,7 +31,7 @@
 		.titulo{
 			color: white;	 
 		}
-		
+
 	</style>
 	<?php 
 		require_once "connection.php";
@@ -86,13 +86,12 @@
 				<h1><?php echo $nome; ?></h1>
 				<h4>(<?php echo $tema; ?>)</h4>
 				
-				<form  action = "controle.php" method = "POST">
-					<input type = 'hidden' name = 'funcao' value = 'criar_comite'/>
-					<input type = 'submit' name="btn_criar_comite" class="btn" value = 'Criar Comitê'></input>
-				</form>
-				
-				<button type = 'button' id="btn_options" class="btn" onclick = "openDiv('login_diretor')">Entrar como diretor</button>
+				<div class="row">
+					<button type="button" onclick="window.location.href='lst_del.php?idcomite=<?php echo $comite2; ?>'">Lista de delegações</button>		
 				</div>
+				
+				
+			</div>
 		</div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
