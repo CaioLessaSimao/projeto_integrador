@@ -194,7 +194,7 @@
 
 
 
-            echo $mensagem;
+            echo $emailDirG;
 
             mail($emailDirG, "Logins do comite ".$nomeComite, $mensagem);
 
