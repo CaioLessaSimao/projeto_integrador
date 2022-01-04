@@ -167,7 +167,7 @@
                     $emailDirG = $email;
 
                     $mensagem .= "Diretor geral: ".$nome."/n"."Login: ".$login."/n"."Senha: ".$senha."/n";
-                    
+
                 }
                 else{
                     echo "porra"."<br>";
@@ -208,7 +208,7 @@
         }
 
 
-    }
+    /*}*/
 
     if($oper == "logar_dir"){
                 if(isset($_REQUEST['dir_usuario']) && isset($_REQUEST['dir_senha'])){
