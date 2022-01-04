@@ -86,25 +86,39 @@
 </head>
 <body>
 	
-	<!-- Dropdown Structure -->
-	<ul id="dropdown1" class="dropdown-content">
-  		<li><a href="#!">one</a></li>
-  		<li><a href="#!">two</a></li>
-  		<li class="divider"></li>
-  		<li><a href="#!">three</a></li>
-	</ul>
+    <div class="navbar-fixed">
+        <nav>
+            <div class="nav-wrapper deep-purple darken-2">
+                <!-- Logo -->
+                <a href="#" class="brand-logo">Logo</a>
 
-	<nav>
-  		<div class="nav-wrapper">
-    		<a href="#!" class="brand-logo">Logo</a>
-    		<ul class="right hide-on-med-and-down">
-      			<li><a href="sass.html">Sass</a></li>
-      			<li><a href="badges.html">Components</a></li>
-      <!-- Dropdown Trigger -->
-      			<li><a class="dropdown-trigger" href="#!" data-target="dropdown1">Dropdown<i class="material-icons right">arrow_drop_down</i></a></li>
-    		</ul>
-  		</div>
-	</nav>
+                <!-- Ícone para abrir no Mobile -->
+                <a href="#" data-target="mobile-navbar" class="sidenav-trigger">
+                    <i class="material-icons">menu</i>
+                </a>
+
+                <ul id="navbar-items" class="right hide-on-med-and-down">
+                    <li><a href="#">Início</a></li>
+                    <li><a href="#">Sobre</a></li>
+                    <li>
+                        <a class="dropdown-trigger" data-target="dropdown-menu" href="#">
+                            Contatos <i class="material-icons right">arrow_drop_down</i>
+                        </a>
+                    </li>
+                </ul>
+
+                <!-- Dropdown -->
+                <ul id="dropdown-menu" class="dropdown-content">
+                    <li><a href="#">Telefone</a></li>
+                    <li><a href="#">E-mail</a></li>
+                    <li class="divider"></li>
+                    <li><a href="#">Redes sociais</a></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+
+
 		<div class="imagem_principal">
 			<h2><?php echo $nome; ?></h2>
 			<h4><?php echo $tema; ?></h4>
@@ -122,6 +136,14 @@
 	  		<h2>Iniciar Simulação</h2>
 		</div>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js">
+	
+	const elemsDropdown = document.querySelectorAll(".dropdown-trigger");
+	const instancesDropdown = M.Dropdown.init(elemsDropdown, {
+    	coverTrigger: false
+	});
+	
+
+</script>
 </body>
 </html>
