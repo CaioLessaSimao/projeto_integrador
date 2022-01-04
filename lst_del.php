@@ -69,7 +69,7 @@
         <nav>
             <div class="nav-wrapper green accent-3">
                 <!-- Logo -->
-                <a href="pag_comite.php?idcomite=<?php echo $comite2; ?>" class="brand-logo">Voltar</a>
+                <a href="pag_comite.php?idcomite=<?php echo $comite2; ?>" >Voltar</a>
 >
 
                 <ul id="navbar-items" class="right hide-on-med-and-down">
