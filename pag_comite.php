@@ -96,7 +96,7 @@
                 <ul id="navbar-items" class="right hide-on-med-and-down">
                     <li>
                         <a class="dropdown-trigger" data-target="dropdown-menu" href="#">
-                    		<i class="material-icons right">account_circle</i>
+                    		a <i class="material-icons right">account_circle</i>
                         </a>
                     </li>
                 </ul>
