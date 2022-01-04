@@ -153,6 +153,8 @@
             $mensagem = "";
             $emailDirG = "";
 
+            echo count($arrayDir);
+
 
             for($i == 0; $i < count($arrayDir); $i++){
                 $array = $arrayDir[$i];
@@ -188,7 +190,7 @@
 
 
 
-            var_dump($mensagem);
+            //var_dump($mensagem);
 
             mail($emailDirG, "Logins do comite ".$nomeComite, $mensagem);
 
