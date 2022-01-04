@@ -63,7 +63,7 @@
                                 
                     $senha = $nome_comite ."." .strval(rand(0, 9)) .strval(rand(0, 9)) .strval(rand(0, 9));
 
-                    $arrayLS = array($login, $senha, $email_dir);
+                    $arrayLS = array($nome_dir, $email_dir,$login, $senha);
 
                     $arrayDir[] = $arrayLS;
 
@@ -87,7 +87,7 @@
                                 
                     $senha = $nome_comite ."." .strval(rand(0, 9)) .strval(rand(0, 9)) .strval(rand(0, 9));
 
-                    $arrayLS = array($login, $senha, $email_dir);
+                    $arrayLS = array($nome_dir, $email_dir, $login, $senha);
                     $arrayDir[] = $arrayLS;
 
                     $sql5 = "UPDATE diretor SET login = '$login', senha = '$senha' WHERE id = $id_dir;";
@@ -150,17 +150,17 @@
         
             var_dump($arrayDir);
 
-            /*
+            
             for($i == 0; $i < count($arrayDir); $i++){
                 if($i == 0){
-
+                    $nome = 
                 }    
             }
 
             for($i == 0; $i < count($arrayDel); $i++){
 
             }
-*/
+
 
 
             //header("Location: index.php?aux=final");
