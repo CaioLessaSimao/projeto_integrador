@@ -91,7 +91,7 @@
       		<a href="index.php" class="brand-logo">PSGD</a>
       		
       		<ul id="nav-mobile" class="right hide-on-med-and-down">
-        		<li><a href="#"><i class="material-icons right">account_circle</i></a></li>
+        		<li><a class="dropdown-trigger" href="#!" data-target="dropdown1">Dropdown<i class="material-icons right">arrow_drop_down</i></a></li>
       		</ul>
     	
     	</div>
