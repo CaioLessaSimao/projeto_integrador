@@ -76,7 +76,12 @@
 				<h4>(<?php echo $tema; ?>)</h4>
 				
 				<div class="row">
-					<button type="button" class="btn" onclick="window.location.href='lst_del.php?idcomite=<?php echo $comite2; ?>'">Lista de delegações</button>		
+					<div class="col s6">
+						<button type="button" class="btn" onclick="window.location.href='lst_del.php?idcomite=<?php echo $comite2; ?>'">Lista de delegações</button>
+					</div>
+					<div class="col s6">
+						<button type="button" class="btn" onclick="">Lista de DPOs</button>
+					</div>		
 				</div>
 				
 				
