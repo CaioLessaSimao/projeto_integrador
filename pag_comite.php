@@ -17,17 +17,6 @@
 			align-items: center;
 			line-height: 0px;
 		}
-		.row{
-			display: none;
-			background-color: #00897b;
-			position: absolute;
-			width: 500px;
-			padding-bottom: 25px;
-			border: 4px solid gray;
-			transition: top 0ms ease-in-out 200ms
-						opacity 200ms ease-in-out 0ms
-						transform 200ms ease-in-out 0ms;
-		}
 		.titulo{
 			color: white;	 
 		}
