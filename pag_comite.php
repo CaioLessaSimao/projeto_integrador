@@ -88,21 +88,15 @@
 	
     <div class="navbar-fixed">
         <nav>
-            <div class="nav-wrapper deep-purple darken-2">
+            <div class="nav-wrapper green accent-3">
                 <!-- Logo -->
-                <a href="#" class="brand-logo">Logo</a>
-
-                <!-- Ícone para abrir no Mobile -->
-                <a href="#" data-target="mobile-navbar" class="sidenav-trigger">
-                    <i class="material-icons">menu</i>
-                </a>
+                <a href="index.php" class="brand-logo">PSGD</a>
+>
 
                 <ul id="navbar-items" class="right hide-on-med-and-down">
-                    <li><a href="#">Início</a></li>
-                    <li><a href="#">Sobre</a></li>
                     <li>
                         <a class="dropdown-trigger" data-target="dropdown-menu" href="#">
-                            Contatos <i class="material-icons right">arrow_drop_down</i>
+                    		<i class="material-icons right">account_circle</i>
                         </a>
                     </li>
                 </ul>
