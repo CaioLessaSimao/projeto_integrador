@@ -148,7 +148,7 @@
 
             $arrayDir = $_SESSION['diretores'];
         
-            var_dump($arrayDir);
+            //var_dump($arrayDir);
 
             $mensagem = "";
             $emailDirG = "";
