@@ -155,6 +155,8 @@
 
 
             for($i == 0; $i < count($arrayDir); $i++){
+                echo "porra"."<br>";
+                /*
                 $array = $arrayDir[$i];
                 if($i == 0){
                     $nome = $array[0];
@@ -165,18 +167,24 @@
                     $emailDirG = $email;
 
                     $mensagem .= "Diretor geral: ".$nome."/n"."Login: ".$login."/n"."Senha: ".$senha."/n";
+                    */
                 }
                 else{
+                    echo "porra"."<br>";
+                    /*
                     $nome = $array[0];
                     $email = $array[1];
                     $login = $array[2];
                     $senha = $array[3];
 
                     $mensagem .= "Diretor assistente: ".$nome."/n"."Login: ".$login."/n"."Senha: ".$senha."/n";
+                    */
                 }    
             }
 
             for($i == 0; $i < count($arrayDel); $i++){
+                echo "porra"."<br>";
+                /*
                 $array = $arrayDel[$i];
 
                 $nome = $array[0];
@@ -184,6 +192,7 @@
                 $senha = $array[3];
 
                 $mensagem .= "Delegação: ".$nome."/n"."Login: ".$login."/n"."Senha: ".$senha."/n";
+                */
             }
 
 
