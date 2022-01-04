@@ -76,7 +76,7 @@
 				<h4>(<?php echo $tema; ?>)</h4>
 				
 				<div class="row">
-					<button type="button" onclick="window.location.href='lst_del.php?idcomite=<?php echo $comite2; ?>'">Lista de delegações</button>		
+					<button type="button" class="btn" onclick="window.location.href='lst_del.php?idcomite=<?php echo $comite2; ?>'">Lista de delegações</button>		
 				</div>
 				
 				
