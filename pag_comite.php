@@ -12,62 +12,6 @@
 		    width: 100%;
 		    height: 560px;
 		}
-		.imagem_principal {
-		    background: url(teste2.jpg) no-repeat center center;
-		    -webkit-background-size: cover;
-		    -moz-background-size: cover;
-		    -o-background-size: cover;
-		    background-size: cover;
-		    display: flex;
-		    flex-direction: column;
-			justify-content: center;
-			align-items: center;		    
-		}
-		.imagem_del{
-		    background: url(teste3.jpg) no-repeat center center;
-		    -webkit-background-size: cover;
-		    -moz-background-size: cover;
-		    -o-background-size: cover;
-		    background-size: cover;
-		    display: flex;
-		    flex-direction: column;
-			justify-content: center;
-			align-items: center;
-		}
-
-		.imagem_dpo{
-		    background: url(teste4.jpg) no-repeat center center;
-		    -webkit-background-size: cover;
-		    -moz-background-size: cover;
-		    -o-background-size: cover;
-		    background-size: cover;
-		    display: flex;
-		    flex-direction: column;
-			justify-content: center;
-			align-items: center;
-			
-		}
-
-		.imagem_sim{
-		    background: url(teste5.jpg) no-repeat center center;
-		    -webkit-background-size: cover;
-		    -moz-background-size: cover;
-		    -o-background-size: cover;
-		    background-size: cover;
-		    display: flex;
-		    flex-direction: column;
-			justify-content: center;
-			align-items: center;
-		}
-		
-		.imagem_principal div{
-			z-index: 0;
-		}
-
-		.quadro{
-		  z-index: 2;
-		  background-color: red;
-		}
 	</style>
 	<?php 
 		require_once "connection.php";
