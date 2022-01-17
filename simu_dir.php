@@ -23,6 +23,12 @@
 			color: white;	 
 		}
 		*/
+
+		#id{
+			border: 5px;
+			border-color: green;
+		}
+
 	</style>
 	<?php 
 		require_once "connection.php";
@@ -69,7 +75,7 @@
         </nav>
     </div>
 
-    <div class="col s6">
+    <div class="col s6" id="lst">
 			Lista de oradores
 	</div>
 
