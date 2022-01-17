@@ -23,11 +23,6 @@
 			color: white;	 
 		}
 		*/
-		.flat-text.small {
-		    width: 25%;
-		    height: 25px;
-		    background-color: rgba(0,0,0,0.15);
-		}
 	</style>
 	<?php 
 		require_once "connection.php";
@@ -74,24 +69,16 @@
         </nav>
     </div>
 
-    <div class="col s12">
-		<div class="container">
-			<p class="flat-text small"></p>
-		</div>
-	</div>
-	<!--
-	<div class="row">
-		<div class="col s12">
-			<h1><?php echo $nome; ?></h1>
+	<div class="container">
+		<div class="center-align">
+			<h2><?php echo $nome; ?></h2>
 			<h4>(<?php echo $tema; ?>)</h4>
 		</div>
-	
-	
-		<div class="col s6">
-			Lista de oradores
-		</div>
 	</div>
-	-->
+
+	<div class="col s6">
+			Lista de oradores
+	</div>
 
 	<div class="fixed-action-btn">
   		<a class="btn-floating btn-large red">
