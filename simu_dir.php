@@ -78,7 +78,10 @@
 			<h2><?php echo $nome; ?></h2>
 			<h4>(<?php echo $tema; ?>)</h4>
 
-			<p>Discursando agora</p>
+			<p>Discursando agora: </p>
+			<span id="counter">00:00:00</span><br>
+			<input type="button" value="Parar" onclick="para();"> <input type="button" value="Iniciar" onclick="inicia();"> <input type="button" value="Zerar" onclick="zera();">
+
 		</div>
 	</div>
 
@@ -100,8 +103,8 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 <script type="text/javascript">
 	document.addEventListener('DOMContentLoaded', function() {
-    var elems = document.querySelectorAll('.fixed-action-btn');
-    var instances = M.FloatingActionButton.init(elems, {
+    const elems = document.querySelectorAll('.fixed-action-btn');
+    const instances = M.FloatingActionButton.init(elems, {
       direction: 'left'
     });
   });
@@ -110,5 +113,53 @@
 	const instancesDropdown = M.Dropdown.init(elemsDropdown, {
     	coverTrigger: false
 	});
+
+	function formatatempo(segs) {
+		min = 0;
+		hr = 0;
+		/*
+		if hr < 10 then hr = "0"&hr
+		if min < 10 then min = "0"&min
+		if segs < 10 then segs = "0"&segs
+		*/
+		while(segs>=60) {
+		if (segs >=60) {
+		segs = segs-60;
+		min = min+1;
+		}
+		}
+
+		while(min>=60) {
+		if (min >=60) {
+		min = min-60;
+		hr = hr+1;
+		}
+		}
+
+		if (hr < 10) {hr = "0"+hr}
+		if (min < 10) {min = "0"+min}
+		if (segs < 10) {segs = "0"+segs}
+		fin = hr+":"+min+":"+segs
+		return fin;
+	}
+	var segundos = 0; //inicio do cronometro
+	function conta() {
+		segundos++;
+		document.getElementById("counter").innerHTML = formatatempo(segundos);
+	}
+
+	function inicia(){
+		interval = setInterval("conta();",1000);
+	}
+
+	function para(){
+		clearInterval(interval);
+	}
+
+	function zera(){
+		clearInterval(interval);
+		segundos = 0;
+		document.getElementById("counter").innerHTML = formatatempo(segundos);
+	}
 </script>
 </html>
