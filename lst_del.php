@@ -17,8 +17,8 @@
 			public $string;
 			public $html;
 
-			function __construct($nome, $email, $id, $comite){
-				$this->string = "<tr><td>".$nome."</td><td>".$email."</td><td><a href='alterar.php?id=$id'>Alterar</a></td><td><a href='controle.php?id=$id&funcao=deletar_delegacao&idcomite=$comite'>Deletar</a></td></tr>";
+			function __construct($nome, $email, $id, $comite,$login,$senha){
+				$this->string = "<tr><td>".$nome."</td><td>".$email."</td><td>".$login."</td><td>".$senha."</td><td><a href='alterar.php?id=$id'>Alterar</a></td><td><a href='controle.php?id=$id&funcao=deletar_delegacao&idcomite=$comite'>Deletar</a></td></tr>";
 				$this->html = $this->string;
 			}
 		}
@@ -26,7 +26,7 @@
 		$comite = (int)$_REQUEST['idcomite'];
 		$comite2 = $_REQUEST['idcomite'];
 
-		$sql = "SELECT nome,email,id FROM delegacao WHERE fk_comite_id=$comite;";
+		$sql = "SELECT nome,email,id,login,senha FROM delegacao WHERE fk_comite_id=$comite;";
 		
 		$result = pg_query($conn,$sql);
 
@@ -35,11 +35,15 @@
 		$nomes = [];
 		$emails = [];
 		$ids = [];
+		$logins = [];
+		$senhas = [];
 		
 		while ($row = pg_fetch_assoc($result)) {
 		    $nomes[] = $row['nome'];
 		    $emails[] =  $row['email'];
-		    $ids[] = strval($row['id']); 
+		    $ids[] = strval($row['id']);
+		    $logins[] = $row['login'];
+		    $senhas[] = $row['senha']; 
 		}
 		
 		$tbdelegacoes = [];
@@ -50,8 +54,12 @@
 			$email = $emails[$i];
 
 			$id = $ids[$i];
+
+			$login = $logins[$i];
+
+			$senha = $senhas[$i];
 			
-			$linha = new create_item($nome,$email,$id,$comites);
+			$linha = new create_item($nome,$email,$id,$comites,$login,$senha);
 			
 			$tbdelegacoes[] = $linha;
 		}
@@ -92,6 +100,8 @@
 			<tr>
 				<th>Nome da Delegação</th>
 				<th>Email do delegado</th>
+				<th>Login da Delegação</th>
+				<th>Senha do delegado</th>
 			</tr>
 		</thead>
 		<tbody>
