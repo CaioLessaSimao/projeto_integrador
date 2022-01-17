@@ -20,12 +20,13 @@
 			line-height: 0px;
 		}
 		
-
+		*/
 		#lst{
 			border: 5px;
 			border-color: green;
 			background-color: black;
 			float: left;
+			z-index: 2;
 		}
 
 	</style>
