@@ -68,7 +68,7 @@
     </div>
 
 	<div class="row">
-		<div class="col s6 offset-s6">
+		<div class="col s6">
 			<h1><?php echo $nome; ?></h1>
 			<h4>(<?php echo $tema; ?>)</h4>
 		</div>
