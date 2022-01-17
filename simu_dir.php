@@ -24,7 +24,7 @@
 		}
 		*/
 
-		#id{
+		#lst{
 			border: 5px;
 			border-color: green;
 		}
@@ -57,7 +57,6 @@
             <div class="nav-wrapper green accent-3">
                 <!-- Logo -->
                 <a href="index.php" class="brand-logo">PSGD</a>
->
 
                 <ul id="navbar-items" class="right hide-on-med-and-down">
                     <li>
@@ -76,7 +75,7 @@
     </div>
 
     <div class="col s6" id="lst">
-			Lista de oradores
+		<p>Lista de oradores</p>
 	</div>
 
 	<div class="container">
