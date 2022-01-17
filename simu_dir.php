@@ -69,6 +69,10 @@
         </nav>
     </div>
 
+    <div class="col s6">
+			Lista de oradores
+	</div>
+
 	<div class="container">
 		<div class="center-align">
 			<h2><?php echo $nome; ?></h2>
@@ -78,9 +82,7 @@
 		</div>
 	</div>
 
-	<div class="col s6">
-			Lista de oradores
-	</div>
+	
 
 	<div class="fixed-action-btn">
   		<a class="btn-floating btn-large red">
