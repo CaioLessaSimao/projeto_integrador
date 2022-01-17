@@ -41,7 +41,9 @@
 <script type="text/javascript">
 	document.addEventListener('DOMContentLoaded', function() {
     var elems = document.querySelectorAll('.fixed-action-btn');
-    var instances = M.FloatingActionButton.init(elems, options);
+    var instances = M.FloatingActionButton.init(elems, {
+      direction: 'left'
+    });
   });
 </script>
 </html>
