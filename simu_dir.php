@@ -15,7 +15,7 @@
 			display: flex;
 			flex-direction: column;
 			justify-content: center;
-			align-items: center;
+			align-items: left;
 			line-height: 0px;
 		}
 		.titulo{
@@ -61,7 +61,7 @@
 
                 <!-- Dropdown -->
                 <ul id="dropdown-menu" class="dropdown-content">
-                    <li><a href="pag_comite.php">Sair da simulação</a></li>
+                    <li><a href="pag_comite.php?idcomite=<?php echo $comite2;?>">Sair da simulação</a></li>
                 </ul>
             </div>
         </nav>
