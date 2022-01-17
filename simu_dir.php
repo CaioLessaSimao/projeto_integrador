@@ -74,8 +74,10 @@
         </nav>
     </div>
 
-	<div class="container">
-		<p class="flat-text small"></p>
+    <div class="col s12">
+		<div class="container">
+			<p class="flat-text small"></p>
+		</div>
 	</div>
 	<!--
 	<div class="row">
