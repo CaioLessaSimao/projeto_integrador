@@ -12,7 +12,8 @@
 
 		.container {
 			width: 100vw;
-			
+			align-items: center;
+
 		}
 		
 
