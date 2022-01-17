@@ -80,7 +80,7 @@
 
 			<p>Discursando agora: </p>
 			<span id="counter">00:00:00</span><br>
-			<input type="button" value="Parar" onclick="para();"> <input type="button" value="Iniciar" onclick="inicia();"> <input type="button" value="Zerar" onclick="zera();">
+			<input type="button" class="btn" value="Parar" onclick="para();"> <input type="button" class="btn" value="Iniciar" onclick="inicia();"> <input type="button" class="btn" value="Zerar" onclick="zera();">
 
 		</div>
 	</div>
