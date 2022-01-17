@@ -70,6 +70,9 @@
     </div>
 
 	<div class="container">
+		<p class="flat-text small"></p>
+	</div>
+	<!--
 	<div class="row">
 		<div class="col s12">
 			<h1><?php echo $nome; ?></h1>
@@ -81,7 +84,7 @@
 			Lista de oradores
 		</div>
 	</div>
-</div>
+	-->
 
 	<div class="fixed-action-btn">
   		<a class="btn-floating btn-large red">
