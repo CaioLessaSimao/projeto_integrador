@@ -27,6 +27,7 @@
 		#lst{
 			border: 5px;
 			border-color: green;
+			background-color: black;
 		}
 
 	</style>
