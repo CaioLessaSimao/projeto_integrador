@@ -68,9 +68,12 @@
     </div>
 
 	<div class="row">
-		<div class="col s6">
+		<div class="col s12">
 			<h1><?php echo $nome; ?></h1>
 			<h4>(<?php echo $tema; ?>)</h4>
+		</div>
+		<div class="col s6">
+			Lista de oradores
 		</div>
 	</div>
 
