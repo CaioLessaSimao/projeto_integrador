@@ -23,6 +23,11 @@
 			color: white;	 
 		}
 		*/
+		.flat-text.small {
+		    width: 25%;
+		    height: 25px;
+		    background-color: rgba(0,0,0,0.15);
+		}
 	</style>
 	<?php 
 		require_once "connection.php";
