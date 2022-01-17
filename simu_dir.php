@@ -9,7 +9,7 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 
 	<style type="text/css">
-		/*
+		
 		.container {
 			width: 100vw;
 			height: 80vh;
@@ -19,10 +19,7 @@
 			align-items: center;
 			line-height: 0px;
 		}
-		.titulo{
-			color: white;	 
-		}
-		*/
+		
 
 		#lst{
 			border: 5px;
