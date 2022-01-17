@@ -28,6 +28,7 @@
 			border: 5px;
 			border-color: green;
 			background-color: black;
+			float: left;
 		}
 
 	</style>
