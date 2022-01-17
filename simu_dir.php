@@ -73,6 +73,8 @@
 		<div class="center-align">
 			<h2><?php echo $nome; ?></h2>
 			<h4>(<?php echo $tema; ?>)</h4>
+
+			<p>Discursando agora</p>
 		</div>
 	</div>
 
