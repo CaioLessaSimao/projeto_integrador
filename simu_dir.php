@@ -22,8 +22,7 @@
 		
 		*/
 		#lst{
-			border: 5px;
-			border-color: green;
+			border: solid white;
 			background-color: black;
 			float: left;
 			z-index: 2;
