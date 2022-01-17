@@ -22,6 +22,25 @@
 			color: white;	 
 		}
 	</style>
+	<?php 
+		require_once "connection.php";
+		if(isset($_REQUEST['idcomite'])){
+			$comite = (int)$_REQUEST['idcomite'];
+			$comite2 = $_REQUEST['idcomite']; 
+			$sql = "SELECT nome,tema FROM comite WHERE id=$comite";
+			$query = pg_query($conn, $sql);
+			$array = pg_fetch_array($query);
+			$nome = $array[0];
+			$tema = $array[1];
+
+			$sql2 = "SELECT nome FROM diretor WHERE fk_comite_id = $comite;";
+			$query2 = pg_query($conn, $sql2);
+			$array2 = pg_fetch_array($query2);
+			$nome2 = $array2[0];	
+		}
+		
+
+	?>
 </head>
 <body>
 	
@@ -35,7 +54,7 @@
                 <ul id="navbar-items" class="right hide-on-med-and-down">
                     <li>
                         <a class="dropdown-trigger" data-target="dropdown-menu" href="#">
-                    		hsauhsuah <i class="material-icons right">account_circle</i>
+                    		<?php echo $nome2;?> <i class="material-icons right">account_circle</i>
                         </a>
                     </li>
                 </ul>
@@ -50,7 +69,8 @@
 
 	<div class="container">
 		<div class="center-align">
-			
+			<h1><?php echo $nome; ?></h1>
+			<h4>(<?php echo $tema; ?>)</h4>
 		</div>
 	</div>
 
