@@ -24,6 +24,36 @@
 	</style>
 </head>
 <body>
+	
+	<div class="navbar-fixed">
+        <nav>
+            <div class="nav-wrapper green accent-3">
+                <!-- Logo -->
+                <a href="index.php" class="brand-logo">PSGD</a>
+>
+
+                <ul id="navbar-items" class="right hide-on-med-and-down">
+                    <li>
+                        <a class="dropdown-trigger" data-target="dropdown-menu" href="#">
+                    		hsauhsuah <i class="material-icons right">account_circle</i>
+                        </a>
+                    </li>
+                </ul>
+
+                <!-- Dropdown -->
+                <ul id="dropdown-menu" class="dropdown-content">
+                    <li><a href="pag_comite.php">Sair da simulação</a></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+
+	<div class="container">
+		<div class="center-align">
+			
+		</div>
+	</div>
+
 	<div class="fixed-action-btn">
   		<a class="btn-floating btn-large red">
     		<i class="large material-icons">mode_edit</i>
@@ -45,5 +75,10 @@
       direction: 'left'
     });
   });
+
+	const elemsDropdown = document.querySelectorAll(".dropdown-trigger");
+	const instancesDropdown = M.Dropdown.init(elemsDropdown, {
+    	coverTrigger: false
+	});
 </script>
 </html>
