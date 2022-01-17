@@ -27,7 +27,7 @@
 			background-color: black;
 			float: left;
 			z-index: 2;
-			width: 450px;
+			width: 350px;
 			height: 100%;
 		}
 
