@@ -9,6 +9,7 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 
 	<style type="text/css">
+		/*
 		.container {
 			width: 100vw;
 			height: 80vh;
@@ -21,6 +22,7 @@
 		.titulo{
 			color: white;	 
 		}
+		*/
 	</style>
 	<?php 
 		require_once "connection.php";
@@ -67,15 +69,19 @@
         </nav>
     </div>
 
+	<div class="container">
 	<div class="row">
 		<div class="col s12">
 			<h1><?php echo $nome; ?></h1>
 			<h4>(<?php echo $tema; ?>)</h4>
 		</div>
+	
+	
 		<div class="col s6">
 			Lista de oradores
 		</div>
 	</div>
+</div>
 
 	<div class="fixed-action-btn">
   		<a class="btn-floating btn-large red">
