@@ -15,7 +15,7 @@
 			display: flex;
 			flex-direction: column;
 			justify-content: center;
-			align-items: left;
+			align-items: center;
 			line-height: 0px;
 		}
 		.titulo{
@@ -67,8 +67,8 @@
         </nav>
     </div>
 
-	<div class="container">
-		<div class="center-align">
+	<div class="row">
+		<div class="col s6 offset-s6">
 			<h1><?php echo $nome; ?></h1>
 			<h4>(<?php echo $tema; ?>)</h4>
 		</div>
