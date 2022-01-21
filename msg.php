@@ -8,14 +8,9 @@ $resposta = $aux['status'];
 echo json_encode($resposta);
 
 $json_data = [
-    "to" => 'DEVICE_TOKEN',
-    "notification" => [
-        "body" => "SOMETHING",
-        "title" => "SOMETHING",
-        "icon" => "ic_launcher"
-    ],
+    "to" => 'topics/all',
     "data" => [
-        $aux['status']
+        "action" => $aux['status']
     ]
 ];
 
