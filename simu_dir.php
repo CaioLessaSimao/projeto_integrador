@@ -156,7 +156,8 @@
 
 	function inicia(){
 		interval = setInterval("conta();",1000);
-		<?php header("Location: funciona.php");?>
+		let ajax = new XMLHttpRequest();
+		ajax.open("post", "controle.php");
 	}
 
 	function para(){
