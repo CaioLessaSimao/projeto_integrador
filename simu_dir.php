@@ -156,29 +156,7 @@
 
 	function inicia(){
 		interval = setInterval("conta();",1000);
-		var data = {status: "iniciar"};
-	    
-	    let ajax = new XMLHttpRequest();
-
-            ajax.open('post', 'msg.php');
-
-            ajax.onreadystatechange = function(){
-                if (
-                    ajax.readyState == 4
-                    && ajax.status >= 200
-                    && ajax.status <= 400
-                ) {
-                    let respostaAjax = JSON.parse(ajax.responseText);
-
-                    // Aqui os dados já foram tratados.
-                    // Faça o que quiser com eles:
-                    console.log(respostaAjax);
-                }
-            }
-            var aux = JSON.stringify(data);
-            console.log(aux);
-            ajax.send(aux);
-        }
+    }
 
 	function para(){
 		clearInterval(interval);
