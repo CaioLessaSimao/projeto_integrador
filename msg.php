@@ -8,7 +8,7 @@ $resposta = $aux['status'];
 echo json_encode($resposta);
 
 $json_data = [
-    "to" => 'topics/all',
+    "to" => '/topics/all',
     "data" => [
         "action" => $aux['status']
     ]
