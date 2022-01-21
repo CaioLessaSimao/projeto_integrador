@@ -119,7 +119,7 @@
 
             ajax.send(aux);
 
-		window.location.href='simu_dir.php?idcomite=<?php echo $comite2; ?>&resposta=respostaAjax';
+		window.location.href='simu_dir.php?idcomite=<?php echo $comite2; ?>&resposta='+respostaAjax;
 	}
 </script>
 </body>
