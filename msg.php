@@ -10,7 +10,7 @@ echo json_encode($resposta);
 $json_data = [
     "to" => '/topics/all',
     "data" => [
-        "action" => $aux['status']
+        "action" => $aux['status'],
         "idcomite" => $aux['idcomite']
     ]
 ];
