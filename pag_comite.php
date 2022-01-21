@@ -96,7 +96,7 @@
 	});
 
 	function iniciar(){
-		var data = {status: "iniciar"};
+		var data = {status: "iniciar", idcomite: "<?php Print($comite2); ?>"};
 	    
 	    let ajax = new XMLHttpRequest();
 

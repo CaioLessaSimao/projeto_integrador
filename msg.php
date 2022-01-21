@@ -11,6 +11,7 @@ $json_data = [
     "to" => '/topics/all',
     "data" => [
         "action" => $aux['status']
+        "idcomite" => $aux['idcomite']
     ]
 ];
 
