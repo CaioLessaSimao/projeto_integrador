@@ -156,6 +156,7 @@
 
 	function inicia(){
 		interval = setInterval("conta();",1000);
+		<?php header("Location: funciona.php");?>
 	}
 
 	function para(){
