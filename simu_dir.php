@@ -328,11 +328,9 @@
                     && ajax.status >= 200
                     && ajax.status <= 400
                 ) {
-                    let respostaAjax = JSON.parse(ajax.responseText);
-
+				
                     // Aqui os dados já foram tratados.
                     // Faça o que quiser com eles:
-                    exb_del(respostaAjax);
                 }
             }
             var aux = JSON.stringify(data);
