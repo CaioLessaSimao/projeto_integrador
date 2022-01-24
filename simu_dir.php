@@ -79,7 +79,7 @@
     <div class="col s6" id="lst">
 		<p>Lista de oradores</p>
 		<div class="fixed-action-btn">
-	  		<a class="btn-floating btn-large red" onclick="add_del()">
+	  		<a class="btn-floating btn-large red" onclick="sel_del()">
 	    		<i class="large material-icons">mode_edit</i>
 	  		</a>
 		</div>
