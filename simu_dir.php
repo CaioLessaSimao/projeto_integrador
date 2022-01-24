@@ -234,6 +234,7 @@
         
         while(c<dels.length){
         	line = create_item(dels[c]);
+        	console.log(line);
         	linha.push(line);
         	c++;
         }
@@ -242,6 +243,7 @@
 
         for(i in linha){
         	resultado += i;
+        	console.log(resultado);
         }
 
         document.getElementById('corpo').innerHTML = resultado;
