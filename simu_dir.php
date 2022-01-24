@@ -347,7 +347,7 @@
             		i++;
             	}
 
-            	document.getElementById('lst').innerHTML = resultado;
+            	document.getElementById('lst').innerHTML += resultado;
             }
             else{
             	localStorage.setItem("<?php Print($comite2); ?>", "");
