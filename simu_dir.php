@@ -236,11 +236,13 @@
                     && ajax.status <= 400
                 ) {
                     let respostaAjax = JSON.parse(ajax.responseText);
+                	console.log(respostaAjax);
                 	if(respostaAjax == "1"){
                 		alert("Delegação já está na lista!");	
                 	}
                 	else{
                 		document.getElementById("lst").innerHTML += "<p>"+nome+"</p>";
+
                 	}
                     // Aqui os dados já foram tratados.
                     // Faça o que quiser com eles:
