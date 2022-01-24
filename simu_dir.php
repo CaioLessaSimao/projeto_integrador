@@ -223,7 +223,7 @@
 
 
 	function add_del(nome){
-		documnent.getElementById("lst").innerHTML += "<p>"+nome+"</p><br>";
+		document.getElementById("lst").innerHTML += "<p>"+nome+"</p><br>";
 	}
 
 
