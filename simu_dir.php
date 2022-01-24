@@ -290,7 +290,7 @@
 
 	function proximo(){
 		var delas = localStorage.getItem("<?php Print($comite2); ?>").split(",");
-		var dels = localStorage.getItem("<?php Print($comite2); ?>").split(",",(dels.length)-1);
+		var dels = localStorage.getItem("<?php Print($comite2); ?>").split(",",(delas.length)-1);
 		console.log(dels)
 		var proximo = dels[0];
 		var i = 1;
