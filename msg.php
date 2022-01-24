@@ -11,7 +11,7 @@ if($oper == "iniciar"){
 	$json_data = [
 	    "to" => '/topics/all',
 	    "data" => [
-	        "action" => $aux['status'],
+	        "action" => $aux['action'],
 	        "idcomite" => $aux['idcomite']
 	    ]
 	];
