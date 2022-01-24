@@ -27,7 +27,7 @@
 			z-index: 2;
 			width: 350px;
 			height: 100%;
-			margin: 10px;
+			margin: 100px;
 		}
 
 	</style>
