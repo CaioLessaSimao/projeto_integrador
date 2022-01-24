@@ -293,6 +293,7 @@
 		var dels = localStorage.getItem("<?php Print($comite2); ?>").split(",",(delas.length)-1);
 		console.log(dels)
 		var proximo = dels[0];
+		console.log(proximo);
 		var i = 1;
 		var resultado = "";
 		while(i<dels.length){
@@ -328,7 +329,8 @@
                     && ajax.status >= 200
                     && ajax.status <= 400
                 ) {
-				
+					let respostaAjax = JSON.parse(ajax.responseText);
+					console.log(respostaAjax);
                     // Aqui os dados já foram tratados.
                     // Faça o que quiser com eles:
                 }

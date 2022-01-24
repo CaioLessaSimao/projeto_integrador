@@ -106,6 +106,7 @@ if ($oper == "add_del") {
 if ($oper == "upd_prx"){
 	$del = $aux["del"];
 	$_SESSION["proximo"] = $del;
+	echo json_encode("atualizado");
 }
 
 if ($oper == "load_prx"){
