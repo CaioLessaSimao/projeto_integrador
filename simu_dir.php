@@ -317,27 +317,7 @@
 
         document.getElementById('lst').innerHTML += result;
 
-		var data = {action: "upd_prx", del: proximo};
-	    
-	    let ajax = new XMLHttpRequest();
-
-            ajax.open('post', 'msg.php');
-
-            ajax.onreadystatechange = function(){
-                if (
-                    ajax.readyState == 4
-                    && ajax.status >= 200
-                    && ajax.status <= 400
-                ) {
-					let respostaAjax = JSON.parse(ajax.responseText);
-					console.log(respostaAjax);
-                    // Aqui os dados já foram tratados.
-                    // Faça o que quiser com eles:
-                }
-            }
-            var aux = JSON.stringify(data);
-
-            ajax.send(aux);
+		localStorage.setItem("proximo", proximo);
 		
 	}
 
@@ -345,7 +325,7 @@
 		if(localStorage.getItem("proximo")){
             	var prx = localStorage.getItem("proximo");
 				console.log(prx);
-            	document.getElementById('prx').innerHTML += resultado;
+            	document.getElementById('prx').innerHTML = resultado;
             }
             else{
             	localStorage.setItem("proximo", "");
