@@ -140,6 +140,9 @@
     	coverTrigger: false
 	});
 
+	const elemsModal = document.querySelectorAll(".modal");
+     const instancesModal = M.Modal.init(elemsModal);
+
 	function formatatempo(segs) {
 		min = 0;
 		hr = 0;
@@ -223,8 +226,7 @@
 
 
 	function exb_del(dels){
-		const elemsModal = document.querySelectorAll(".modal");
-        const instancesModal = M.Modal.init(elemsModal);
+		
 
         var c = 0;
         var linha = [];
