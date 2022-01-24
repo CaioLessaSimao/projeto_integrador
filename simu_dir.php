@@ -293,7 +293,7 @@
             	document.getElementById('prx').innerHTML = resultado;
             }
             else{
-            	localStorage.setItem("proximo", "");
+            	localStorage.setItem("proximo", "Discursando agora: ");
             }
 	}
 
