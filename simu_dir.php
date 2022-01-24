@@ -242,7 +242,7 @@
         var resultado = "";
 
         for(i in linha){
-        	resultado += i;
+        	resultado += i.linha;
         	console.log(resultado);
         }
 
