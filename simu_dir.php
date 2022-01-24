@@ -344,6 +344,7 @@
             	var resultado = "";
             	while(i<dels.length){
             		resultado += "<p>"+dels[i]+"</p>";
+            		i++;
             	}
 
             	document.getElementById('lst').innerHTML = resultado;
