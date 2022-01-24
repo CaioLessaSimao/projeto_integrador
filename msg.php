@@ -101,6 +101,20 @@ if ($oper == "add_del") {
 		$_SESSION[$idComite] .= $nomeDel .",";
 		echo json_encode("2");  
 	}
+}
 
+if ($oper == "upd_prx"){
+	$del = $aux["del"];
+	$_SESSION["proximo"] = $del;
+}
+
+if ($oper == "load_prx"){
+	if($_SESSION["proximo"]){
+		echo json_encode($_SESSION["proximo"]);
+	}
+	else{
+		$_SESSION["proximo"] = "";
+		echo json_encode($_SESSION["proximo"]);
+	}
 }
 ?>

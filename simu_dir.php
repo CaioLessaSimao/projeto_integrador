@@ -90,7 +90,7 @@
 			<h2><?php echo $nome; ?></h2>
 			<h4>(<?php echo $tema; ?>)</h4>
 
-			<p id="prx"></p>
+			<p id="prx" onload = "load_prx()"></p>
 			<span id="counter">00:00:00</span><br>
 			<input type="button" class="btn" value="Parar" onclick="para();"> <input type="button" class="btn" value="Iniciar" onclick="inicia();"> <input type="button" class="btn" value="Zerar" onclick="zera();">
 			<input type="button" class="btn" value="Proximo" onclick="proximo();">
@@ -316,7 +316,39 @@
 
         document.getElementById('lst').innerHTML += result;
 
+		var data = {action: "upd_prx", del: proximo};
+	    
+	    let ajax = new XMLHttpRequest();
+
+            ajax.open('post', 'msg.php');
+
+            ajax.onreadystatechange = function(){
+                if (
+                    ajax.readyState == 4
+                    && ajax.status >= 200
+                    && ajax.status <= 400
+                ) {
+                    let respostaAjax = JSON.parse(ajax.responseText);
+
+                    // Aqui os dados já foram tratados.
+                    // Faça o que quiser com eles:
+                    exb_del(respostaAjax);
+                }
+            }
+            var aux = JSON.stringify(data);
+
+            ajax.send(aux);
 		
+	}
+
+	function load_prx(){
+		if(localStorage.getItem("proximo")){
+            	var prx = localStorage.getItem("proximo");
+            	document.getElementById('prx').innerHTML += resultado;
+            }
+            else{
+            	localStorage.setItem("proximo", "");
+            }
 	}
 
 	function apagar(){
