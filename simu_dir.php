@@ -299,7 +299,7 @@
 		}
 		localStorage.setItem("<?php Print($comite2); ?>", resultado);
 
-		document.getElementById('prx').innerHTML = "Discursando agora: "+proximo+;
+		document.getElementById('prx').innerHTML = "Discursando agora: "+proximo;
 		
 		var deles = localStorage.getItem("<?php Print($comite2); ?>").split(",");
 		var j = 0;
