@@ -295,6 +295,7 @@
 		var resultado = "";
 		while(i<dels.length){
 			resultado += dels[i]+",";
+			i++;
 		}
 		localStorage.setItem("<?php Print($comite2); ?>", resultado);
 
