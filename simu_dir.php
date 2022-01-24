@@ -77,7 +77,7 @@
     </div>
 
     <div class="col s6" id="lst">
-		<p>Lista de oradores</p><br>
+		<p>Lista de oradores</p>
 		<div class="fixed-action-btn">
 	  		<a data-target="meu-modal" class="btn-floating btn-large red modal-trigger" onclick="sel_del()">
 	    		<i class="large material-icons">mode_edit</i>
@@ -223,7 +223,7 @@
 
 
 	function add_del(nome){
-		document.getElementById("lst").innerHTML += "<p>"+nome+"</p><br>";
+		document.getElementById("lst").innerHTML += "<p>"+nome+"</p>";
 	}
 
 
