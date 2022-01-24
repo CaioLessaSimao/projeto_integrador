@@ -323,7 +323,7 @@
         }
 
         document.getElementById('lst').innerHTML += result;
-
+		console.log(proximo);
 		localStorage.setItem("proximo", proximo);
 		
 	}
