@@ -47,7 +47,7 @@ if($oper == "sel_del"){
 
 	$sql = "SELECT nome FROM delegacao WHERE fk_comite_id = $idComite";
 
-	$result = pg_query($conn,$query);
+	$result = pg_query($conn, $sql);
 
 	$nomes = [];
 
