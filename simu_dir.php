@@ -290,6 +290,7 @@
 
 	function proximo(){
 		var dels = localStorage.getItem("<?php Print($comite2); ?>").split(",");
+		console.log(dels);
 		var proximo = dels[0];
 		var i = 1;
 		var resultado = "";
@@ -305,7 +306,7 @@
 		var j = 0;
 		var result = "";
 		
-		document.getElementById('lst').innerHTML = "";
+		document.getElementById('lst').innerHTML = "<p>Lista de oradores</p>";
 
 		while(j<dels.length){
             result += "<p>"+deles[j]+"</p>";
