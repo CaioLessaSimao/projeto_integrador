@@ -88,7 +88,8 @@ if ($oper == "add_del") {
 	$nomeDel = $aux["nomedel"];
 
 	if($_SESSION[$idComite] == ""){
-		$_SESSION[$idComite] = $nomeDel . ",";
+		$_SESSION[$idComite] .= $nomeDel . ",";
+		echo json_encode("2");
 	}
 	else{
 		$dels = explode(",", $_SESSION[$idComite]);
