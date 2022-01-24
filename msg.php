@@ -61,12 +61,13 @@ if($oper == "sel_del"){
 	$c = 0;
 
 	$delegacoes = [];
-
+	/*
 	while ($c < count($nomes)) {
-		$delegacoes[] = [$nomes: $id];
+		$delegacoes[] = [$ids[$c] => $nomes[$c]];
+		$c++;
 	}
-
-	echo json_encode($delegacoes);
+	*/
+	echo json_encode($nomes);
 }
 
 if ($oper == "add_del") {
