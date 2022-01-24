@@ -240,11 +240,11 @@
         }
 
         var resultado = "";
-
-        for(i in linha){
-        	resultado += i.linha;
-        	console.log(resultado);
-        }
+        var i = 0;
+     	while(i<linha.length){
+     		resultado += linha[i];
+     		i++;
+     	}
 
         document.getElementById('corpo').innerHTML = resultado;
 	}
