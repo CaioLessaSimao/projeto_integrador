@@ -218,8 +218,8 @@
 	}
 
 	function create_item(nome){
-		console.log(nome);
-		return "<tr><td onclick='add_del("+nome+")'>"+nome+"</td></tr>";
+		console.log(String(nome);
+		return "<tr><td onclick='add_del("+String(nome)+")'>"+String(nome)+"</td></tr>";
 	}
 
 
