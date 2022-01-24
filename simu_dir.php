@@ -344,6 +344,7 @@
 	function load_prx(){
 		if(localStorage.getItem("proximo")){
             	var prx = localStorage.getItem("proximo");
+				console.log(prx);
             	document.getElementById('prx').innerHTML += resultado;
             }
             else{
