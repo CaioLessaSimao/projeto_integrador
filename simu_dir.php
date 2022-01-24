@@ -290,7 +290,7 @@
 			if(localStorage.getItem("proximo")){
             	var prx = localStorage.getItem("proximo");
 				console.log(prx);
-            	document.getElementById('prx').innerHTML = resultado;
+            	document.getElementById('prx').innerHTML = "Discursando agora: "+ prx;
             }
             else{
             	localStorage.setItem("proximo", "Discursando agora: ");
