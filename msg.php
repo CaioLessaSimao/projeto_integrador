@@ -7,7 +7,7 @@ $aux = json_decode(file_get_contents('php://input'), true);
 $oper = $aux['action'];
 
 if($oper == "iniciar"){
-
+	echo json_encode($aux['action']);
 	$json_data = [
 	    "to" => '/topics/all',
 	    "data" => [
