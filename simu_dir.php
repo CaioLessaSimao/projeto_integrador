@@ -218,7 +218,7 @@
 	}
 
 	function create_item(nome){
-		return "<tr><td onclick='add_del("+nome+")'>"+nome+"</td></tr>";
+		return "<tr><td onclick='add_del('"+nome+"')'>"+nome+"</td></tr>";
 	}
 
 
