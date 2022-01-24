@@ -223,6 +223,7 @@
 
 
 	function add_del(nome){
+		/*
 		var data = {action: "add_del", idcomite: "<?php Print($comite2); ?>", nomedel : nome};
 	    
 	    let ajax = new XMLHttpRequest();
@@ -253,6 +254,7 @@
             ajax.send(aux);
 
 		//document.getElementById("lst").innerHTML += "<p>"+nome+"</p>";
+		*/
 	}
 
 
@@ -281,7 +283,8 @@
 	}
 
 	function load_lst(){
-		var data = {action: "load_lst", idcomite: "<?php Print($comite2); ?>"};
+		/*
+		var data = {action: "load_lst", idcomite: "<?php //Print($comite2); ?>"};
 	    
 	    let ajax = new XMLHttpRequest();
 
@@ -311,6 +314,15 @@
             var aux = JSON.stringify(data);
 
             ajax.send(aux);
+            */
+
+            if(localStorage.getItem("<?php Print($comite2); ?>")){
+            	document.getElementById("lst").innerHTML += "<p>"+localStorage.getItem("<?php Print($comite2); ?>")+"</p>";
+            }
+            else{
+            	localStorage.setItem("<?php Print($comite2); ?>", "");
+            	console.log(localStorage.getItem("<?php Print($comite2); ?>"));
+            }
 	}
 
 </script>
