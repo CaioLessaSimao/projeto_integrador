@@ -90,7 +90,7 @@
 			<h2><?php echo $nome; ?></h2>
 			<h4>(<?php echo $tema; ?>)</h4>
 
-			<p id="prx">Discursando agora: </p>
+			<p id="prx"></p>
 			<span id="counter">00:00:00</span><br>
 			<input type="button" class="btn" value="Parar" onclick="para();"> <input type="button" class="btn" value="Iniciar" onclick="inicia();"> <input type="button" class="btn" value="Zerar" onclick="zera();">
 			<input type="button" class="btn" value="Proximo" onclick="proximo();">
@@ -299,11 +299,14 @@
 		}
 		localStorage.setItem("<?php Print($comite2); ?>", resultado);
 
-		document.getElementById('prx').innerHTML += proximo;
+		document.getElementById('prx').innerHTML = "Discursando agora: "+proximo+;
 		
 		var deles = localStorage.getItem("<?php Print($comite2); ?>").split(",");
 		var j = 0;
 		var result = "";
+		
+		document.getElementById('lst').innerHTML = "";
+
 		while(j<dels.length){
             result += "<p>"+deles[j]+"</p>";
             j++;
