@@ -90,7 +90,7 @@
 			<h2><?php echo $nome; ?></h2>
 			<h4>(<?php echo $tema; ?>)</h4>
 
-			<p id="prx" onload = "load_prx()"></p>
+			<p id="prx"></p>
 			<span id="counter">00:00:00</span><br>
 			<input type="button" class="btn" value="Parar" onclick="para();"> <input type="button" class="btn" value="Iniciar" onclick="inicia();"> <input type="button" class="btn" value="Zerar" onclick="zera();">
 			<input type="button" class="btn" value="Proximo" onclick="proximo();">
