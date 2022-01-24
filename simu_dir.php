@@ -286,14 +286,21 @@
             else{
             	localStorage.setItem("<?php Print($comite2); ?>", "");
             }
+
+			if(localStorage.getItem("proximo")){
+            	var prx = localStorage.getItem("proximo");
+				console.log(prx);
+            	document.getElementById('prx').innerHTML = resultado;
+            }
+            else{
+            	localStorage.setItem("proximo", "");
+            }
 	}
 
 	function proximo(){
 		var delas = localStorage.getItem("<?php Print($comite2); ?>").split(",");
 		var dels = localStorage.getItem("<?php Print($comite2); ?>").split(",",(delas.length)-1);
-		console.log(dels)
 		var proximo = dels[0];
-		console.log(proximo);
 		var i = 1;
 		var resultado = "";
 		while(i<dels.length){
@@ -319,17 +326,6 @@
 
 		localStorage.setItem("proximo", proximo);
 		
-	}
-
-	function load_prx(){
-		if(localStorage.getItem("proximo")){
-            	var prx = localStorage.getItem("proximo");
-				console.log(prx);
-            	document.getElementById('prx').innerHTML = resultado;
-            }
-            else{
-            	localStorage.setItem("proximo", "");
-            }
 	}
 
 	function apagar(){
