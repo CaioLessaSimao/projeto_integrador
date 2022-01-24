@@ -263,15 +263,19 @@
 		else{
 			var dels = localStorage.getItem("<?php Print($comite2); ?>").split(",");
 			var i = 0;
+			var x = "";
 			while(i<dels.length) {
 			 	if(dels[i] == nome){
 			 		alert("Delegação já está na lista!");
+			 		x = "1";
 			 	}
 			 	i++;
 			}
-			resultado += localStorage.getItem("<?php Print($comite2); ?>")+","+nome+",";
-			localStorage.setItem("<?php Print($comite2); ?>", resultado);
-			document.getElementById("lst").innerHTML += "<p>"+nome+"</p>";   
+			if (!x == "1") {
+				resultado += localStorage.getItem("<?php Print($comite2); ?>")+","+nome+",";
+				localStorage.setItem("<?php Print($comite2); ?>", resultado);
+				document.getElementById("lst").innerHTML += "<p>"+nome+"</p>";
+			}   
 		}
 	}
 
