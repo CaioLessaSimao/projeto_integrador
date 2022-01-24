@@ -339,7 +339,14 @@
             */
 
             if(localStorage.getItem("<?php Print($comite2); ?>")){
-            	document.getElementById("lst").innerHTML += "<p>"+localStorage.getItem("<?php Print($comite2); ?>")+"</p>";
+            	var dels = localStorage.getItem("<?php Print($comite2); ?>").split(",");
+            	var i = 0;
+            	var resultado = "";
+            	while(i<dels.length){
+            		resultado += "<p>"+dels[i]+"</p>";
+            	}
+
+            	document.getElementById('lst').innerHTML = resultado;
             }
             else{
             	localStorage.setItem("<?php Print($comite2); ?>", "");
