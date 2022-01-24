@@ -94,6 +94,7 @@
 			<span id="counter">00:00:00</span><br>
 			<input type="button" class="btn" value="Parar" onclick="para();"> <input type="button" class="btn" value="Iniciar" onclick="inicia();"> <input type="button" class="btn" value="Zerar" onclick="zera();">
 			<input type="button" class="btn" value="Proximo" onclick="proximo();">
+			<input type="button" class="btn" value="ajuda" onclick="apagar();">
 
 		</div>
 	</div>
@@ -316,6 +317,12 @@
         document.getElementById('lst').innerHTML += result;
 
 		
+	}
+
+	function apagar(){
+		document.getElementById('lst').innerHTML = "<p>Lista de oradores</p>";
+		localStorage.setItem("<?php Print($comite2); ?>","");
+		console.log(localStorage.getItem("<?php Print($comite2); ?>"));
 	}
 
 </script>
