@@ -232,7 +232,7 @@
         
         while(c<dels.length){
         	line = create_item(dels[c]);
-        	linha[] = line;
+        	linha.push(line);
         	c++;
         }
 
