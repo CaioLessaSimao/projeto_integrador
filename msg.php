@@ -54,8 +54,7 @@ if($oper == "sel_del"){
 	$ids = [];
 
 	while ($row = pg_fetch_assoc($result)) {
-		    $nomes[] = $row['nome'];
-		    $ids[] = strval($row['id']); 
+		    $nomes[] = $row['nome']; 
 	}
 
 	$c = 0;

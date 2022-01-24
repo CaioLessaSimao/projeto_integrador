@@ -97,6 +97,28 @@
 		</div>
 	</div>
 
+	 <div id="meu-modal" class="modal">
+        <div class="row modal-content">
+            <h4 id="title">Selecione uma delegação</h4>
+            
+            <table>
+		<thead>
+			<tr>
+				
+				<th>Nome da Delegação</th>
+				
+			</tr>
+		</thead>
+		<tbody id="corpo">
+			
+		</tbody>
+	</table>
+                        
+        
+        </div>
+        
+    </div>
+
 	
 
 	
@@ -183,7 +205,7 @@
 
                     // Aqui os dados já foram tratados.
                     // Faça o que quiser com eles:
-                    console.log(respostaAjax);
+                    exb_del(respostaAjax);
                 }
             }
             var aux = JSON.stringify(data);
@@ -191,5 +213,37 @@
             ajax.send(aux);
 
 	}
+
+	function create_item(nome){
+		return "<td onclick='add_del("+nome+")'>"+nome+"</td>";
+	}
+
+
+
+
+
+	function exb_del(dels){
+		const elemsModal = document.querySelectorAll(".modal");
+        const instancesModal = M.Modal.init(elemsModal);
+
+        var c = 0;
+        var linha = [];
+        var line = "";
+        
+        while(c<dels.length){
+        	line = create_item(dels[c]);
+        	linha[] = line;
+        	c++;
+        }
+
+        var resultado = "";
+
+        for(i in linha){
+        	resultado += i;
+        }
+
+        document.getElementById('corpo').innerHTML = resultado;
+	}
+
 </script>
 </html>
