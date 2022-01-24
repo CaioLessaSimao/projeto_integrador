@@ -79,7 +79,7 @@
     <div class="col s6" id="lst">
 		<p>Lista de oradores</p>
 		<div class="fixed-action-btn">
-	  		<a class="btn-floating btn-large red modal-trigger">
+	  		<a data-target="meu-modal" class="btn-floating btn-large red modal-trigger">
 	    		<i class="large material-icons">mode_edit</i>
 	  		</a>
 		</div>
@@ -141,7 +141,7 @@
 	});
 
 	const elemsModal = document.querySelectorAll(".modal");
-     const instancesModal = M.Modal.init(elemsModal);
+    const instancesModal = M.Modal.init(elemsModal);
 
 	function formatatempo(segs) {
 		min = 0;
