@@ -45,7 +45,7 @@ if($oper == "iniciar"){
 if($oper == "sel_del"){
 	$idComite = (int)$aux['idcomite'];
 
-	$sql = "SELECT nome, id FROM delegacao WHERE fk_comite_id = $idComite";
+	$sql = "SELECT nome FROM delegacao WHERE fk_comite_id = $idComite";
 
 	$result = pg_query($conn,$query);
 
