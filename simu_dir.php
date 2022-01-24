@@ -90,9 +90,10 @@
 			<h2><?php echo $nome; ?></h2>
 			<h4>(<?php echo $tema; ?>)</h4>
 
-			<p>Discursando agora: </p>
+			<p id="prx">Discursando agora: </p>
 			<span id="counter">00:00:00</span><br>
 			<input type="button" class="btn" value="Parar" onclick="para();"> <input type="button" class="btn" value="Iniciar" onclick="inicia();"> <input type="button" class="btn" value="Zerar" onclick="zera();">
+			<input type="button" class="btn" value="Proximo" onclick="proximo();">
 
 		</div>
 	</div>
@@ -146,11 +147,7 @@
 	function formatatempo(segs) {
 		min = 0;
 		hr = 0;
-		/*
-		if hr < 10 then hr = "0"&hr
-		if min < 10 then min = "0"&min
-		if segs < 10 then segs = "0"&segs
-		*/
+
 		while(segs>=60) {
 		if (segs >=60) {
 		segs = segs-60;
@@ -223,38 +220,7 @@
 
 
 	function add_del(nome){
-		/*
-		var data = {action: "add_del", idcomite: "<?php Print($comite2); ?>", nomedel : nome};
-	    
-	    let ajax = new XMLHttpRequest();
 
-            ajax.open('post', 'msg.php');
-
-            ajax.onreadystatechange = function(){
-                if (
-                    ajax.readyState == 4
-                    && ajax.status >= 200
-                    && ajax.status <= 400
-                ) {
-                    let respostaAjax = JSON.parse(ajax.responseText);
-                	console.log(respostaAjax);
-                	if(respostaAjax == "1"){
-                		alert("Delegação já está na lista!");	
-                	}
-                	else{
-                		document.getElementById("lst").innerHTML += "<p>"+nome+"</p>";
-
-                	}
-                    // Aqui os dados já foram tratados.
-                    // Faça o que quiser com eles:
-                }
-            }
-            var aux = JSON.stringify(data);
-
-            ajax.send(aux);
-
-		//document.getElementById("lst").innerHTML += "<p>"+nome+"</p>";
-		*/
 		var resultado = "";
 		if(localStorage.getItem("<?php Print($comite2); ?>") == ""){
 			localStorage.setItem("<?php Print($comite2); ?>", nome);
@@ -305,38 +271,6 @@
 	}
 
 	function load_lst(){
-		/*
-		var data = {action: "load_lst", idcomite: "<?php //Print($comite2); ?>"};
-	    
-	    let ajax = new XMLHttpRequest();
-
-            ajax.open('post', 'msg.php');
-
-            ajax.onreadystatechange = function(){
-                if (
-                    ajax.readyState == 4
-                    && ajax.status >= 200
-                    && ajax.status <= 400
-                ) {
-                    let respostaAjax = JSON.parse(ajax.responseText);
-                	console.log(respostaAjax);
-                	
-                	if(!respostaAjax == ""){
-                		var dels = 	respostaAjax.split(',');
-                		var i = 0;
-                		while (i<dels.length){
-                			document.getElementById("lst").innerHTML += "<p>" + dels[i] + "</p>"; 
-                		}
-                	}
-
-                    // Aqui os dados já foram tratados.
-                    // Faça o que quiser com eles:
-                }
-            }
-            var aux = JSON.stringify(data);
-
-            ajax.send(aux);
-            */
 
             if(localStorage.getItem("<?php Print($comite2); ?>")){
             	var dels = localStorage.getItem("<?php Print($comite2); ?>").split(",");
@@ -351,8 +285,32 @@
             }
             else{
             	localStorage.setItem("<?php Print($comite2); ?>", "");
-            	console.log(localStorage.getItem("<?php Print($comite2); ?>"));
             }
+	}
+
+	function proximo(){
+		var dels = localStorage.getItem("<?php Print($comite2); ?>").split(",");
+		var proximo = dels[0];
+		var i = 1;
+		var resultado = "";
+		while(i<dels.length){
+			resultado += dels[i]+",";
+		}
+		localStorage.setItem("<?php Print($comite2); ?>", resultado);
+
+		document.getElementById('prx').innerHTML += proximo;
+		
+		var deles = localStorage.getItem("<?php Print($comite2); ?>").split(",");
+		var j = 0;
+		var result = "";
+		while(j<dels.length){
+            result += "<p>"+deles[j]+"</p>";
+            j++;
+        }
+
+        document.getElementById('lst').innerHTML += result;
+
+		
 	}
 
 </script>
