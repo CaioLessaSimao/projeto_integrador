@@ -261,7 +261,7 @@
 			document.getElementById('lst').innerHTML += "<p>"+nome+"</p>";
 		}
 		else{
-			$dels = localStorage.getItem("<?php Print($comite2); ?>").split(",");
+			var dels = localStorage.getItem("<?php Print($comite2); ?>").split(",");
 			var i = 0;
 			while(i<dels.length) {
 			 	if(dels[i] == nome){
