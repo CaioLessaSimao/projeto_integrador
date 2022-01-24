@@ -292,6 +292,7 @@
                     && ajax.status <= 400
                 ) {
                     let respostaAjax = JSON.parse(ajax.responseText);
+                	console.log(respostaAjax);
                 	
                 	if(!respostaAjax == ""){
                 		var dels = 	respostaAjax.split(',');
