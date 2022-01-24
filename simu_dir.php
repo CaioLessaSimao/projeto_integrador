@@ -52,7 +52,7 @@
 
 	?>
 </head>
-<body>
+<body onload="load_lst()">
 	
 	<div class="navbar-fixed">
         <nav>
@@ -223,7 +223,34 @@
 
 
 	function add_del(nome){
-		document.getElementById("lst").innerHTML += "<p>"+nome+"</p>";
+		var data = {action: "add_del", idcomite: "<?php Print($comite2); ?>", nomedel : nome};
+	    
+	    let ajax = new XMLHttpRequest();
+
+            ajax.open('post', 'msg.php');
+
+            ajax.onreadystatechange = function(){
+                if (
+                    ajax.readyState == 4
+                    && ajax.status >= 200
+                    && ajax.status <= 400
+                ) {
+                    let respostaAjax = JSON.parse(ajax.responseText);
+                	if(respostaAjax == "1"){
+                		alert("Delegação já está na lista!");	
+                	}
+                	else{
+                		document.getElementById("lst").innerHTML += "<p>"+nome+"</p>";
+                	}
+                    // Aqui os dados já foram tratados.
+                    // Faça o que quiser com eles:
+                }
+            }
+            var aux = JSON.stringify(data);
+
+            ajax.send(aux);
+
+		//document.getElementById("lst").innerHTML += "<p>"+nome+"</p>";
 	}
 
 
@@ -249,6 +276,38 @@
      	}
 
         document.getElementById('corpo').innerHTML = resultado;
+	}
+
+	function load_lst(){
+		var data = {action: "load_lst", idcomite: "<?php Print($comite2); ?>"};
+	    
+	    let ajax = new XMLHttpRequest();
+
+            ajax.open('post', 'msg.php');
+
+            ajax.onreadystatechange = function(){
+                if (
+                    ajax.readyState == 4
+                    && ajax.status >= 200
+                    && ajax.status <= 400
+                ) {
+                    let respostaAjax = JSON.parse(ajax.responseText);
+                	
+                	if(!respostaAjax == ""){
+                		var dels = 	respostaAjax.split(',');
+                		var i = 0;
+                		while (i<dels.length){
+                			document.getElementById("lst").innerHTML += "<p>" + dels[i] + "</p>"; 
+                		}
+                	}
+
+                    // Aqui os dados já foram tratados.
+                    // Faça o que quiser com eles:
+                }
+            }
+            var aux = JSON.stringify(data);
+
+            ajax.send(aux);
 	}
 
 </script>

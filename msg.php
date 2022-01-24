@@ -1,5 +1,7 @@
 <?php
 
+session_start();
+
 require_once "connection.php";
 
 $aux = json_decode(file_get_contents('php://input'), true);
@@ -69,7 +71,35 @@ if($oper == "sel_del"){
 	echo json_encode($nomes);
 }
 
+if ($oper == "load_lst"){
+	$idComite = $aux['idcomite'];
+
+	if($_SESSION[$idComite]){
+		echo json_encode($_SESSION[$idComite]);
+	}
+	else{
+		$_SESSION[$idComite] = "";
+		echo json_encode($_SESSION[$idComite]);
+	}
+}
+
 if ($oper == "add_del") {
-	
+	$idComite = $aux["idcomite"];
+	$nomeDel = $aux["nomedel"];
+
+	if(!$_SESSION[$idComite] == ""){
+		$_SESSION[$idComite] = $nomeDel . ",";
+	}
+	else{
+		$dels = explode(",", $_SESSION[$idComite]);
+		foreach ($dels as $i) {
+		 	if($i == $nomeDel){
+		 		echo json_encode("1");
+		 	}
+		}
+		$_SESSION[$idComite] .= $nomeDel .",";
+		echo json_encode("2");  
+	}
+
 }
 ?>
