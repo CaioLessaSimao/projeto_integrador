@@ -42,12 +42,33 @@ if($isAuth) {
 
 		$query = pg_query($con, $sql);
 
+		$sql2 = "SELECT * FROM diretor WHERE fk_comite_id=$idComite and cargo='geral'";
+		$query2 = pg_query($conn, $sql2);
+
+		$sql3 = "SELECT nome FROM diretor WHERE fk_comite_id=$idComite and cargo='assistente'";
+		$query3 = pg_query($conn, $sql3);
+
 		if (!empty($query)) {
         	if (pg_num_rows($query) > 0) {
         		$row = pg_fetch_array($query);
-        		
+        		$row2 = pg_fetch_array($query2);
+
+
+        		$response['dirAss'] = array();
+        		if (pg_num_rows($query3) > 0) {
+        			while ($row3 = pg_fetch_array($query3)) {
+        				$diretor = array();
+        				$diretor['nome'] = $row3['nome'];
+        				array_push($response['dirAss'], $diretor);
+        			}
+
+        		}
+
+				 
+
         		$response['nomeComite'] = $row['nome'];
         		$response['temaComite'] = $row['tema'];
+        		$response['dirG'] = $row2['nome'];
         		$response["success"] = 1;
 			}
 			else{
