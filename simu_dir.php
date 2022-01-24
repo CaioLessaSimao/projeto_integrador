@@ -23,7 +23,6 @@
 		*/
 		#lst{
 			border: solid green;
-			background-color: black;
 			float: left;
 			z-index: 2;
 			width: 350px;
