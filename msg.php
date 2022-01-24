@@ -87,7 +87,7 @@ if ($oper == "add_del") {
 	$idComite = $aux["idcomite"];
 	$nomeDel = $aux["nomedel"];
 
-	if(!$_SESSION[$idComite] == ""){
+	if($_SESSION[$idComite] == ""){
 		$_SESSION[$idComite] = $nomeDel . ",";
 	}
 	else{
