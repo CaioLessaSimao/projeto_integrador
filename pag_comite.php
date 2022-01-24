@@ -111,7 +111,7 @@
                     // Aqui os dados já foram tratados.
                     // Faça o que quiser com eles:
                     console.log(respostaAjax);
-					//window.location.href='simu_dir.php?idcomite=<?php echo $comite2; ?>';
+					window.location.href='simu_dir.php?idcomite=<?php echo $comite2; ?>';
                     
                 }
             }
