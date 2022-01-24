@@ -94,32 +94,17 @@
 	});
 
 	function iniciar(){
-		var data = {status: "iniciar", idcomite: "<?php Print($comite2); ?>"};
+		var data = {action: "iniciar", idcomite: "<?php Print($comite2); ?>"};
 	    
 	    let ajax = new XMLHttpRequest();
 
             ajax.open('post', 'msg.php');
 
-            ajax.onreadystatechange = function(){
-                if (
-                    ajax.readyState == 4
-                    && ajax.status >= 200
-                    && ajax.status <= 400
-                ) {
-                    let respostaAjax = JSON.parse(ajax.responseText);
-
-                    // Aqui os dados já foram tratados.
-                    // Faça o que quiser com eles:
-                    console.log(respostaAjax);
-
-                    window.location.href='simu_dir.php?idcomite=<?php echo $comite2; ?>';
-                }
-            }
             var aux = JSON.stringify(data);
 
             ajax.send(aux);
 
-		
+			window.location.href='simu_dir.php?idcomite=<?php echo $comite2; ?>';
 	}
 </script>
 </body>

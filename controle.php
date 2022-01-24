@@ -193,10 +193,7 @@
             }
 
 
-
-          
-
-            
+      
 
            header("Location: index.php?aux=final");
             

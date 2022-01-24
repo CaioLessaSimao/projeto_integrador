@@ -27,12 +27,13 @@
 			z-index: 2;
 			width: 350px;
 			height: 100%;
-			margin: 100px;
+			margin-left: 50px;
 		}
 
 	</style>
 	<?php 
 		require_once "connection.php";
+		
 		if(isset($_REQUEST['idcomite'])){
 			$comite = (int)$_REQUEST['idcomite'];
 			$comite2 = $_REQUEST['idcomite']; 
@@ -77,6 +78,11 @@
 
     <div class="col s6" id="lst">
 		<p>Lista de oradores</p>
+		<div class="fixed-action-btn">
+	  		<a class="btn-floating btn-large red" onclick="add_del()">
+	    		<i class="large material-icons">mode_edit</i>
+	  		</a>
+		</div>
 	</div>
 
 	<div class="container">
@@ -93,21 +99,13 @@
 
 	
 
-	<div class="fixed-action-btn">
-  		<a class="btn-floating btn-large red">
-    		<i class="large material-icons">mode_edit</i>
-  		</a>
-  		
-  		<ul>
-		    <li><a class="btn-floating red"><i class="material-icons">insert_chart</i></a></li>
-		    <li><a class="btn-floating yellow darken-1"><i class="material-icons">format_quote</i></a></li>
-		    <li><a class="btn-floating green"><i class="material-icons">publish</i>asasas</a></li>
-		    <li><a class="btn-floating blue"><i class="material-icons">attach_file</i></a></li>
-  		</ul>
-	</div>
+	
 </body>
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
 <script type="text/javascript">
+	
 	document.addEventListener('DOMContentLoaded', function() {
     const elems = document.querySelectorAll('.fixed-action-btn');
     const instances = M.FloatingActionButton.init(elems, {
@@ -166,6 +164,32 @@
 		clearInterval(interval);
 		segundos = 0;
 		document.getElementById("counter").innerHTML = formatatempo(segundos);
+	}
+
+	function sel_del(){
+		var data = {action: "sel_del", idcomite: "<?php Print($comite2); ?>"};
+	    
+	    let ajax = new XMLHttpRequest();
+
+            ajax.open('post', 'msg.php');
+
+            ajax.onreadystatechange = function(){
+                if (
+                    ajax.readyState == 4
+                    && ajax.status >= 200
+                    && ajax.status <= 400
+                ) {
+                    let respostaAjax = JSON.parse(ajax.responseText);
+
+                    // Aqui os dados já foram tratados.
+                    // Faça o que quiser com eles:
+                    console.log(respostaAjax);
+                }
+            }
+            var aux = JSON.stringify(data);
+
+            ajax.send(aux);
+
 	}
 </script>
 </html>
