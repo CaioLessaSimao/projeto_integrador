@@ -94,7 +94,8 @@
 			<span id="counter">00:00:00</span><br>
 			<input type="button" class="btn" value="Parar" onclick="para();"> <input type="button" class="btn" value="Iniciar" onclick="inicia();"> <input type="button" class="btn" value="Zerar" onclick="zera();">
 			<input type="button" class="btn" value="Proximo" onclick="proximo();">
-			<input type="button" class="btn" value="ajuda" onclick="apagar();">
+			<input type="button" class="btn" value="Finalizar simulação" onclick="finalizar();">
+
 
 		</div>
 	</div>
@@ -413,9 +414,33 @@
 		
 	}
 
-	function apagar(){
-		document.getElementById('lst').innerHTML = "<p>Lista de oradores</p>";
+	function finalizar(){
 		localStorage.setItem("<?php Print($comite2); ?>","");
+
+		var data = {action: "finalizar", idcomite: "<?php Print($comite2); ?>"};
+	    
+	    		let ajax = new XMLHttpRequest();
+
+            	ajax.open('post', 'msg.php');
+
+            	ajax.onreadystatechange = function(){
+	                if (
+	                    ajax.readyState == 4
+	                    && ajax.status >= 200
+	                    && ajax.status <= 400
+	                ) {
+	                    let respostaAjax = JSON.parse(ajax.responseText);
+
+	                    // Aqui os dados já foram tratados.
+	                    // Faça o que quiser com eles:
+	                    console.log(respostaAjax);
+						window.location.href = "pag_comite.php?idcomite=<?php echo $comite2;?>";
+	                    
+	                }
+            	}
+            	var aux = JSON.stringify(data);
+
+            	ajax.send(aux);	
 	}
 
 </script>
