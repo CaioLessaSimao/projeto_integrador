@@ -357,6 +357,7 @@
 	function proximo(){
 		var delas = localStorage.getItem("<?php Print($comite2); ?>").split(",");
 		var dels = localStorage.getItem("<?php Print($comite2); ?>").split(",",(delas.length)-1);
+		console.log(dels);
 		var proximo = dels[0];
 		var i = 1;
 		var resultado = "";
@@ -364,6 +365,7 @@
 			resultado += dels[i]+",";
 			i++;
 		}
+		console.log(resultado);
 		localStorage.setItem("<?php Print($comite2); ?>", resultado);
 
 		document.getElementById('prx').innerHTML = "Discursando agora: "+proximo;
@@ -394,12 +396,13 @@
             	ajax.send(aux);		
 		
 		var deles = localStorage.getItem("<?php Print($comite2); ?>").split(",");
-		var j = 1;
+		console.log(deles);
+		var j = 0;
 		var result = "";
 		
 		document.getElementById('lst').innerHTML = "<p>Lista de oradores</p>";
 
-		while(j<dels.length){
+		while(j<deles.length){
             result += "<p>"+deles[j]+"</p>";
             j++;
         }
