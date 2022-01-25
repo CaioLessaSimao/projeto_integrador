@@ -226,11 +226,11 @@
 		if(localStorage.getItem("<?php Print($comite2); ?>") == ""){
 			localStorage.setItem("<?php Print($comite2); ?>", nome);
 			document.getElementById('lst').innerHTML += "<p>"+nome+"</p>";
-				resultado += localStorage.getItem("<?php Print($comite2); ?>")+","+nome+",";
+				//resultado += localStorage.getItem("<?php Print($comite2); ?>")+","+nome+",";
 				
-				localStorage.setItem("<?php Print($comite2); ?>", resultado);
+				//localStorage.setItem("<?php Print($comite2); ?>", resultado);
 				
-				document.getElementById("lst").innerHTML += "<p>"+nome+"</p>";
+				//document.getElementById("lst").innerHTML += "<p>"+nome+"</p>";
 				
 				var data = {action: "adicionar", idcomite: "<?php Print($comite2); ?>", nomeDel: nome};
 	    
