@@ -226,6 +226,36 @@
 		if(localStorage.getItem("<?php Print($comite2); ?>") == ""){
 			localStorage.setItem("<?php Print($comite2); ?>", nome);
 			document.getElementById('lst').innerHTML += "<p>"+nome+"</p>";
+				resultado += localStorage.getItem("<?php Print($comite2); ?>")+","+nome+",";
+				
+				localStorage.setItem("<?php Print($comite2); ?>", resultado);
+				
+				document.getElementById("lst").innerHTML += "<p>"+nome+"</p>";
+				
+				var data = {action: "adicionar", idcomite: "<?php Print($comite2); ?>", nomeDel: nome};
+	    
+	    		let ajax = new XMLHttpRequest();
+
+            	ajax.open('post', 'msg.php');
+
+            	ajax.onreadystatechange = function(){
+	                if (
+	                    ajax.readyState == 4
+	                    && ajax.status >= 200
+	                    && ajax.status <= 400
+	                ) {
+	                    let respostaAjax = JSON.parse(ajax.responseText);
+
+	                    // Aqui os dados já foram tratados.
+	                    // Faça o que quiser com eles:
+	                    console.log(respostaAjax);
+						
+	                    
+	                }
+            	}
+            	var aux = JSON.stringify(data);
+
+            	ajax.send(aux);
 		}
 		else{
 			var dels = localStorage.getItem("<?php Print($comite2); ?>").split(",");
