@@ -338,6 +338,31 @@
 
 		document.getElementById('prx').innerHTML = "Discursando agora: "+proximo;
 		
+		var data = {action: "proximo", idcomite: "<?php Print($comite2); ?>", nomeDel: nome};
+	    
+	    		let ajax = new XMLHttpRequest();
+
+            	ajax.open('post', 'msg.php');
+
+            	ajax.onreadystatechange = function(){
+	                if (
+	                    ajax.readyState == 4
+	                    && ajax.status >= 200
+	                    && ajax.status <= 400
+	                ) {
+	                    let respostaAjax = JSON.parse(ajax.responseText);
+
+	                    // Aqui os dados já foram tratados.
+	                    // Faça o que quiser com eles:
+	                    console.log(respostaAjax);
+						
+	                    
+	                }
+            	}
+            	var aux = JSON.stringify(data);
+
+            	ajax.send(aux);		
+		
 		var deles = localStorage.getItem("<?php Print($comite2); ?>").split(",");
 		var j = 0;
 		var result = "";
