@@ -370,7 +370,7 @@
 
 		document.getElementById('prx').innerHTML = "Discursando agora: "+proximo;
 		
-		var data = {action: "proximo", idcomite: "<?php Print($comite2); ?>", nomeDel: nome};
+		var data = {action: "proximo", idcomite: "<?php Print($comite2); ?>", nomeDel: proximo};
 	    
 	    		let ajax = new XMLHttpRequest();
 
