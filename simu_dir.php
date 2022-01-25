@@ -394,7 +394,7 @@
             	ajax.send(aux);		
 		
 		var deles = localStorage.getItem("<?php Print($comite2); ?>").split(",");
-		var j = 0;
+		var j = 1;
 		var result = "";
 		
 		document.getElementById('lst').innerHTML = "<p>Lista de oradores</p>";
