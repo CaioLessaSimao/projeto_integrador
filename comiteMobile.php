@@ -43,10 +43,10 @@ if($isAuth) {
 		$query = pg_query($con, $sql);
 
 		$sql2 = "SELECT * FROM diretor WHERE fk_comite_id=$idComite and cargo='geral'";
-		$query2 = pg_query($conn, $sql2);
+		$query2 = pg_query($con, $sql2);
 
 		$sql3 = "SELECT nome FROM diretor WHERE fk_comite_id=$idComite and cargo='assistente'";
-		$query3 = pg_query($conn, $sql3);
+		$query3 = pg_query($con, $sql3);
 
 		if (!empty($query)) {
         	if (pg_num_rows($query) > 0) {
