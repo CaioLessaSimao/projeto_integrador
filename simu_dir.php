@@ -417,7 +417,6 @@
 	function finalizar(){
 		localStorage.setItem("<?php Print($comite2); ?>","");
 		localStorage.setItem("proximo", "");
-		document.getElementById('prx').innerHTML = "Discursando agora: ";
 
 
 		var data = {action: "finalizar", idcomite: "<?php Print($comite2); ?>"};
