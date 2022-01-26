@@ -40,7 +40,7 @@
 	    $nomes[] = $row['nome'];
 	    $logins[] = $row['login'];
 	    $senhas[] = $row['senha'];
-	    $cargos[] = $row['cargo'] 
+	    $cargos[] = $row['cargo']; 
 	}
 		
 	$tbdiretores = [];
