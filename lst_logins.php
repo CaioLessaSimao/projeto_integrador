@@ -82,6 +82,7 @@
 		<thead>
 			<tr>
 				<th>Nome do diretor</th>
+				<th>Cargo do diretor</th>
 				<th>Login do diretor</th>
 				<th>Senha do diretor</th>
 			</tr>
