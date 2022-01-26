@@ -52,7 +52,7 @@
 
 		$senha = $senhas[$i];
 
-		$cargo = $cargos[$i]
+		$cargo = $cargos[$i];
 			
 		$linha = new create_item($nome,$login,$senha,$cargo);
 			
