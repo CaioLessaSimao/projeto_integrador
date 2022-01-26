@@ -351,7 +351,7 @@
             	document.getElementById('prx').innerHTML = "Discursando agora: "+ prx;
             }
             else{
-            	localStorage.setItem("proximo", "Discursando agora: ");
+            	localStorage.setItem("proximo", "");
             }
 	}
 
