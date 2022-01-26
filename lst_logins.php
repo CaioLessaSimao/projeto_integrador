@@ -87,7 +87,7 @@
 		</tbody>
 	</table>
 
-	<button type="button" onclick="window.location.href='index.php?aux=final'">Finalizar</button>
+	<button type="button" class="btn" onclick="window.location.href='index.php?aux=final'">Finalizar</button>
 
 </body>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
