@@ -18,8 +18,8 @@
 		public $string;
 		public $html;
 
-		function __construct($nome,$login,$senha){
-			$this->string = "<tr><td>".$nome."</td><td>".$login."</td><td>".$senha."</td>";
+		function __construct($nome,$login,$senha,$cargo){
+			$this->string = "<tr><td>".$nome."</td><td>".$cargo."</td><td>".$login."</td><td>".$senha."</td>";
 				$this->html = $this->string;
 		}
 	}
@@ -27,18 +27,20 @@
 	$comite = (int)$_REQUEST['idcomite'];
 	$comite2 = $_REQUEST['idcomite'];
 
-	$sql = "SELECT nome,login,senha FROM diretor WHERE fk_comite_id=$comite;";
+	$sql = "SELECT nome,login,senha,cargo FROM diretor WHERE fk_comite_id=$comite;";
 	
 	$result = pg_query($conn,$sql);
 
 	$nomes = [];
 	$logins = [];
 	$senhas = [];
+	$cargos = [];
 		
 	while ($row = pg_fetch_assoc($result)) {
 	    $nomes[] = $row['nome'];
 	    $logins[] = $row['login'];
-	    $senhas[] = $row['senha']; 
+	    $senhas[] = $row['senha'];
+	    $cargos[] = $row['cargo'] 
 	}
 		
 	$tbdiretores = [];
@@ -49,8 +51,10 @@
 		$login = $logins[$i];
 
 		$senha = $senhas[$i];
+
+		$cargo = $cargos[$i]
 			
-		$linha = new create_item($nome,$login,$senha);
+		$linha = new create_item($nome,$login,$senha,$cargo);
 			
 		$tbdiretores[] = $linha;
 	}
