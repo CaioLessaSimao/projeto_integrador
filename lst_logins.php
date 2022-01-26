@@ -1,6 +1,14 @@
 <html>
 <head>
 	<title>Lista de logins</title>
+	<head>
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	
+
 	<?php 
 	require_once "connection.php";	
 
@@ -82,4 +90,5 @@
 	<button type="button" onclick="window.location.href='index.php?aux=final'">Finalizar</button>
 
 </body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 </html>
