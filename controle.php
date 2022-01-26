@@ -145,7 +145,7 @@
                 
             }
 
-
+            /*
             $arrayDir = $_SESSION['diretores'];
         
             //var_dump($arrayDir);
@@ -191,11 +191,11 @@
                 $mensagem .= "Delegação: ".$nome."\n"."Login: ".$login."\n"."Senha: ".$senha."\n";
                 
             }
-
+            */
 
       
 
-           header("Location: index.php?aux=final");
+           header("Location: lst_logins.php?idcomite=$aux");
             
         }
 
