@@ -10,7 +10,7 @@
 		public $string;
 		public $html;
 
-		function __construct($nome,,$login,$senha){
+		function __construct($nome,$login,$senha){
 			$this->string = "<tr><td>".$nome."</td><td>".$login."</td><td>".$senha."</td>";
 				$this->html = $this->string;
 		}
